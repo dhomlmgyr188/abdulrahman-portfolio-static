@@ -5,10 +5,13 @@
     --white-color: #fff;
     --bg-color: #fff;
     --bg-navbar-color: #bbbbbb;
+    --border-dark-color: #111111;
+    --border-white-color: #ffffff;
     --bg--section-1-color: #fff;
     --bg--section-2-color: #fafafa;
     --primary-color: #940020;
     --secondary-color: #C44800;
+    --success-color: rgb(0, 196, 26);
     --cta-color: #026CC9;
     --cta-hover-color: #1380df;
     --text-color-dark: #111111;
@@ -23,8 +26,12 @@
     --sizing-md: 16px;
     --sizing-lg: 32px;
     --sizing-xl: 64px;
+    --sizing-xxl: 128px;
+    --sizing-xxxl: 256px;
+    --sizing-xxxxl: 512px;
     --logo-height: 64px;
     --navbar-height: 80px;
+
 }
 
 /* reset */
@@ -34,6 +41,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -49,15 +60,10 @@ h2 {
     color: var(--primary-color);
 }
 
-h3 {
-    color: var(--secondary-color);
-}
-
 h1,
 h2,
 h3 {
     margin-bottom: var(--sizing-md);
-
 }
 
 h2 {
@@ -76,6 +82,7 @@ ul {
 }
 
 a {
+    color: var(--cta-color);
     text-decoration: none;
 }
 
@@ -120,20 +127,19 @@ section:first-child {
     display: flex;
     gap: var(--spacing-md);
 }
-
+.c-card__button,
 .c-header__button,
 .c-nav__li a {
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--text-color-white);
     border-radius: var(--sizing-sm);
-    text-align: center;
     transition: background-color 200ms ease;
 }
-
+.c-card__button,
 .c-header__button {
     background-color: var(--cta-color);
 }
-
+.c-card__button:hover,
 .c-hero__button:hover,
 .c-header__button:hover {
     background-color: var(--cta-hover-color);
@@ -152,7 +158,6 @@ section:first-child {
 .o-container {
     padding-left: var(--spacing-xl);
     padding-right: var(--spacing-xl);
-    max-width: 1600px;
 }
 
 /* hero */
@@ -224,19 +229,37 @@ section:first-child {
 
 .c-about__footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.c-about__content {
-    flex: 1;
-}
+.c-about__content {}
 
 .c-about__preview {
-    flex: 1;
     display: flex;
     justify-content: center;
+    height: var(--sizing-xxxxl);
+    width: 100%;
+    max-width: var(--sizing-xxxxl);
+    overflow: hidden;
+    background-color: var(--cta-color);
+    border: 3px solid var(--border-dark-color);
+    filter: brightness(140%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.c-about__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 300ms ease;
+}
+
+.c-about__img:hover {
+    transform: scale(1.1);
 }
 
 .c-cards {
@@ -263,14 +286,25 @@ section:first-child {
     border-radius: var(--sizing-sm);
 }
 
+
 .c-card--goal::after {
-    background: url(assets/images/goal.png);
+    background: url(assets/images/goals-bg.png);
 }
 
 .c-card--achievement::after {
     background: url(assets/images/1432.jpg);
 }
 
+.c-card--summary::after {
+    background: url(assets/images/desc-bg.jpg);
+}
+
+.c-card--information::after {
+    background: url(assets/images/info-bg.jpg);
+}
+
+.c-card--information::after,
+.c-card--summary::after,
 .c-card--achievement::after,
 .c-card--goal::after {
     box-shadow: inset 0px 0px 5px 1px var(--white-color);
@@ -279,7 +313,7 @@ section:first-child {
     inset: 0;
     border-radius: var(--sizing-sm);
     z-index: 1;
-    filter: brightness(50%);
+    filter: brightness(65%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -292,7 +326,7 @@ section:first-child {
 .c-about__list {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    line-height: 1.6;
 }
 
 .c-about__list__child {
@@ -305,4 +339,19 @@ section:first-child {
     content: "-";
     transform: translateY(50%, -50%);
     right: -16px;
+}
+
+.c-badges {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.c-badge {
+    padding: var(--spacing-sm);
+    background-color: var(--cta-color);
+    border-radius: var(--sizing-sm);
+}
+.c-card__button{
+    width: fit-content;
 }
