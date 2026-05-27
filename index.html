@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <title>الملف الشخصي | عبدالرحمن ناصر المغير</title>
 </head>
 
@@ -43,9 +44,8 @@
             </div>
         </section>
         <section id="about" class="o-container c-about">
-            <h2 class="c-about__title">نبذة عني</h2>
+            <h2 class="c-title">نبذة عني</h2>
             <div class="c-about__footer">
-
                 <div class="c-about__cards">
                     <div class="c-about__card c-about__card--information">
                         <div class="c-about__card__content">
@@ -78,56 +78,198 @@
                         <div class="c-about__card__content">
                             <h3 class="c-about__title">الملخص المهني</h3>
                             <p class="c-about__description">
-                                أنا عبدالرحمن المغير <span>مطور ويب ووسائط متعددة</span>, حاصل على دبلوم في تخصص
-                                <span>مطور الويب المتكامل (Full-Stack Web Development)</span> من جامعة طيبة <sub><a
-                                        href="#certificates"><i
+                                أنا عبدالرحمن المغير <span class="c-about__highlight">مطور ويب ووسائط متعددة</span>,
+                                حاصل على دبلوم في تخصص
+                                <span class="c-about__highlight">مطور الويب المتكامل (Full-Stack Web Development)</span>
+                                من جامعة طيبة <sub><a href="#certificates" class="c-about__link"><i
                                             class="fa-solid fa-arrow-up-right-from-square"></i></a></sub>,
                                 وأتممت دورة
-                                <span>تطوير واجهات المستخدم (Front-End Developer)</span> من أكاديمية حسوب <sub><a
-                                        href="#certificates"><i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i></a></sub>. <br>أقدم
-                                خدمات <a href="#services"><i
+                                <span class="c-about__highlight">تطوير واجهات المستخدم (Front-End Developer)</span> من
+                                أكاديمية حسوب <sub><a href="#certificates" class="c-about__link"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></a></sub>. أقدم
+                                خدمات <a href="#services" class="c-about__link"><i
                                         class="fa-solid fa-arrow-up-right-from-square"></i></a></sub> ذو جودة
-                                عالية في تطوير مواقع الويب وكتابة شيفرات برمجية نظيفة.<br> كما أسعى للحصول على وظيفة
-                                بدوام كامل داخل الممكلة
-                                تضمني إلى فريق عمل تقني متمكن وتساعدني على تطوير
-                                مهاراتي وتحويل أفكاري التقنية إلى نتائج واقعية.
+                                عالية في تطوير مواقع الويب وكتابة شيفرات برمجية نظيفة. كما أسعى للحصول على
+                                <span class="c-about__highlight">وظيفة
+                                    بدوام كامل داخل الممكلة
+                                    تضمني إلى فريق عمل تقني متمكن وتساعدني على تطوير
+                                    مهاراتي وتحويل أفكاري التقنية إلى نتائج واقعية.</span>
                             </p>
                         </div>
                     </div>
                 </div>
-
-            </div>
-        </section>
-        <section id="services" class="o-container">
-            <div class="c-about__skills">
                 <div class="c-about__preview">
                     <img src="assets/images/im.png" alt="im" class="c-about__img">
                 </div>
-                <img src="assets/icons/npm-svgrepo-com.svg" alt="npm" class="c-about__icon">
-                <img src="assets/icons/vite-svgrepo-com.svg" alt="vite" class="c-about__icon">
-                <img src="assets/icons/bootstrap-svgrepo-com.svg" alt="bootstrap" class="c-about__icon">
-                <img src="assets/icons/github-142-svgrepo-com.svg" alt="github" class="c-about__icon">
-                <img src="assets/icons/html5-svgrepo-com.svg" alt="html" class="c-about__icon">
-                <img src="assets/icons/css-3-svgrepo-com.svg" alt="css" class="c-about__icon">
-                <img src="assets/icons/sass-svgrepo-com.svg" alt="sass" class="c-about__icon">
-                <img src="assets/icons/js-svgrepo-com.svg" alt="js" class="c-about__icon">
-
             </div>
         </section>
-        <section id="projects" class="o-container">
-            s
-        </section>
-        <section id="certificates" class="o-container">
-            s
-        </section>
-        <section id="contact" class="o-container">
-            s
-        </section>
+        <section id="services" class="o-container c-services">
+            <h2 class="c-title">الخدمات</h2>
+            <section class="section slider-section">
+                <div class="container slider-column">
+                    <div class="swiper swiper-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="c-services__card">
+                                    <header>
+                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
+                                    </header>
+
+                                    <img src="assets/icons/html5-svgrepo-com.svg" alt="html5"
+                                        class="c-services__card__img" />
+                                    <div class="content">
+                                        <p>
+                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
+                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
+                                            الشاشات وسهل التصفح.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="c-services__card">
+                                    <header>
+                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
+                                    </header>
+
+                                    <img src="assets/icons/css-3-svgrepo-com.svg" alt="css"
+                                        class="c-services__card__img" />
+                                    <div class="content">
+                                        <p>
+                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
+                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
+                                            الشاشات وسهل التصفح.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="c-services__card">
+                                    <header>
+                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
+                                    </header>
+
+                                    <img src="assets/icons/js-svgrepo-com.svg" alt="js"
+                                        class="c-services__card__img" />
+                                    <div class="content">
+                                        <p>
+                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
+                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
+                                            الشاشات وسهل التصفح.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="c-services__card">
+                                    <header>
+                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
+                                    </header>
+
+                                    <img src="assets/icons/sass-svgrepo-com.svg" alt="sass"
+                                        class="c-services__card__img" />
+                                    <div class="content">
+                                        <p>
+                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
+                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
+                                            الشاشات وسهل التصفح.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="c-services__card">
+                                    <header>
+                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
+                                    </header>
+
+                                    <img src="assets/icons/npm-svgrepo-com.svg" alt="npm"
+                                        class="c-services__card__img" />
+                                    <div class="content">
+                                        <p>
+                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
+                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
+                                            الشاشات وسهل التصفح.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="c-services__card">
+                                    <header>
+                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
+                                    </header>
+
+                                    <img src="assets/icons/vite-svgrepo-com.svg" alt="vite"
+                                        class="c-services__card__img" />
+                                    <div class="content">
+                                        <p>
+                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
+                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
+                                            الشاشات وسهل التصفح.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="c-services__card">
+                                    <header>
+                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
+                                    </header>
+
+                                    <img src="assets/icons/bootstrap-svgrepo-com.svg" alt="bootstrap"
+                                        class="c-services__card__img" />
+                                    <div class="content">
+                                        <p>
+                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
+                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
+                                            الشاشات وسهل التصفح.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="c-services__card">
+                                    <header>
+                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
+                                    </header>
+
+                                    <img src="assets/icons/github-142-svgrepo-com.svg" alt="github"
+                                        class="c-services__card__img" />
+                                    <div class="content">
+                                        <p>
+                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
+                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
+                                            الشاشات وسهل التصفح.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+
+                        </div>
+                        <span class="swiper-pagination"></span>
+                        <span class="swiper-button-prev"></span>
+                        <span class="swiper-button-next"></span>
+                    </div>
+                </div>
+            </section>
+    </main>
+    </section>
+    <section id="projects" class="o-container c-projects">
+        s
+    </section>
+    <section id="certificates" class="o-container c-certificates">
+        s
+    </section>
+    <section id="contact" class="o-container c-contact">
+        s
+    </section>
     </main>
     <footer>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
 
