@@ -17,18 +17,25 @@
 </head>
 
 <body>
-    <header class="c-header">
+    <header class="c-header" id="header">
         <div class="c-header__wallpaper">
-            <img src="assets/images/logo.png" alt="logo" class="c-header__img">
+            <a href="#hero">
+                <img src="assets/images/logo.png" alt="logo" class="c-header__img">
+            </a>
         </div>
-        <ul class="c-nav">
-            <li class="c-nav__li"><a href="#hero">الرئيسية</a></li>
-            <li class="c-nav__li"><a href="#about">نبذة عني</a></li>
-            <li class="c-nav__li"><a href="#services">الخدمات</a></li>
-            <li class="c-nav__li"><a href="#projects">المشاريع</a></li>
-            <li class="c-nav__li"><a href="#certificates">الشهادات</a></li>
+        <button type="button" id="collapse" aria-label="collapse" class="c-header__collapse">
+            <i class="fa-solid fa-list"></i>
+        </button>
+        <ul class="c-nav" id="navbar">
+            <li class="c-nav__li"><a href="#hero" class="js-hero-button">الرئيسية</a></li>
+            <li class="c-nav__li"><a href="#about" class="js-hero-button">نبذة عني</a></li>
+            <li class="c-nav__li"><a href="#services" class="js-hero-button">الخدمات</a></li>
+            <li class="c-nav__li"><a href="#projects" class="js-hero-button">المشاريع</a></li>
+            <li class="c-nav__li"><a href="#certificates" class="js-hero-button">الشهادات</a></li>
+            <li class="c-nav__li"><a href="#contact" class="js-hero-button">تواصل معي</a></li>
         </ul>
         <a href="#contact" class="c-header__button">تواصل معي</a>
+
     </header>
     <main>
         <section id="hero" class="o-container c-hero">
@@ -44,7 +51,7 @@
             </div>
         </section>
         <section id="about" class="o-container c-about">
-            <h2 class="c-title">نبذة عني</h2>
+            <h2 class="c-title-no-margin">نبذة عني</h2>
             <div class="c-about__footer">
                 <div class="c-about__cards">
                     <div class="c-about__card c-about__card--information">
@@ -78,19 +85,19 @@
                         <div class="c-about__card__content">
                             <h3 class="c-about__title">الملخص المهني</h3>
                             <p class="c-about__description">
-                                أنا عبدالرحمن المغير <span class="c-about__highlight">مطور ويب ووسائط متعددة</span>,
+                                أنا عبدالرحمن المغير <span class="c-highlight">مطور ويب ووسائط متعددة</span>,
                                 حاصل على دبلوم في تخصص
-                                <span class="c-about__highlight">مطور الويب المتكامل (Full-Stack Web Development)</span>
-                                من جامعة طيبة <sub><a href="#certificates" class="c-about__link"><i
+                                <span class="c-highlight">مطور الويب المتكامل (Full-Stack Web Development)</span>
+                                من جامعة طيبة <sub><a href="#certificates" class="c-about__link" aria-label="certificates"><i
                                             class="fa-solid fa-arrow-up-right-from-square"></i></a></sub>,
                                 وأتممت دورة
-                                <span class="c-about__highlight">تطوير واجهات المستخدم (Front-End Developer)</span> من
-                                أكاديمية حسوب <sub><a href="#certificates" class="c-about__link"><i
+                                <span class="c-highlight">تطوير واجهات المستخدم (Front-End Developer)</span> من
+                                أكاديمية حسوب <sub><a href="#certificates" class="c-about__link" aria-label="certificates"><i
                                             class="fa-solid fa-arrow-up-right-from-square"></i></a></sub>. أقدم
-                                خدمات <a href="#services" class="c-about__link"><i
+                                خدمات <a href="#services" class="c-about__link" aria-label="services"><i
                                         class="fa-solid fa-arrow-up-right-from-square"></i></a></sub> ذو جودة
                                 عالية في تطوير مواقع الويب وكتابة شيفرات برمجية نظيفة. كما أسعى للحصول على
-                                <span class="c-about__highlight">وظيفة
+                                <span class="c-highlight">وظيفة
                                     بدوام كامل داخل الممكلة
                                     تضمني إلى فريق عمل تقني متمكن وتساعدني على تطوير
                                     مهاراتي وتحويل أفكاري التقنية إلى نتائج واقعية.</span>
@@ -104,166 +111,115 @@
             </div>
         </section>
         <section id="services" class="o-container c-services">
-            <h2 class="c-title">الخدمات</h2>
-            <section class="section slider-section">
-                <div class="container slider-column">
-                    <div class="swiper swiper-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <header>
-                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
-                                    </header>
-
-                                    <img src="assets/icons/html5-svgrepo-com.svg" alt="html5"
-                                        class="c-services__card__img" />
-                                    <div class="content">
-                                        <p>
-                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
-                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
-                                            الشاشات وسهل التصفح.
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <header>
-                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
-                                    </header>
-
-                                    <img src="assets/icons/css-3-svgrepo-com.svg" alt="css"
-                                        class="c-services__card__img" />
-                                    <div class="content">
-                                        <p>
-                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
-                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
-                                            الشاشات وسهل التصفح.
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <header>
-                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
-                                    </header>
-
-                                    <img src="assets/icons/js-svgrepo-com.svg" alt="js"
-                                        class="c-services__card__img" />
-                                    <div class="content">
-                                        <p>
-                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
-                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
-                                            الشاشات وسهل التصفح.
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <header>
-                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
-                                    </header>
-
-                                    <img src="assets/icons/sass-svgrepo-com.svg" alt="sass"
-                                        class="c-services__card__img" />
-                                    <div class="content">
-                                        <p>
-                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
-                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
-                                            الشاشات وسهل التصفح.
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <header>
-                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
-                                    </header>
-
-                                    <img src="assets/icons/npm-svgrepo-com.svg" alt="npm"
-                                        class="c-services__card__img" />
-                                    <div class="content">
-                                        <p>
-                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
-                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
-                                            الشاشات وسهل التصفح.
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <header>
-                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
-                                    </header>
-
-                                    <img src="assets/icons/vite-svgrepo-com.svg" alt="vite"
-                                        class="c-services__card__img" />
-                                    <div class="content">
-                                        <p>
-                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
-                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
-                                            الشاشات وسهل التصفح.
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <header>
-                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
-                                    </header>
-
-                                    <img src="assets/icons/bootstrap-svgrepo-com.svg" alt="bootstrap"
-                                        class="c-services__card__img" />
-                                    <div class="content">
-                                        <p>
-                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
-                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
-                                            الشاشات وسهل التصفح.
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <header>
-                                        <h3 class="c-title">تطوير موقع شخصي Portfolio</h3>
-                                    </header>
-
-                                    <img src="assets/icons/github-142-svgrepo-com.svg" alt="github"
-                                        class="c-services__card__img" />
-                                    <div class="content">
-                                        <p>
-                                            أنشئ لك موقع شخصي يعرض جميع أعمالك أياً كان تخصصك. لعدة أهداف مثل عرض سيرتك
-                                            الذاتية، مشاريعك، خدماتك، أو حتى مدونة شخصية. الموقع سيكون متجاوباً مع جميع
-                                            الشاشات وسهل التصفح.
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-
+            <h2 class="c-title-no-margin">الخدمات</h2>
+            <div class="slider-container">
+                <div class="swiper swiper-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="c-services__card">
+                                <h3 class="c-title-no-margin">تطوير ملف أعمال Portfolio Website</h3>
+                                <img src="assets/images/0-web-designer-portfolio-thumb.jpg" alt="ملف اعمال صورة"
+                                    class="c-services__card__img" />
+                                <p class="c-services__desc"></p>
+                                <a href="https://wa.me/966541590819" class="c-services__button"
+                                    aria-label="تواصل معي على واتساب">
+                                    إحصل على عرض
+                                    <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp" class="c-services__icon">
+                                </a>
+                            </article>
                         </div>
-                        <span class="swiper-pagination"></span>
-                        <span class="swiper-button-prev"></span>
-                        <span class="swiper-button-next"></span>
+                        <div class="swiper-slide">
+                            <article class="c-services__card">
+                                <h3 class="c-title-no-margin">تطوير صفحات هبوط Landing Page</h3>
+                                <img src="assets/images/landing-pafge.jpg" alt="صفحات هبوط صورة"
+                                    class="c-services__card__img" />
+                                <p class="c-services__desc"></p>
+                                <a href="https://wa.me/966541590819" class="c-services__button"
+                                    aria-label="تواصل معي على واتساب">
+                                    إحصل على عرض
+                                    <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp" class="c-services__icon">
+                                </a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="c-services__card">
+                                <h3 class="c-title-no-margin">تطوير الواجهات الأمامية Front End</h3>
+                                <img src="assets/images/front-end-development-minimal-infographic-banner-vector.jpg"
+                                    alt="تطوير الواجهات الامامية صورة" class="c-services__card__img" />
+                                <p class="c-services__desc"></p>
+                                <a href="https://wa.me/966541590819" class="c-services__button"
+                                    aria-label="تواصل معي على واتساب">
+                                    إحصل على عرض
+                                    <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp" class="c-services__icon">
+                                </a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="c-services__card">
+                                <h3 class="c-title-no-margin">تطوير الواجهات الأمامية Front End (React)</h3>
+                                <img src="assets/images/react.png" alt="ري اكت صورة" class="c-services__card__img" />
+                                <p class="c-services__desc"></p>
+                                <a href="https://wa.me/966541590819" class="c-services__button"
+                                    aria-label="تواصل معي على واتساب">
+                                    إحصل على عرض
+                                    <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp" class="c-services__icon">
+                                </a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="c-services__card">
+                                <h3 class="c-title-no-margin">تطوير الوجهات الخلفية Back End</h3>
+                                <img src="assets/images/nodejs" alt="نود جي اس صورة" class="c-services__card__img" />
+                                <p class="c-services__desc"></p>
+                                <a href="https://wa.me/966541590819" class="c-services__button"
+                                    aria-label="تواصل معي على واتساب">
+                                    إحصل على عرض
+                                    <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp" class="c-services__icon">
+                                </a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="c-services__card">
+                                <h3 class="c-title-no-margin">إنشاء وإدارة قواعد بيانات MySQL</h3>
+                                <img src="assets/images/MySQLimage1.jpg" alt="ماي اس كيو ال صورة"
+                                    class="c-services__card__img" />
+                                <p class="c-services__desc"></p>
+                                <a href="https://wa.me/966541590819" class="c-services__button"
+                                    aria-label="تواصل معي على واتساب">
+                                    إحصل على عرض
+                                    <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp" class="c-services__icon">
+                                </a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="c-services__card">
+                                <h3 class="c-title-no-margin">إنشاء وإدارة قواعد بيانات MongoDB</h3>
+                                <img src="assets/images/meta_generic.png" alt="مونغو دي بي صورة"
+                                    class="c-services__card__img" />
+                                <p class="c-services__desc"></p>
+                                <a href="https://wa.me/966541590819" class="c-services__button"
+                                    aria-label="تواصل معي على واتساب">
+                                    إحصل على عرض
+                                    <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp" class="c-services__icon">
+                                </a>
+                            </article>
+                        </div>
                     </div>
+                    <span class="swiper-pagination custom-swiper-pagination"></span>
+                    <span class="swiper-button-prev"></span>
+                    <span class="swiper-button-next"></span>
                 </div>
-            </section>
-    </main>
-    </section>
-    <section id="projects" class="o-container c-projects">
-        s
-    </section>
-    <section id="certificates" class="o-container c-certificates">
-        s
-    </section>
-    <section id="contact" class="o-container c-contact">
-        s
-    </section>
+            </div>
+        </section>
+        <section id="projects" class="o-container c-projects">
+            s
+        </section>
+        <section id="certificates" class="o-container c-certificates">
+            s
+        </section>
+        <section id="contact" class="o-container c-contact">
+            s
+        </section>
     </main>
     <footer>
 
