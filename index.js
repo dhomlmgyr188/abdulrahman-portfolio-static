@@ -60,3 +60,57 @@ navButton.forEach((link) => {
     collapse.classList.remove("hide");
   });
 });
+
+// جلب جميع السلايدرز الموجودة في الصفحة
+const allSliders = document.querySelectorAll(".c-wrapper-slider");
+
+allSliders.forEach((wrapperSlider) => {
+  // البحث عن العناصر داخل السلايدر الحالي فقط باستخدام wrapperSlider بدلاً من document
+  const carousel = wrapperSlider.querySelector(
+    ".c-wrapper-slider__img-container__carousel",
+  );
+  const images = wrapperSlider.querySelectorAll(
+    ".c-wrapper-slider__img-container__carousel__img",
+  );
+  const buttons = wrapperSlider.querySelectorAll(".carousel-button");
+
+  let imageIndex = 0;
+  let intervalId;
+
+  const slideImage = () => {
+    if (imageIndex >= images.length) {
+      imageIndex = 0;
+    } else if (imageIndex < 0) {
+      imageIndex = images.length - 1;
+    }
+
+    carousel.style.transform = `translateX(+${imageIndex * 100}%)`;
+  };
+
+  const autoSlide = () => {
+    intervalId = setInterval(() => {
+      imageIndex++;
+      slideImage();
+    }, 2000);
+  };
+
+  autoSlide();
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      clearInterval(intervalId);
+
+      if (button.classList.contains("js-next-carousel")) {
+        imageIndex--;
+      } else {
+        imageIndex++;
+      }
+
+      slideImage();
+      autoSlide();
+    });
+  });
+
+  wrapperSlider.addEventListener("mouseover", () => clearInterval(intervalId));
+  wrapperSlider.addEventListener("mouseleave", autoSlide);
+});

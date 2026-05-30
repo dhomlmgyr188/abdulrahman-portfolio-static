@@ -24,23 +24,22 @@
             </a>
         </div>
         <button type="button" id="collapse" aria-label="collapse" class="c-header__collapse">
-            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-bars"></i>
         </button>
         <ul class="c-nav" id="navbar">
             <li class="c-nav__li"><a href="#hero" class="js-hero-button">الرئيسية</a></li>
             <li class="c-nav__li"><a href="#about" class="js-hero-button">نبذة عني</a></li>
             <li class="c-nav__li"><a href="#services" class="js-hero-button">الخدمات</a></li>
-            <li class="c-nav__li"><a href="#projects" class="js-hero-button">المشاريع</a></li>
+            <li class="c-nav__li"><a href="#projects" class="js-hero-button js-projects-button">المشاريع</a></li>
             <li class="c-nav__li"><a href="#certificates" class="js-hero-button">الشهادات</a></li>
             <li class="c-nav__li"><a href="#contact" class="js-hero-button">تواصل معي</a></li>
         </ul>
         <a href="#contact" class="c-header__button">تواصل معي</a>
-
     </header>
     <main>
         <section id="hero" class="c-hero">
             <div class="o-container">
-                <h1 class="c-hero__title">
+                <h1 class="c-title-no-margin">
                     مرحبا أنا
                     <span>عبدالرحمن المغير</span>
                 </h1>
@@ -54,7 +53,7 @@
         </section>
         <section id="about" class="c-about">
             <div class="o-container">
-                <h2 class="c-title-no-margin">نبذة عني</h2>
+                <h2>نبذة عني</h2>
                 <div class="c-about__footer">
                     <div class="c-about__cards">
                         <div class="c-about__card c-about__card--information">
@@ -99,8 +98,8 @@
                                     أكاديمية حسوب <sub><a href="#certificates" class="c-about__link"
                                             aria-label="certificates"><i
                                                 class="fa-solid fa-arrow-up-right-from-square"></i></a></sub>. أقدم
-                                    خدمات <a href="#services" class="c-about__link" aria-label="services"><i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i></a></sub> ذو جودة
+                                    خدمات <sub><a href="#services" class="c-about__link" aria-label="services"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a></sub> ذو جودة
                                     عالية في تطوير مواقع الويب وكتابة شيفرات برمجية نظيفة. كما أسعى للحصول على
                                     <span class="c-highlight">وظيفة
                                         بدوام كامل داخل الممكلة
@@ -118,141 +117,52 @@
         </section>
         <section id="services" class="c-services">
             <div class="o-container">
-                <h2 class="c-title-no-margin">الخدمات</h2>
-                <div class="slider-container">
-                    <div class="swiper swiper-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <h3 class="c-title-no-margin">تطوير ملف أعمال Portfolio Website</h3>
-                                    <img src="assets/images/0-web-designer-portfolio-thumb.jpg" alt="ملف اعمال صورة"
-                                        class="c-services__card__img" />
-                                    <p class="c-services__desc"></p>
-                                    <a href="https://wa.me/966541590819" class="c-services__button"
-                                        aria-label="تواصل معي على واتساب">
-                                        إحصل على عرض
-                                        <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp"
-                                            class="c-services__icon">
-                                    </a>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <h3 class="c-title-no-margin">تطوير صفحات هبوط Landing Page</h3>
-                                    <img src="assets/images/landing-pafge.jpg" alt="صفحات هبوط صورة"
-                                        class="c-services__card__img" />
-                                    <p class="c-services__desc"></p>
-                                    <a href="https://wa.me/966541590819" class="c-services__button"
-                                        aria-label="تواصل معي على واتساب">
-                                        إحصل على عرض
-                                        <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp"
-                                            class="c-services__icon">
-                                    </a>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <h3 class="c-title-no-margin">تطوير الواجهات الأمامية Front End</h3>
-                                    <img src="assets/images/front-end-development-minimal-infographic-banner-vector.jpg"
-                                        alt="تطوير الواجهات الامامية صورة" class="c-services__card__img" />
-                                    <p class="c-services__desc"></p>
-                                    <a href="https://wa.me/966541590819" class="c-services__button"
-                                        aria-label="تواصل معي على واتساب">
-                                        إحصل على عرض
-                                        <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp"
-                                            class="c-services__icon">
-                                    </a>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <h3 class="c-title-no-margin">تطوير الواجهات الأمامية Front End (React)</h3>
-                                    <img src="assets/images/react.png" alt="ري اكت صورة"
-                                        class="c-services__card__img" />
-                                    <p class="c-services__desc"></p>
-                                    <a href="https://wa.me/966541590819" class="c-services__button"
-                                        aria-label="تواصل معي على واتساب">
-                                        إحصل على عرض
-                                        <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp"
-                                            class="c-services__icon">
-                                    </a>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <h3 class="c-title-no-margin">تطوير الوجهات الخلفية Back End</h3>
-                                    <img src="assets/images/nodejs" alt="نود جي اس صورة"
-                                        class="c-services__card__img" />
-                                    <p class="c-services__desc"></p>
-                                    <a href="https://wa.me/966541590819" class="c-services__button"
-                                        aria-label="تواصل معي على واتساب">
-                                        إحصل على عرض
-                                        <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp"
-                                            class="c-services__icon">
-                                    </a>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <h3 class="c-title-no-margin">إنشاء وإدارة قواعد بيانات MySQL</h3>
-                                    <img src="assets/images/MySQLimage1.jpg" alt="ماي اس كيو ال صورة"
-                                        class="c-services__card__img" />
-                                    <p class="c-services__desc"></p>
-                                    <a href="https://wa.me/966541590819" class="c-services__button"
-                                        aria-label="تواصل معي على واتساب">
-                                        إحصل على عرض
-                                        <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp"
-                                            class="c-services__icon">
-                                    </a>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="c-services__card">
-                                    <h3 class="c-title-no-margin">إنشاء وإدارة قواعد بيانات MongoDB</h3>
-                                    <img src="assets/images/meta_generic.png" alt="مونغو دي بي صورة"
-                                        class="c-services__card__img" />
-                                    <p class="c-services__desc"></p>
-                                    <a href="https://wa.me/966541590819" class="c-services__button"
-                                        aria-label="تواصل معي على واتساب">
-                                        إحصل على عرض
-                                        <img src="assets/icons/icons8-whatsapp.svg" alt="whatsapp"
-                                            class="c-services__icon">
-                                    </a>
-                                </article>
-                            </div>
-                        </div>
-                        <span class="swiper-pagination custom-swiper-pagination"></span>
-                        <span class="swiper-button-prev"></span>
-                        <span class="swiper-button-next"></span>
-                    </div>
-                </div>
+                <h2>الخدمات</h2>
             </div>
         </section>
         <section id="projects" class="c-projects">
             <div class="o-container">
-                <h2 class="c-title-no-margin">المشاريع</h2>
+                <h2>المشاريع</h2>
                 <div class="c-projects__gallery">
-                    <nav class="c-projects__navbar">
+                    <!-- <nav class="c-projects__navbar">
                         <label for="selectAllProjects" class="c-projects__label">
                             <input type="radio" id="selectAllProjects" name="projects" class="c-projects__input">
                             اختيار الكل
                         </label>
                         <label for="selectFrontEnd" class="c-projects__label">
-                            <input type="radio" id="selectFrontEnd"ّ name="projects" class="c-projects__input">
+                            <input type="radio" id="selectFrontEnd" ّ name="projects" class="c-projects__input">
                             Front End
                         </label>
                         <label for="selectFullStack" class="c-projects__label">
                             <input type="radio" id="selectFullStack" name="projects" class="c-projects__input">
                             Full Stack
                         </label>
-                    </nav>
+                    </nav> -->
                     <div class="c-projects__cards">
                         <article class="c-projects__card">
-                            <img src="assets/images/صورة لوحة تحكم.png" alt="صورة لوحة تحكم" class="c-projects__img">
+                            <div class="c-wrapper-slider">
+                                <i class="fa-solid fa-arrow-right carousel-button js-next-carousel"></i>
+                                <div class="c-wrapper-slider__img-container">
+                                    <div class="c-wrapper-slider__img-container__carousel">
+                                        <img src="assets/images/cpanelOne.PNG" alt="cpanelOne.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                        <img src="assets/images/cpanelTwo.PNG" alt="cpanelTwo.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                        <img src="assets/images/cpanelThree.PNG" alt="cpanelThree.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                        <img src="assets/images/cpanelFour.PNG" alt="cpanelFour.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                        <img src="assets/images/cpanelFive.PNG" alt="cpanelFive.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                    </div>
+                                    <i class="fa-solid fa-arrow-left carousel-button js-prev-carousel"></i>
+                                </div>
+                            </div>
 
                             <main class="c-projects__content">
+                                <span class="c-projects__badge c-projects__badge--frontend">Front-End</span>
                                 <div class="c-projects__content__top">
-                                    <h3 class="c-title-no-margin">لوحة تحكم Dashboard</h3>
+                                    <h3>لوحة تحكم</h3>
                                     <span class="c-projects__date">2026/01/01</span>
                                 </div>
                                 <p class="c-projects__content__middle">
@@ -283,11 +193,29 @@
 
                         </article>
                         <article class="c-projects__card">
-                            <img src="assets/images/صورة لوحة تحكم.png" alt="صورة لوحة تحكم" class="c-projects__img">
+                            <div class="c-wrapper-slider">
+                                <i class="fa-solid fa-arrow-right carousel-button js-next-carousel"></i>
+                                <div class="c-wrapper-slider__img-container">
+                                    <div class="c-wrapper-slider__img-container__carousel">
+                                        <img src="assets/images/cpanelOne.PNG" alt="cpanelOne.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                        <img src="assets/images/cpanelTwo.PNG" alt="cpanelTwo.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                        <img src="assets/images/cpanelThree.PNG" alt="cpanelThree.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                        <img src="assets/images/cpanelFour.PNG" alt="cpanelFour.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                        <img src="assets/images/cpanelFive.PNG" alt="cpanelFive.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                    </div>
+                                    <i class="fa-solid fa-arrow-left carousel-button js-prev-carousel"></i>
+                                </div>
+                            </div>
 
                             <main class="c-projects__content">
+                                <span class="c-projects__badge c-projects__badge--backend">Back-End</span>
                                 <div class="c-projects__content__top">
-                                    <h3 class="c-title-no-margin">لوحة تحكم Dashboard</h3>
+                                    <h3>لوحة تحكم</h3>
                                     <span class="c-projects__date">2026/01/01</span>
                                 </div>
                                 <p class="c-projects__content__middle">
@@ -318,11 +246,29 @@
 
                         </article>
                         <article class="c-projects__card">
-                            <img src="assets/images/صورة لوحة تحكم.png" alt="صورة لوحة تحكم" class="c-projects__img">
+                            <div class="c-wrapper-slider">
+                                <i class="fa-solid fa-arrow-right carousel-button js-next-carousel"></i>
+                                <div class="c-wrapper-slider__img-container">
+                                    <div class="c-wrapper-slider__img-container__carousel">
+                                        <img src="assets/images/cpanelOne.PNG" alt="cpanelOne.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                        <img src="assets/images/cpanelTwo.PNG" alt="cpanelTwo.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                        <img src="assets/images/cpanelThree.PNG" alt="cpanelThree.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                        <img src="assets/images/cpanelFour.PNG" alt="cpanelFour.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                        <img src="assets/images/cpanelFive.PNG" alt="cpanelFive.PNG"
+                                            class="c-wrapper-slider__img-container__carousel__img">
+                                    </div>
+                                    <i class="fa-solid fa-arrow-left carousel-button js-prev-carousel"></i>
+                                </div>
+                            </div>
 
                             <main class="c-projects__content">
+                                <span class="c-projects__badge c-projects__badge--fullstack">Full-Stack</span>
                                 <div class="c-projects__content__top">
-                                    <h3 class="c-title-no-margin">لوحة تحكم Dashboard</h3>
+                                    <h3>لوحة تحكم</h3>
                                     <span class="c-projects__date">2026/01/01</span>
                                 </div>
                                 <p class="c-projects__content__middle">
@@ -357,14 +303,15 @@
             </div>
         </section>
         <section id="certificates" class="c-certificates">
-           <div class="o-container">
+            <div class="o-container">
+                <h2>الشهادات</h2>
 
-           </div>
+            </div>
         </section>
         <section id="contact" class="c-contact">
-           <div class="o-container">
-
-           </div>
+            <div class="o-container">
+                <h2>تواصل معي</h2>
+            </div>
         </section>
     </main>
     <footer>
