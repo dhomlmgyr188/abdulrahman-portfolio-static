@@ -6,15 +6,20 @@
     --bg-color: #fff;
     --bg-navbar-color: #bbbbbb;
     --border-dark-color: #111111;
+    --border-light-color: #c5c5c5;
     --border-white-color: #ffffff;
     --bg--section-1-color: #fff;
     --bg--section-2-color: #fafafa;
     --primary-color: #940020;
+    --expired-color: #b90028;
+    --start-color: rgb(0, 196, 26);
+    --working-color: rgb(196, 193, 0);
     --secondary-color: #C44800;
     --highlight-color: #7e7e7e;
     --highlight-frontend-color: #009400;
-    --highlight-backend-color: #003b94;
-    --highlight-fullstack-color: #590094;
+    --highlight-4-color: #b6a508;
+    --highlight-5-color: #850bbd;
+    --highlight-6-color: #590094;
     --success-color: rgb(0, 196, 26);
     --cta-color: #026CC9;
     --cta-hover-color: #1380df;
@@ -34,6 +39,7 @@
     --sizing-xxxl: 256px;
     --sizing-xxxxl: 512px;
     --sizing-xxxxxl: 768px;
+    --sizing-xxxxxll: 896px;
     --sizing-xxxxxxl: 1024px;
     --logo-height: 64px;
     --navbar-height: 80px;
@@ -83,9 +89,10 @@ button {
 }
 
 
-h1{
+h1 {
     font-size: var(--sizing-xl);
 }
+
 h1,
 h2 {
     color: var(--primary-color);
@@ -155,8 +162,8 @@ section:first-child {
 .c-wrapper-slider__img-container__carousel__img {
     height: 100%;
     width: 100%;
-    border: 10px solid var(--white-color);
-    object-fit: contain;
+    /* border: 10px solid var(--white-color); */
+    object-fit: cover;
 }
 
 .carousel-button {
@@ -509,10 +516,10 @@ section:first-child {
 .c-projects__card {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    max-height: var(--sizing-xxxxxll);
     background-color: var(--bg--section-1-color);
     border: 1px solid var(--gray-color);
-
+    overflow: hidden;
 }
 
 .c-projects__content {
@@ -522,12 +529,33 @@ section:first-child {
     padding: var(--spacing-md);
 }
 
-.c-projects__content__top {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.c-projects__content>*:not(:last-child) {
+    border-bottom: 1px solid var(--border-light-color);
+    padding-bottom: var(--sizing-md);
 }
 
+.c-projects__content__date {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+}
+
+.c-projects__content__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.c-projects__date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.c-projects__contributors ul,
 .c-projects__content__bottom {
     display: flex;
     flex-wrap: wrap;
@@ -539,16 +567,39 @@ section:first-child {
     background-color: var(--highlight-color);
     padding: 0 var(--spacing-sm);
     width: fit-content;
+    text-align: center;
 }
-.c-projects__badge--frontend{
+
+.c-projects__badge--type {
+    color: var(--white-color);
+    background-color: var(--highlight-color);
+    padding: 0 var(--spacing-sm);
+}
+
+.c-projects__badge--contributor {
+    background-color: var(--highlight-4-color);
+}
+
+.c-projects__badge--frontend {
     background-color: var(--highlight-frontend-color);
 }
-.c-projects__badge--backend{
-    background-color: var(--highlight-backend-color);
+
+.c-projects__badge--backend {
+    background-color: var(--highlight-5-color);
 }
-.c-projects__badge--fullstack{
-    background-color: var(--highlight-fullstack-color);
+
+.c-projects__badge--fullstack {
+    background-color: var(--highlight-6-color);
 }
+
+.c-projects__contributors {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    border-bottom: none !important;
+    padding-bottom: 0px !important;
+}
+
 .c-projects__actions {
     display: flex;
     gap: var(--spacing-md);
@@ -566,17 +617,20 @@ section:first-child {
 .c-projects__icon {
     height: var(--sizing-md);
 }
+
 /* certificates */
-.c-certificates{
+.c-certificates {
     background-color: var(--bg--section-1-color);
 }
+
 /* contact */
-.c-contact{
+.c-contact {
     background-color: var(--bg--section-2-color);
 }
+
 /* xs device */
 @media (max-width: 500px) {
-    
+
 
     .c-projects__button span {
         display: none;
