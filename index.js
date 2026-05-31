@@ -1,6 +1,3 @@
-import tippy from 'tippy.js';
-import 'tippy.js/dist/tippy.css';
-
 // collapse header
 const collapse = document.getElementById("collapse");
 const navbar = document.getElementById("navbar");
@@ -72,7 +69,3 @@ allSliders.forEach((wrapperSlider) => {
   wrapperSlider.addEventListener("mouseover", () => clearInterval(intervalId));
   wrapperSlider.addEventListener("mouseleave", autoSlide);
 });
-
-tippy('.class', {
-  content: 'Tooltip',
-})
