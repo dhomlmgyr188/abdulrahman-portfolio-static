@@ -11,10 +11,10 @@
     --bg--section-1-color: #fff;
     --bg--section-2-color: #fafafa;
     --primary-color: #940020;
+    --secondary-color: #C44800;
     --expired-color: #b90028;
     --start-color: rgb(0, 196, 26);
     --working-color: rgb(196, 193, 0);
-    --secondary-color: #C44800;
     --highlight-color: #7e7e7e;
     --highlight-frontend-color: #009400;
     --highlight-4-color: #b6a508;
@@ -78,6 +78,9 @@ body {
     line-height: 1.6;
 }
 
+p {
+    overflow-wrap: break-all;
+}
 
 a,
 button {
@@ -90,7 +93,7 @@ button {
 
 
 h1 {
-    font-size: var(--sizing-xl);
+    font-size: var(--sizing-lg);
 }
 
 h1,
@@ -121,17 +124,18 @@ section {
     scroll-margin: var(--navbar-height);
 }
 
+section:first-child {
+    padding-top: var(--navbar-height);
+}
+
 /* o-container */
 .o-container {
     max-width: var(--container-width);
     width: 100%;
-    overflow-wrap: break-word;
     padding: var(--spacing-lg) var(--spacing-md);
 }
 
-section:first-child {
-    margin-top: var(--navbar-height);
-}
+
 
 /* carousel */
 
@@ -195,23 +199,47 @@ section:first-child {
 }
 
 /* header */
+
 .c-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
+    z-index: 999;
+    animation: scroll-transition;
+    background-color: transparent;
+    animation-timeline: scroll(y);
+}
+
+@keyframes scroll-transition {
+    15% {
+        background-color: var(--bg-navbar-color);
+    }
+
+    100% {
+        background-color: var(--bg-navbar-color);
+    }
+}
+
+.o-container--header {
     display: flex;
     justify-content: space-between;
-    min-height: var(--navbar-height);
     align-items: center;
+    width: 100%;
+    min-height: var(--navbar-height);
+    gap: var(--spacing-md);
     padding: var(--spacing-sm) var(--spacing-md);
-    background-color: var(--bg-navbar-color);
-    z-index: 999;
+    overflow-wrap: break-word;
+    max-width: var(--container-width);
+
 }
 
 .c-header__wallpaper {
     height: var(--logo-height);
-    overflow: hidden;
 }
 
 .c-header__img {
@@ -265,7 +293,7 @@ section:first-child {
     flex-shrink: 0;
     font-size: var(--sizing-lg);
     padding: var(--spacing-sm);
-    color: var(--text-color-white) !important;
+    color: var(--black-color) !important;
     transition: background-color 200ms ease;
 }
 
@@ -291,44 +319,73 @@ section:first-child {
 
 /* hero */
 .c-hero {
-    min-height: calc(100vh - var(--navbar-height));
-    text-align: center;
-    background-color: var(--bg--section-1-color);
+    min-height: 100vh;
+    color: var(--text-color-white);
+    background-color: var(--highlight-color);
+    background-size: cover;
 }
 
 .c-hero .o-container {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: var(--spacing-lg);
+    flex-grow: 1;
 }
 
-.c-hero__title {
-    font-size: var(--sizing-xl);
+.c-hero__section {
+    flex: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--text-color-dark);
 }
 
-.c-hero__title span {
-    color: var(--primary-color);
+.c-hero__section__title {
+    color: var(--cta-color);
 }
 
-.c-hero__description {
-    font-size: var(--sizing-lg);
+.c-hero__aside {
+    flex: 40%;
+    height: var(--sizing-xxxxl);
+    width: var(--sizing-xxxxl);
+    overflow: hidden;
+    filter: drop-shadow(0px 5px 15px var(--white-color));
 }
 
-.c-hero__description span {
-    color: var(--secondary-color);
+.c-hero__aside img {
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s linear;
 }
-
+.c-hero__aside img:hover{
+    transform: skewX(5deg) translateY(-10px);
+}
+.c-hero__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    filter: grayscale(0%);
+}
+.c-hero__content span{
+    font-size: var(--sizing-md);
+    font-weight: 500;
+}
+.c-hero__content span img{
+    width: var(--sizing-md);
+    height:var(--sizing-md);
+}
 .c-hero__actions {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: var(--spacing-md);
-    width: 100%;
 }
 
 .c-hero__button {
-    font-size: var(--sizing-md);
-    padding: var(--spacing-md) var(--spacing-lg);
+    flex-grow: 1;
+    padding: var(--spacing-md);
     background-color: var(--cta-color);
     color: var(--text-color-white);
     text-align: center;
@@ -685,7 +742,6 @@ section:first-child {
         align-items: flex-start;
         gap: var(--spacing-lg);
         flex-direction: column;
-        padding-bottom: var(--spacing-lg);
     }
 
     .is-active {
