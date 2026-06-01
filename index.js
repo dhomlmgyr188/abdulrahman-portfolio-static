@@ -1,44 +1,45 @@
 // collapse header
-const navbar = document.getElementById('navbar'),
-  collapse = document.getElementById('collapse'),
+const navbar = document.getElementById("navbar"),
+  collapse = document.getElementById("collapse"),
   headerButton = document.querySelectorAll(".c-nav__li"),
-  sections = document.querySelectorAll("section")
+  sections = document.querySelectorAll("section");
+
+var lastScrollTop = 0,
+  header = document.getElementById("header"),
+  headerContainer = document.querySelector(".c-header")
 
 collapse.addEventListener("click", () => {
   navbar.classList.toggle("active");
-})
+});
 
 window.addEventListener("scroll", () => {
   let current = "";
-  sections.forEach(section => {
+  sections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
     if (pageYOffset >= sectionTop) {
       current = section.getAttribute("id");
     }
-  })
+  });
 
-  headerButton.forEach(li => {
-    navbar.classList.remove("active")
+  headerButton.forEach((li) => {
+    navbar.classList.remove("active");
     li.classList.remove("button-active");
     if (li.classList.contains(current)) {
       li.classList.add("button-active");
     }
-  })
-})
+  });
+  // var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  // if (scrollTop > lastScrollTop) {
+  //   header.classList.add("hidden-header");
+  // } else {
+  //   header.classList.remove("hidden-header");
+  // }
+  // lastScrollTop = scrollTop;
 
-var lastScrollTop = 0,
-  header = document.getElementById('header');
-window.addEventListener("scroll", () => {
-  var scrollTop = window.pageYOffset || document.getElement.scrollTop;
-  if (scrollTop > lastScrollTop) {
-    header.classList.add("hidden-header");
-  }
-  else {
-    header.classList.remove("hidden-header");
-  }
-  lastScrollTop = scrollTop;
-})
+  headerContainer.classList.toggle("slidedown", window.scrollY > 0)
+});
+
 
 const allSliders = document.querySelectorAll(".c-wrapper-slider");
 
