@@ -5,7 +5,7 @@
   "keywords": [
     "portfolio"
   ],
-  "homepage": "https://github.com/dhomlmgyr188/abdulrahman-portfolio-static#readme",
+  "homepage": "https://dhomlmgyr188.github.io/abdulrahman-portfolio-static/",
   "bugs": {
     "url": "https://github.com/dhomlmgyr188/abdulrahman-portfolio-static/issues"
   },
@@ -21,9 +21,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "vite": "^8.0.14"
   }
 }
