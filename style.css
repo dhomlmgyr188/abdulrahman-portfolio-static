@@ -138,7 +138,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    scroll-margin: var(--navbar-height);
 }
 
 
@@ -225,19 +224,13 @@ section {
     right: 0;
     top: 0;
     z-index: 999;
-    animation: scroll-transition;
-    background-color: transparent;
-    animation-timeline: scroll(y);
+    background-color: var(--bg-navbar-color);
 }
 
-@keyframes scroll-transition {
-    15% {
-        background-color: var(--bg-navbar-color);
-    }
-
-    100% {
-        background-color: var(--bg-navbar-color);
-    }
+.c-header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .c-header__logo {
@@ -253,15 +246,18 @@ section {
 
 .o-container--header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     min-height: var(--navbar-height);
     gap: var(--spacing-md);
     padding: var(--spacing-sm) var(--spacing-md);
     overflow-wrap: break-word;
     max-width: var(--container-width);
+}
 
+.hidden-header {
+    display: none;
 }
 
 .c-header__wallpaper {
@@ -277,50 +273,25 @@ section {
     gap: var(--spacing-md);
 }
 
+.c-nav__li {
+    display: flex;
+    transition: background-color 200ms ease;
+}
+
+.c-nav__li:hover {
+    background-color: var(--primary-color);
+}
+
 .c-projects__button,
 .c-services__button,
 .c-about__card__button,
 .c-nav__li a {
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--text-color-white);
-    transition: background-color 200ms ease;
-}
-
-.c-projects__button,
-.c-services__button,
-.c-about__card__button {
-    background-color: var(--cta-color);
-}
-
-.c-projects__button:hover,
-.c-services__button:hover,
-.c-about__card__button:hover {
-    color: var(--text-color-white);
-    background-color: var(--cta-hover-color);
 }
 
 
-.c-nav__li a {
-    background-color: var(--primary-color);
-}
 
-.c-projects__label:hover,
-.c-nav__li a:hover {
-    background-color: var(--secondary-color);
-}
-
-.c-header__collapse {
-    display: none;
-    flex-shrink: 0;
-    font-size: var(--sizing-lg);
-    padding: var(--spacing-sm);
-    color: var(--primary-color) !important;
-    transition: background-color 200ms ease;
-}
-
-#collapse.hide {
-    display: none;
-}
 
 .c-header__button {
     padding: var(--spacing-sm) var(--spacing-md);
@@ -545,6 +516,19 @@ section {
 
 
 /* about */
+.c-projects__button,
+.c-services__button,
+.c-about__card__button {
+    background-color: var(--cta-color);
+}
+
+.c-projects__button:hover,
+.c-services__button:hover,
+.c-about__card__button:hover {
+    color: var(--text-color-white);
+    background-color: var(--cta-hover-color);
+}
+
 .c-about {
     display: flex;
     flex-direction: column;
@@ -835,8 +819,14 @@ section {
     background-color: var(--bg--section-2-color);
 }
 
+.button-active {
+    background-color: var(--primary-color) !important;
+}
+
 /* xs device */
 @media (max-width: 500px) {
+
+
     .c-hero__content {
         gap: var(--spacing-md);
     }
@@ -855,8 +845,25 @@ section {
     }
 }
 
+.c-header__collapse {
+    display: none;
+    flex-shrink: 0;
+    font-size: var(--sizing-md);
+    padding: var(--spacing-sm);
+    color: var(--white-color) !important;
+    background-color: var(--primary-color);
+    transition: background-color 200ms ease;
+}
+
 /* sm device */
+
 @media (max-width: 600px) {
+    .c-hero {
+        background: var(--black-color);
+        padding-top: var(--navbar-height);
+        margin: auto;
+    }
+
     .c-projects__button {
         padding: var(--spacing-sm);
     }
@@ -879,6 +886,14 @@ section {
 
 /* lg device */
 @media (max-width: 992px) {
+    .o-container--header {
+        flex-direction: column;
+    }
+
+    .c-header__top {
+        width: 100%;
+    }
+
     h2 {
         width: 100%;
         text-align: center;
@@ -889,8 +904,7 @@ section {
         display: none;
     }
 
-    .c-header__collapse,
-    .c-nav__li--contact {
+    .c-header__collapse {
         display: flex;
     }
 
@@ -898,17 +912,25 @@ section {
         display: none;
     }
 
-    .active-is {
-        justify-content: center;
-        align-items: flex-start;
-        gap: var(--spacing-lg);
-        flex-direction: column;
-    }
-
-    .is-active {
+    .c-nav.active {
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
         gap: var(--spacing-md);
+        justify-content: center;
+        padding-bottom: var(--spacing-md);
+    }
+
+    .c-nav__li {
+        width: 100%;
+    }
+
+    .c-nav__li a {
+        flex: 1;
+    }
+
+    .c-nav__li:last-child {
+        background-color: var(--cta-color);
     }
 
     .c-projects__cards {

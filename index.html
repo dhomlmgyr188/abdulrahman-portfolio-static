@@ -16,23 +16,25 @@
 </head>
 
 <body>
-    <header class="c-header" id="header">
-        <div class="o-container--header">
-            <a href="#hero" class="c-header__logo">
+    <header class="c-header">
+        <div class="o-container--header" id="header">
+            <div class="c-header__top">
+                <a href="#hero" class="c-header__logo">
                 <span>ANA</span><span>ALMUGHYIR</span>
             </a>
             <button type="button" id="collapse" aria-label="collapse" class="c-header__collapse">
                 <i class="fa-solid fa-bars"></i>
             </button>
+            </div>
             <ul class="c-nav" id="navbar">
-                <li class="c-nav__li"><a href="#hero" class="js-hero-button">الرئيسية</a></li>
-                <li class="c-nav__li"><a href="#about" class="js-hero-button">نبذة عني</a></li>
-                <li class="c-nav__li"><a href="#services" class="js-hero-button">الخدمات</a></li>
-                <li class="c-nav__li"><a href="#projects" class="js-hero-button js-projects-button">المشاريع</a></li>
-                <li class="c-nav__li"><a href="#certificates" class="js-hero-button">الشهادات</a></li>
-                <li class="c-nav__li"><a href="#contact" class="js-hero-button">تواصل معي</a></li>
+                <li class="c-nav__li hero button-active"><a href="#hero" class="js-hero-button">الرئيسية</a></li>
+                <li class="c-nav__li about"><a href="#about" class="js-hero-button">نبذة عني</a></li>
+                <li class="c-nav__li services"><a href="#services" class="js-hero-button">الخدمات</a></li>
+                <li class="c-nav__li projects"><a href="#projects" class="js-hero-button">المشاريع</a></li>
+                <li class="c-nav__li certificates"><a href="#certificates" class="js-hero-button">الشهادات</a></li>
+                <li class="c-nav__li contact"><a href="#contact" class="js-hero-button">تواصل معي</a></li>
             </ul>
-            <a href="#contact" class="c-header__button">تواصل معي</a>
+            <a href="#contact" class="c-header__button contact">تواصل معي</a>
         </div>
     </header>
     <main>
@@ -51,7 +53,7 @@
                         </p>
                         <div class="c-hero__actions">
                             <a href="#services" class="c-hero__button">شاهد خدماتي</a>
-                            <a href="#projects" class="c-hero__button c-hero__button--ghost">شاهد أعمالي</a>
+                            <a href="#projects" class="c-hero__button">شاهد أعمالي</a>
                         </div>
                     </div>
 
