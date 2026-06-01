@@ -13,14 +13,14 @@ collapse.addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
+  // let current = "";
+  // sections.forEach((section) => {
+  //   const sectionTop = section.offsetTop;
+  //   const sectionHeight = section.clientHeight;
+  //   if (pageYOffset >= sectionTop) {
+  //     current = section.getAttribute("id");
+  //   }
+  // });
 
   headerButton.forEach((li) => {
     navbar.classList.remove("active");
@@ -29,15 +29,15 @@ window.addEventListener("scroll", () => {
       li.classList.add("button-active");
     }
   });
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollTop > lastScrollTop) {
-    header.classList.add("hidden-header");
-  } else {
-    header.classList.remove("hidden-header");
-  }
-  lastScrollTop = scrollTop;
+  // var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  // if (scrollTop > lastScrollTop) {
+  //   header.classList.add("hidden-header");
+  // } else {
+  //   header.classList.remove("hidden-header");
+  // }
+  // lastScrollTop = scrollTop;
 
-  headerContainer.classList.toggle("slidedown", window.scrollY > 0)
+  // headerContainer.classList.toggle("slidedown", window.scrollY > 0)
 });
 
 

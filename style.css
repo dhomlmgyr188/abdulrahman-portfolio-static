@@ -84,6 +84,7 @@ html {
     box-sizing: inherit;
     scroll-behavior: smooth;
     height: -webkit-fill-available;
+    scroll-padding-top: var(--navbar-height);
 }
 
 body {
@@ -139,8 +140,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    scroll-margin-top: var(--navbar-height);
-    scroll-margin-bottom: -64px;
 }
 
 
@@ -228,13 +227,10 @@ section {
     right: 0;
     top: 0;
     z-index: 999;
-    background: transparent;
-    transition:all 0.3s ease-in-out;
-}
-.c-header.slidedown{
     background: var(--bg-navbar-color);
-    filter: drop-shadow(0px 0px 2px var(--white-color));
+    filter: drop-shadow(0px 0px 1px var(--white-color));
 }
+
 .c-header__top {
     display: flex;
     align-items: center;
@@ -829,11 +825,13 @@ section {
 /* certificates */
 .c-certificates {
     background-color: var(--bg--section-1-color);
+    height: 100vh;
 }
 
 /* contact */
 .c-contact {
     background-color: var(--bg--section-2-color);
+    height: 100vh;
 }
 
 .button-active {
