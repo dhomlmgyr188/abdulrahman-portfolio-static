@@ -401,7 +401,7 @@ section {
 .c-hero::before {
     content: "";
     position: absolute;
-    background: url(assets/images/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg) no-repeat center;
+    background: url(assets/images/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.gif) no-repeat center;
     background-size: cover;
     filter: brightness(15%);
     background-attachment: fixed;
