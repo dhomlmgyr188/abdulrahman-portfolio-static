@@ -53,6 +53,7 @@
     --icon-size: 48px;
     --logo-height: 64px;
     --navbar-height: 64px;
+    --ham-line-size: 4px;
     --container-width: 1408px;
     --instagram-color: #833AB4;
     --tiktok-color: #FE2C55;
@@ -138,6 +139,8 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-margin-top: var(--navbar-height);
+    scroll-margin-bottom: -64px;
 }
 
 
@@ -280,6 +283,11 @@ section {
 
 .c-nav__li:hover {
     background-color: var(--primary-color);
+}
+
+.c-nav__li:last-child {
+    display: none;
+    background-color: var(--cta-color);
 }
 
 .c-projects__button,
@@ -848,13 +856,45 @@ section {
 .c-header__collapse {
     display: none;
     flex-shrink: 0;
-    font-size: var(--sizing-md);
-    padding: var(--spacing-sm);
     color: var(--white-color) !important;
     background-color: var(--primary-color);
     transition: background-color 200ms ease;
+    width: var(--sizing-lg);
+    height: var(--sizing-lg);
+    position: relative;
+    margin-right: auto;
+    cursor: pointer;
 }
 
+.c-header__collapse span {
+    height: var(--ham-line-size);
+    width: 100%;
+    background-color: var(--white-color);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.c-header__collapse span:nth-child(1) {
+    top: 25%;
+}
+
+.c-header__collapse span:nth-child(3) {
+    top: 75%;
+}
+
+.c-nav.active .c-header__collapse span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(45deg);
+}
+.c-nav.active .c-header__collapse span:nth-child(2) {
+    opacity: 0;
+}
+.c-nav.active .c-header__collapse span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
 /* sm device */
 
 @media (max-width: 600px) {
@@ -925,12 +965,12 @@ section {
         width: 100%;
     }
 
-    .c-nav__li a {
-        flex: 1;
+    .c-nav__li:last-child {
+        display: flex;
     }
 
-    .c-nav__li:last-child {
-        background-color: var(--cta-color);
+    .c-nav__li a {
+        flex: 1;
     }
 
     .c-projects__cards {
