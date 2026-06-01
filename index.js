@@ -29,13 +29,13 @@ window.addEventListener("scroll", () => {
       li.classList.add("button-active");
     }
   });
-  // var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  // if (scrollTop > lastScrollTop) {
-  //   header.classList.add("hidden-header");
-  // } else {
-  //   header.classList.remove("hidden-header");
-  // }
-  // lastScrollTop = scrollTop;
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    header.classList.add("hidden-header");
+  } else {
+    header.classList.remove("hidden-header");
+  }
+  lastScrollTop = scrollTop;
 
   headerContainer.classList.toggle("slidedown", window.scrollY > 0)
 });
