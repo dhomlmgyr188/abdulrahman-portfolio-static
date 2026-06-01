@@ -402,9 +402,13 @@ section {
     content: "";
     position: absolute;
     background: url(assets/images/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.gif) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     filter: brightness(15%);
     inset: 0;
+    z-index: -10;
 }
 
 .c-hero .o-container {
@@ -901,9 +905,7 @@ section {
 
 @media (max-width: 600px) {
     .c-hero {
-        background: var(--black-color);
         padding-top: var(--navbar-height);
-        margin: auto;
     }
 
     .c-projects__button {
