@@ -11,45 +11,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <title>الملف الشخصي | عبدالرحمن ناصر المغير</title>
-  <script type="module" crossorigin src="/abdulrahman-portfolio-static/assets/index-B6DNkYNv.js"></script>
-  <link rel="stylesheet" crossorigin href="/abdulrahman-portfolio-static/assets/index-CadjKN81.css">
+  <script type="module" crossorigin src="/abdulrahman-portfolio-static/assets/index-Dqtn4M1s.js"></script>
+  <link rel="stylesheet" crossorigin href="/abdulrahman-portfolio-static/assets/index-BG7LRZeK.css">
 </head>
 
 <body>
     <header class="c-header" id="header">
-        <div class="c-header__wallpaper">
-            <a href="#hero">
-                <img src="/abdulrahman-portfolio-static/assets/logo-iqD1d1hb.png" alt="logo" class="c-header__img">
-            </a>
+        <div class="o-container--header">
+            <div class="c-header__wallpaper">
+                <a href="#hero">
+                    <img src="/abdulrahman-portfolio-static/assets/logo-iqD1d1hb.png" alt="logo" class="c-header__img">
+                </a>
+            </div>
+            <button type="button" id="collapse" aria-label="collapse" class="c-header__collapse">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="c-nav" id="navbar">
+                <li class="c-nav__li"><a href="#hero" class="js-hero-button">الرئيسية</a></li>
+                <li class="c-nav__li"><a href="#about" class="js-hero-button">نبذة عني</a></li>
+                <li class="c-nav__li"><a href="#services" class="js-hero-button">الخدمات</a></li>
+                <li class="c-nav__li"><a href="#projects" class="js-hero-button js-projects-button">المشاريع</a></li>
+                <li class="c-nav__li"><a href="#certificates" class="js-hero-button">الشهادات</a></li>
+                <li class="c-nav__li"><a href="#contact" class="js-hero-button">تواصل معي</a></li>
+            </ul>
+            <a href="#contact" class="c-header__button">تواصل معي</a>
         </div>
-        <button type="button" id="collapse" aria-label="collapse" class="c-header__collapse">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        <ul class="c-nav" id="navbar">
-            <li class="c-nav__li"><a href="#hero" class="js-hero-button">الرئيسية</a></li>
-            <li class="c-nav__li"><a href="#about" class="js-hero-button">نبذة عني</a></li>
-            <li class="c-nav__li"><a href="#services" class="js-hero-button">الخدمات</a></li>
-            <li class="c-nav__li"><a href="#projects" class="js-hero-button js-projects-button">المشاريع</a></li>
-            <li class="c-nav__li"><a href="#certificates" class="js-hero-button">الشهادات</a></li>
-            <li class="c-nav__li"><a href="#contact" class="js-hero-button">تواصل معي</a></li>
-        </ul>
-        <a href="#contact" class="c-header__button">تواصل معي</a>
     </header>
     <main>
         <section id="hero" class="c-hero">
             <div class="o-container">
-                <h1 class="c-title-no-margin">
-                    مرحبا أنا
-                    <span>عبدالرحمن المغير</span>
-                </h1>
-                <p class="c-hero__description">أصمم وأطور مواقع ويب <span>حديثة</span> <span>ومتجاوبة</span> مع مختلف
-                    الشاشات.</p>
-                <div class="c-hero__actions">
-                    <a href="#services" class="c-hero__button">الخدمات</a>
-                    <a href="#contact" class="c-hero__button c-hero__button--ghost">تواصل معي</a>
-                </div>
+                <section class="c-hero__section">
+                    <div class="c-hero__content">
+                        <span>مرحباً <span><img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2036%2036'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20aria-hidden='true'%20role='img'%20class='iconify%20iconify--twemoji'%20preserveAspectRatio='xMidYMid%20meet'%3e%3cpath%20fill='%23D2A077'%20d='M4.861%209.147c.94-.657%202.357-.531%203.201.166l-.968-1.407c-.779-1.111-.5-2.313.612-3.093c1.112-.777%204.263%201.312%204.263%201.312c-.786-1.122-.639-2.544.483-3.331a2.483%202.483%200%200%201%203.456.611l10.42%2014.72L25%2031l-11.083-4.042L4.25%2012.625a2.495%202.495%200%200%201%20.611-3.478z'%3e%3c/path%3e%3cpath%20fill='%23F3D2A2'%20d='M2.695%2017.336s-1.132-1.65.519-2.781c1.649-1.131%202.78.518%202.78.518l5.251%207.658c.181-.302.379-.6.6-.894L4.557%2011.21s-1.131-1.649.519-2.78c1.649-1.131%202.78.518%202.78.518l6.855%209.997c.255-.208.516-.417.785-.622L7.549%206.732s-1.131-1.649.519-2.78c1.649-1.131%202.78.518%202.78.518l7.947%2011.589c.292-.179.581-.334.871-.498L12.238%204.729s-1.131-1.649.518-2.78c1.649-1.131%202.78.518%202.78.518l7.854%2011.454l1.194%201.742c-4.948%203.394-5.419%209.779-2.592%2013.902c.565.825%201.39.26%201.39.26c-3.393-4.949-2.357-10.51%202.592-13.903L24.515%208.62s-.545-1.924%201.378-2.47c1.924-.545%202.47%201.379%202.47%201.379l1.685%205.004c.668%201.984%201.379%203.961%202.32%205.831c2.657%205.28%201.07%2011.842-3.94%2015.279c-5.465%203.747-12.936%202.354-16.684-3.11L2.695%2017.336z'%3e%3c/path%3e%3cg%20fill='%235DADEC'%3e%3cpath%20d='M12%2032.042C8%2032.042%203.958%2028%203.958%2024c0-.553-.405-1-.958-1s-1.042.447-1.042%201C1.958%2030%206%2034.042%2012%2034.042c.553%200%201-.489%201-1.042s-.447-.958-1-.958z'%3e%3c/path%3e%3cpath%20d='M7%2034c-3%200-5-2-5-5a1%201%200%201%200-2%200c0%204%203%207%207%207a1%201%200%201%200%200-2zM24%202a1%201%200%200%200%200%202c4%200%208%203.589%208%208a1%201%200%200%200%202%200c0-5.514-4-10-10-10z'%3e%3c/path%3e%3cpath%20d='M29%20.042c-.552%200-1%20.406-1%20.958s.448%201.042%201%201.042c3%200%204.958%202.225%204.958%204.958c0%20.552.489%201%201.042%201s.958-.448.958-1C35.958%203.163%2033%20.042%2029%20.042z'%3e%3c/path%3e%3c/g%3e%3c/svg%3e" alt="light-skin-tone"></span> , أنا عبدالرحمن المغير </span>
+                        <h1 class="c-title-no-margin">مطور ويب ووسائط متعددة</h1>
+                        <p class="c-hero__desc"></p>
+                    </div>
+                    <div class="c-hero__social-medias">
+                        <h3 class="c-hero__social__title">منصات التواصل الإجتماعي</h3>  
+                        <ul class="c-hero__social-nav">
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                            <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="c-hero__actions">
+                        <a href="#services" class="c-hero__button">خدماتي</a>
+                        <a href="#projects" class="c-hero__button c-hero__button--ghost">مشاريعي</a>
+                    </div>
+                </section>
+                <aside class="c-hero__aside">
+                    <img src="/abdulrahman-portfolio-static/assets/web-design-svgrepo-com%20(1)-DtRVP38z.svg" alt="design">
+                </aside>
             </div>
         </section>
         <section id="about" class="c-about">
