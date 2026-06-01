@@ -401,10 +401,9 @@ section {
 .c-hero::before {
     content: "";
     position: absolute;
-    background: url(assets/images/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.gif) no-repeat center;
+    background: url(assets/images/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.gif) no-repeat center center;
     background-size: cover;
     filter: brightness(15%);
-    background-attachment: fixed;
     inset: 0;
 }
 
@@ -888,13 +887,16 @@ section {
     top: 50%;
     transform: translate(-50%, 50%) rotate(45deg);
 }
+
 .c-nav.active .c-header__collapse span:nth-child(2) {
     opacity: 0;
 }
+
 .c-nav.active .c-header__collapse span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, 50%) rotate(-45deg);
 }
+
 /* sm device */
 
 @media (max-width: 600px) {
