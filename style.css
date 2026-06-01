@@ -52,7 +52,7 @@
     --icon-font-size: 24px;
     --icon-size: 48px;
     --logo-height: 64px;
-    --navbar-height: 80px;
+    --navbar-height: 64px;
     --container-width: 1408px;
     --instagram-color: #833AB4;
     --tiktok-color: #FE2C55;
@@ -417,8 +417,6 @@ section {
 } */
 .c-hero {
     min-height: 100svh;
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
 }
 
 .c-hero::before {
@@ -426,7 +424,7 @@ section {
     position: absolute;
     background: url(assets/images/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg) no-repeat center;
     background-size: cover;
-    filter: brightness(6%) grayscale(40%);
+    filter: brightness(15%);
     background-attachment: fixed;
     inset: 0;
 }
