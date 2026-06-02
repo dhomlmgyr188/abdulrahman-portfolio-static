@@ -664,6 +664,107 @@ section {
     background-color: var(--bg--section-1-color);
 }
 
+.c-services .o-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    height: 100%;
+}
+
+.services-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.c-how-to-use {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--sizing-sm);
+}
+
+.c-how-box-container {
+    display: grid;
+    width: 100%;
+    justify-content: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(var(--sizing-xxxl), 1fr));
+    grid-template-rows: repeat(3, var(--sizing-xl));
+    gap: var(--spacing-md);
+}
+
+.c-how-box {
+    background-color: red;
+}
+
+.c-instructions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.c-instructions>* {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    background-color: var(--cta-color);
+}
+
+.c-services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--sizing-sm);
+    grid-row: 4 / 1;
+}
+
+.c-categories {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: var(--spacing-md);
+}
+
+.c-services-filter nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    background-color: var();
+}
+
+.c-services-filter nav ul li {
+    color: var(--text-color-white);
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.c-services-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.c-services-cards-container {
+    display: grid;
+    gap: var(--spacing-md);
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+}
+
+.c-service-card {
+    background-color: var(--bg--section-2-color);
+}
+
+.c-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
 /* projects */
 .c-projects {
     background-color: var(--bg--section-2-color);
@@ -908,6 +1009,17 @@ section {
 /* sm device */
 
 @media (max-width: 600px) {
+    .services-main{
+        grid-template-columns: auto;
+    }
+    .c-how-box-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .o-container {
+        padding: 0 15px;
+    }
+
     .c-hero {
         padding-top: var(--navbar-height);
     }
@@ -934,6 +1046,23 @@ section {
 
 /* lg device */
 @media (max-width: 992px) {
+
+    .c-categories {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .c-services-filter ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .c-services-filter li {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
     .o-container--header {
         flex-direction: column;
     }
