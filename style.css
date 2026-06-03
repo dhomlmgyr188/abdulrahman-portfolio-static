@@ -47,6 +47,7 @@
     --sizing-lg: 32px;
     --sizing-lx: 48px;
     --sizing-xl: 64px;
+    --sizing-xsl: 96px;
     --sizing-xxl: 128px;
     --sizing-xxsl: 208px;
     --sizing-xxxl: 256px;
@@ -638,7 +639,7 @@ section {
 .c-services .o-container {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-xl);
 }
 
 .services__cards {
@@ -648,19 +649,34 @@ section {
 }
 
 .services__card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
     gap: var(--spacing-md);
     background-color: var(--bg--section-2-color);
     border: 1px solid var(--border-light-color);
 }
 
+.services__card h3 {
+    color: var(--primary-color);
+}
+
 .services__card i {
-    font-size: var(--sizing-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -48px;
+    background-color: var(--bg--section-1-color);
+    border: 1px solid var(--border-light-color);
+    color: var(--primary-color);
+    width: var(--sizing-xsl);
+    height: var(--sizing-xsl);
+    font-size: var(--sizing-lx);
 }
 
 .services__direct {
@@ -1140,6 +1156,7 @@ section {
 /* lg device */
 @media (max-width: 992px) {
     .services__cards {
+        gap: var(--spacing-xl);
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1234,21 +1251,28 @@ section {
 /* sm device */
 @media (max-width: 600px) {
     .c-services .o-container {
-        display: flex;
-        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .services__cards {
         gap: var(--spacing-lg);
     }
 
     .services__card {
-        padding: var(--spacing-md);
-        gap: var(--spacing-sm);
-    }
-
-    .services__card h3 {
-        font-size: var(--sizing-smd);
+        padding: var(--sizing-lx) var(--spacing-md) var(--spacing-md);
     }
 
     .services__card i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -16px;
+        background-color: var(--bg--section-1-color);
+        border: 1px solid var(--border-light-color);
+        color: var(--primary-color);
+        width: var(--sizing-lx);
+        height: var(--sizing-lx);
         font-size: var(--sizing-lg);
     }
 
@@ -1295,6 +1319,10 @@ section {
 }
 
 @media (max-width: 450px) {
+    .services__card h3 {
+        font-size: var(--sizing-md);
+    }
+
     .c-about__card__content>*:not(:first-child) {
         font-size: var(--spacing-smmd);
     }
