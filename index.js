@@ -95,7 +95,7 @@ allSliders.forEach((wrapperSlider) => {
 // filterServices
 const filterButtons = document.querySelectorAll(".c-services-filter btutton");
 const filterContainer = document.querySelectorAll(
-  ".c-services-cards-container .c-service-card",
+  ".c-services-cards-container .c-service-card ",
 );
 
 //
