@@ -6,7 +6,7 @@ const navbar = document.getElementById("navbar"),
 
 var lastScrollTop = 0,
   header = document.getElementById("header"),
-  headerContainer = document.querySelector(".c-header")
+  headerContainer = document.querySelector(".c-header");
 
 collapse.addEventListener("click", () => {
   navbar.classList.toggle("active");
@@ -39,7 +39,6 @@ window.addEventListener("scroll", () => {
 
   // headerContainer.classList.toggle("slidedown", window.scrollY > 0)
 });
-
 
 const allSliders = document.querySelectorAll(".c-wrapper-slider");
 
@@ -92,3 +91,27 @@ allSliders.forEach((wrapperSlider) => {
   wrapperSlider.addEventListener("mouseover", () => clearInterval(intervalId));
   wrapperSlider.addEventListener("mouseleave", autoSlide);
 });
+
+// filterServices
+const filterButtons = document.querySelectorAll(".c-services-filter btutton");
+const filterContainer = document.querySelectorAll(
+  ".c-services-cards-container .c-service-card",
+);
+
+//
+const filterCard = (e) => {
+  document.querySelector(".active").classList.remove("active");
+  e.target.classList.add("active");
+
+  filterContainer.forEach((card) => {
+    card.classList.add("hide");
+    
+    if ( card.dataset.name === e.target.dataset.name || e.target.dataset.name === "all") {
+      card.classList.remove("hide");
+      
+    }
+  });
+};
+// console.log(filterButtons, filterContainer);
+
+filterButtons.forEach((button) => button.addEventListener("click", filterCard));

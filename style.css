@@ -42,10 +42,12 @@
     --sizing-sm: 8px;
     --sizing-md: 16px;
     --sizing-lg: 32px;
+    --sizing-lx: 48px;
     --sizing-xl: 64px;
     --sizing-xxl: 128px;
     --sizing-xxsl: 208px;
     --sizing-xxxl: 256px;
+    --sizing-xxxll: 384px;
     --sizing-xxxxl: 512px;
     --sizing-xxxxxl: 768px;
     --sizing-xxxxxll: 896px;
@@ -124,7 +126,7 @@ h2 {
 
 h2 {
     font-size: var(--sizing-lg);
-    text-align: center;
+    text-align: right;
 }
 
 .c-title-no-margin {
@@ -414,13 +416,13 @@ section {
 
 .c-hero .o-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-lg);
-    flex-grow: 1;
 }
 
 .c-hero__section {
-    flex: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -438,6 +440,36 @@ section {
     max-width: var(--sizing-xxxxxll);
     gap: var(--spacing-lg);
     z-index: 1;
+    filter: drop-shadow(0px 0px 1px var(--dark-color));
+}
+
+.read-more-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color-white);
+    font-size: var(--sizing-md);
+}
+
+.read-more-hero i {
+    color: var(--primary-color);
+    display: flex;
+    width: var(--icon-font-size);
+    height: var(--icon-font-size);
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0px);
+    animation: updown 0.8s infinite ease-in-out alternate;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-4px);
+    }
 }
 
 .c-hero__content:last-child {
@@ -445,17 +477,15 @@ section {
 }
 
 .c-hero__content__title {
-    font-size: var(--sizing-xl);
+    font-size: var(--sizing-lx);
 }
 
 .c-hero__social-medias span,
 .c-hero__content span {
     font-size: var(--sizing-lg);
-    font-weight: 400;
 }
 
 .c-hero__content span img {
-    filter: hue-rotate(300deg);
     display: inline-block;
     width: var(--sizing-lg);
     height: var(--sizing-lg);
@@ -465,11 +495,13 @@ section {
 .c-hero__actions {
     display: flex;
     align-items: center;
-    justify-content: baseline;
-    gap: var(--spacing-md);
+    justify-content: center;
+    gap: var(--spacing-lg);
+    width: 100%;
 }
 
 .c-hero__button {
+    width: 100%;
     padding: var(--spacing-md);
     background-color: var(--primary-color);
     color: var(--text-color-white);
@@ -477,7 +509,7 @@ section {
     transition: background-color 200ms ease;
 }
 
-.c-services-filter nav ul li:hover,
+.c-services-filter__button:hover,
 .c-service-card__direct:hover,
 .c-hero__button:hover {
     background-color: var(--secondary-color);
@@ -542,80 +574,30 @@ section {
     color: var(--text-color-white);
     background-color: var(--cta-hover-color);
 }
-
-.c-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--spacing-lg);
-    background-color: var(--bg--section-2-color);
+.c-about h2,
+.c-about{
+    position: relative;
+    color: var(--text-color-white);
 }
-
-.c-about__footer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    gap: var(--spacing-lg);
+.c-about::before {
+    content: "";
+    position: absolute;
+    background: var(--primary-color);
+    filter: brightness(33%);
+    inset: 0;
+    z-index: -10;
 }
 
 .c-about__cards {
     display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: var(--spacing-lg);
-    max-width: var(--sizing-xxxxxl);
-}
-
-.c-about__card {
-    position: relative;
-    padding: var(--spacing-lg);
-    text-align: right;
 }
 
 .c-about__card__content {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
-    position: relative;
-    inset: 0;
-    z-index: 2;
-}
-
-
-.c-about__card--summary::after {
-    background-color: var(--bg--section-1-color);
-}
-
-.c-about__card--information::after {
-    background-color: var(--bg--section-1-color);
-}
-
-.c-about__card--information::after,
-.c-about__card--summary::after {
-    border: 1px solid var(--gray-color);
-    position: absolute;
-    content: "";
-    inset: 0;
-    z-index: 1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.c-about__list {
-    display: flex;
-    flex-direction: column;
-}
-
-.c-about__list__child {
-    position: relative;
-    margin-right: 24px;
-}
-
-.c-about__list__child::before {
-    position: absolute;
-    content: "✦";
-    transform: translateY(50%, -50%);
-    right: -24px;
 }
 
 .c-about__card__button {
@@ -637,9 +619,11 @@ section {
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    background-color: var(--cta-color);
-    box-shadow: inset 0px 0px 5px 0px var(--gray-color);
+    width: var(--sizing-xxxl);
+    height: var(--sizing-xxxl);
     border-radius: 50%;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-light-color);
 }
 
 .c-about__img {
@@ -647,13 +631,11 @@ section {
     width: 100%;
     object-fit: cover;
     object-position: center;
-    filter: grayscale(0.5);
     transition: transform 300ms ease, filter 300ms ease;
 }
 
 .c-about__preview:hover .c-about__img {
     transform: scale(1.1);
-    filter: grayscale(0) brightness(120%);
 }
 
 .c-about__img .c-about__preview:hover {
@@ -774,26 +756,25 @@ section {
     gap: var(--spacing-md);
 }
 
-.c-services-filter nav {
-    height: 100%;
-}
-
-.c-services-filter nav ul {
+.c-services-filter {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
     padding: var(--spacing-md);
-    height: 100%;
     background-color: var(--bg--section-2-color);
     border: 1px solid var(--border-light-color);
 }
 
-.c-services-filter nav ul li {
+.c-services-filter__button {
     color: var(--text-color-white);
     background-color: var(--primary-color);
     padding: var(--spacing-sm);
     text-align: center;
     cursor: pointer;
+}
+
+.c-services-filter__button.active {
+    background-color: var(--secondary-color);
 }
 
 .c-services-cards {
@@ -818,6 +799,10 @@ section {
     background-color: var(--bg--section-2-color);
     padding: var(--spacing-md);
     transition: all 200ms linear;
+}
+
+.c-service-card.hide {
+    display: none;
 }
 
 .c-service-card:hover {
@@ -1045,19 +1030,27 @@ section {
 
 /* xs device */
 @media (max-width: 500px) {
+    .c-about__preview {
+        width: var(--sizing-xxxl);
+        height: var(--sizing-xxxl);
+    }
 
+    .c-hero__content__title {
+        line-height: 1.3;
+    }
 
+    .c-hero__actions,
     .c-hero__content {
         gap: var(--spacing-md);
     }
 
-    .c-hero__desc,
     .c-hero__content span {
         font-size: var(--sizing-md);
     }
 
-    .c-hero__content__title {
-        font-size: var(--icon-font-size);
+    .c-hero__content span img {
+        width: var(--sizing-md);
+        height: var(--sizing-md);
     }
 
     .c-projects__button span {
@@ -1172,19 +1165,31 @@ section {
 
 /* lg device */
 @media (max-width: 992px) {
+    .c-about__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .c-about__card__content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .c-about__card__button {
+        width: 100%;
+    }
 
     .c-categories {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
 
-    .c-services-filter ul {
-        flex-direction: row;
+    .c-services-filter {
+        flex-direction: column;
         flex-wrap: wrap;
         gap: var(--spacing-md);
     }
 
-    .c-services-filter li {
+    .c-services-filter__button {
         padding: 8px 12px;
         font-size: 0.9rem;
     }
