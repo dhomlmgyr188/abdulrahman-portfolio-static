@@ -34,7 +34,10 @@
     --text-color-white: #ffffff;
     --border-light-color: #bebebe;
     --word-spacing: 2px;
+    --spacing-xs: 6px;
     --spacing-sm: 8px;
+    --spacing-smd: 12px;
+    --spacing-smmd: 14px;
     --spacing-md: 16px;
     --spacing-lg: 32px;
     --spacing-xl: 64px;
@@ -127,6 +130,11 @@ h2 {
 h2 {
     font-size: var(--sizing-lg);
     text-align: right;
+}
+
+h4,
+h3 {
+    color: var(--secondary-color);
 }
 
 .c-title-no-margin {
@@ -297,7 +305,6 @@ section {
 
 .c-projects__button,
 .c-services__button,
-.c-about__card__button,
 .c-nav__li a {
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--text-color-white);
@@ -563,84 +570,59 @@ section {
 
 /* about */
 .c-projects__button,
-.c-services__button,
-.c-about__card__button {
+.c-services__button {
     background-color: var(--cta-color);
 }
 
 .c-projects__button:hover,
-.c-services__button:hover,
-.c-about__card__button:hover {
+.c-services__button:hover {
     color: var(--text-color-white);
     background-color: var(--cta-hover-color);
 }
-.c-about h2,
-.c-about{
-    position: relative;
-    color: var(--text-color-white);
-}
-.c-about::before {
-    content: "";
-    position: absolute;
-    background: var(--primary-color);
-    filter: brightness(33%);
-    inset: 0;
-    z-index: -10;
+
+.c-about {
+    background-color: var(--bg--section-2-color);
 }
 
 .c-about__cards {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: var(--sizing-xxsl) 1fr 1fr;
+    width: 100%;
     gap: var(--spacing-lg);
+}
+
+.c-about__personal-img {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    height: var(--sizing-xxxl);
+    width: var(--sizing-xxsl);
+    border: 1px solid var(--border-light-color);
 }
 
 .c-about__card__content {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background-color: var(--bg--section-1-color);
+    border: 1px solid var(--border-light-color);
 }
 
 .c-about__card__button {
     width: fit-content;
+    padding: var(--spacing-sm) var(--spacing-md);
+    color: var(--text-color-white);
+    background-color: var(--primary-color);
+    transition: background-color 200ms linear;
 }
 
-.c-about__list__child,
-.c-about__link {
-    transition: color 300ms ease;
+.c-about__card__button:hover {
+    background-color: var(--secondary-color);
 }
 
-.c-about__list__child a:hover,
-.c-about__link:hover {
-    color: var(--cta-hover-color);
-}
-
-.c-about__preview {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    width: var(--sizing-xxxl);
-    height: var(--sizing-xxxl);
-    border-radius: 50%;
-    background-color: var(--white-color);
-    border: 1px solid var(--border-light-color);
-}
-
-.c-about__img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 300ms ease, filter 300ms ease;
-}
-
-.c-about__preview:hover .c-about__img {
-    transform: scale(1.1);
-}
-
-.c-about__img .c-about__preview:hover {
-    border-color: transparent;
-}
 
 /* services */
 .c-services {
@@ -1030,10 +1012,6 @@ section {
 
 /* xs device */
 @media (max-width: 500px) {
-    .c-about__preview {
-        width: var(--sizing-xxxl);
-        height: var(--sizing-xxxl);
-    }
 
     .c-hero__content__title {
         line-height: 1.3;
@@ -1103,59 +1081,15 @@ section {
     transform: translate(-50%, 50%) rotate(-45deg);
 }
 
-/* sm device */
 
-@media (max-width: 600px) {
-    .c-service-main__icon--size {
-        width: var(--icon-font-size);
-        height: var(--icon-font-size);
-    }
-
-    .c-how-box {
-        padding: var(--spacing-sm);
-    }
-
-    .c-hero {
-        padding-top: var(--navbar-height);
-    }
-
-    .c-projects__button {
-        padding: var(--spacing-sm);
-    }
-
-    .c-categories {
-        width: 100%;
-        grid-template-columns: 1fr;
-    }
-
-    .c-services-cards-container {
-        width: 100%;
-        grid-template-columns: repeat(1, 1fr) !important;
-    }
-}
-
-/* md device */
-@media (max-width: 768px) {
-
-
-    .c-services-cards-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .c-instructions>div {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* xl device */
 @media (max-width: 1200px) {
+
+
     .c-projects__cards {
         grid-template-columns: 1fr 1fr;
         margin: auto;
-    }
-
-    .c-about__footer {
-        flex-direction: column-reverse;
     }
 
     .c-how-box-container {
@@ -1163,19 +1097,15 @@ section {
     }
 }
 
+
 /* lg device */
 @media (max-width: 992px) {
     .c-about__cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .c-about__card__content {
-        align-items: center;
-        text-align: center;
-    }
-
-    .c-about__card__button {
-        width: 100%;
+    .c-about__card__content--summary {
+        grid-column: span 2;
     }
 
     .c-categories {
@@ -1245,4 +1175,63 @@ section {
         grid-template-columns: 1fr;
     }
 
+}
+
+/* md device */
+@media (max-width: 768px) {
+    .c-services-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .c-instructions>div {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* sm device */
+@media (max-width: 600px) {
+    .c-about__cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .c-about__card__content--summary {
+        grid-column: span 1;
+    }
+
+    .c-service-main__icon--size {
+        width: var(--icon-font-size);
+        height: var(--icon-font-size);
+    }
+
+    .c-how-box {
+        padding: var(--spacing-sm);
+    }
+
+    .c-hero {
+        padding-top: var(--navbar-height);
+    }
+
+    .c-projects__button {
+        padding: var(--spacing-sm);
+    }
+
+    .c-categories {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .c-services-cards-container {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .c-about__card__content > *:not(:first-child) {
+        font-size: var(--spacing-smmd);
+    }
+    .c-about__list__child span{
+        display: block;
+    }
 }
