@@ -133,9 +133,8 @@ h2 {
     text-align: right;
 }
 
-h4,
 h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .c-title-no-margin {
@@ -162,7 +161,23 @@ section {
     padding: var(--spacing-lg) var(--spacing-md);
 }
 
+.breadcrumb {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+}
 
+.breadcrumb-item a {
+    color: var(--cta-color);
+}
+
+.breadcrumb span {
+    color: var(--gray-color);
+}
+
+.breadcrumb-item.active {
+    color: var(--primary-color);
+}
 
 /* carousel */
 
@@ -292,7 +307,7 @@ section {
 
 .c-nav__li {
     display: flex;
-    transition: background-color 200ms ease;
+    transition: background-color 100ms linear;
 }
 
 .c-nav__li:hover {
@@ -305,7 +320,6 @@ section {
 }
 
 .c-projects__button,
-/* .c-services__button, */
 .c-nav__li a {
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--text-color-white);
@@ -316,7 +330,7 @@ section {
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--text-color-white) !important;
     background-color: var(--cta-color);
-    transition: background-color 200ms ease;
+    transition: background-color 100ms linear;
 }
 
 .c-header__button:hover {
@@ -514,11 +528,9 @@ section {
     background-color: var(--primary-color);
     color: var(--text-color-white);
     text-align: center;
-    transition: background-color 200ms ease;
+    transition: background-color 100ms linear;
 }
 
-/* .c-services-filter__button:hover, */
-/* .c-service-card__direct:hover, */
 .c-hero__button:hover {
     background-color: var(--secondary-color);
 }
@@ -568,27 +580,21 @@ section {
     }
 }
 
-
-/* about */
-.c-projects__button
-
-/* ,
-.c-services__button*/
-    {
+.c-projects__button {
     background-color: var(--cta-color);
 }
 
-.c-projects__button:hover
-
-/*,
- .c-services__button:hover */
-    {
+.c-projects__button:hover {
     color: var(--text-color-white);
     background-color: var(--cta-hover-color);
 }
 
 .c-about {
-    background-color: var(--bg--section-2-color);
+    background: linear-gradient(360deg, rgba(148, 0, 32, 0.055) 0%, rgba(100, 100, 100, 0.075) 100%);
+}
+
+.c-about .o-container {
+    border-bottom: 1px solid var(--border-light-color);
 }
 
 .c-about__cards {
@@ -623,7 +629,7 @@ section {
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--text-color-white);
     background-color: var(--primary-color);
-    transition: background-color 200ms linear;
+    transition: background-color 100ms linear;
 }
 
 .c-about__card__button:hover {
@@ -633,7 +639,7 @@ section {
 
 /* services */
 .c-services {
-    background-color: var(--bg--section-1-color);
+    background: linear-gradient(-180deg, rgba(148, 0, 32, 0.055) 0%, rgba(100, 100, 100, 0.075) 100%);
 }
 
 .c-services .o-container {
@@ -657,7 +663,7 @@ section {
     text-align: center;
     padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
     gap: var(--spacing-md);
-    background-color: var(--bg--section-2-color);
+    background-color: var(--bg--section-1-color);
     border: 1px solid var(--border-light-color);
 }
 
@@ -684,212 +690,13 @@ section {
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--text-color-white) !important;
     background-color: var(--primary-color);
-    transition: background-color 200ms ease;
+    transition: background-color 200ms linear;
 }
 
 .services__direct:hover {
     background-color: var(--secondary-color);
 }
 
-/* .services-main { 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: var(--spacing-lg);
-}
-*/
-/* .services-main > * {
-    border: 1px solid var(--border-light-color);
-    padding: var(--spacing-md);
-} */
-/* .c-service-main__icon--size {
-    width: var(--sizing-lg);
-    height: var(--sizing-lg);
-}
-
-.c-service-main__icon {
-    width: var(--icon-size-md);
-    height: var(--icon-size-md);
-    font: var(--icon-font-size);
-    margin-left: var(--spacing-sm);
-}
-
-.c-how-to-use {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--sizing-sm);
-}
-
-.c-how-box-container {
-    display: grid;
-    width: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--spacing-md);
-}
-
-.c-how-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--sizing-md);
-    overflow: hidden;
-    border: 1px solid var(--border-light-color);
-}
-
-.c-instructions {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: var(--spacing-sm);
-}
-
-.c-instructions>div {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: flex-start;
-    gap: var(--spacing-md);
-}
-
-.c-ins__provide,
-.c-ins__client {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    border: 1px solid var(--border-light-color);
-    padding: var(--spacing-md);
-}
-
-.c-ins__provide span {
-    color: var(--primary-color);
-}
-
-.c-ins__provide h4 {
-    display: flex;
-    align-items: center;
-}
-
-.c-ins__client h4 {
-    display: flex;
-    align-items: center;
-}
-
-.c-services-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: var(--sizing-sm);
-}
-
-.c-categories {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    gap: var(--spacing-md);
-}
-
-.c-services-filter {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md);
-    background-color: var(--bg--section-2-color);
-    border: 1px solid var(--border-light-color);
-}
-
-.c-services-filter__button {
-    color: var(--text-color-white);
-    background-color: var(--primary-color);
-    padding: var(--spacing-sm);
-    text-align: center;
-    cursor: pointer;
-}
-
-.c-services-filter__button.active {
-    background-color: var(--secondary-color);
-}
-
-.c-services-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-md);
-}
-
-.c-services-cards-container {
-    display: grid;
-    gap: var(--spacing-md);
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.c-service-card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    color: var(--text-color-dark);
-    border: 1px solid var(--border-dark-color);
-    background-color: var(--bg--section-2-color);
-    padding: var(--spacing-md);
-    transition: all 200ms linear;
-}
-
-.c-service-card.hide {
-    display: none;
-}
-
-.c-service-card:hover {
-    border: 1px solid var(--primary-color);
-    transform: scale(1.01);
-}
-
-.c-service-card__date {
-    color: var(--highlight-color);
-}
-
-.c-service-card header>*:not(:last-child),
-.c-service-card>*:not(:last-child) {
-    border-bottom: 1px solid var(--border-light-color);
-    padding-bottom: var(--spacing-sm);
-}
-
-.c-service-card header {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-
-}
-
-.c-service-card header>div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.c-service-card__direct {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary-color);
-    color: var(--text-color-white);
-    padding: var(--spacing-md);
-    width: 100%;
-    transition: background-color 200ms ease;
-}
-
-.c-reviews {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    align-items: flex-start;
-    justify-content: flex-start;
-    grid-row: 4;
-} */
 
 /* projects */
 .c-projects {
@@ -913,30 +720,6 @@ section {
     color: var(--cta-color);
     background-color: #026cc90c;
 }
-
-/* .c-projects__navbar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
-}
-
-.c-projects__label {
-    cursor: pointer;
-    padding-left: var(--spacing-sm);
-    padding-bottom: var(--spacing-sm);
-    padding-top: var(--spacing-sm);
-    color: var(--text-color-white);
-    background-color: var(--primary-color);
-    transition: background-color 200ms ease;
-    flex: 1;
-    text-align: center;
-}
-
-.c-projects__input {
-    appearance: none;
-} */
 
 .c-projects__cards {
     display: grid;
@@ -1096,7 +879,7 @@ section {
     flex-shrink: 0;
     color: var(--white-color) !important;
     background-color: var(--primary-color);
-    transition: background-color 200ms ease;
+    transition: background-color 200ms linear;
     width: var(--sizing-lg);
     height: var(--sizing-lg);
     position: relative;
@@ -1173,7 +956,7 @@ section {
         gap: var(--spacing-md);
     }
 
-    /* .c-services-filter {
+    .c-services-filter {
         flex-direction: column;
         flex-wrap: wrap;
         gap: var(--spacing-md);
@@ -1182,7 +965,7 @@ section {
     .c-services-filter__button {
         padding: 8px 12px;
         font-size: 0.9rem;
-    } */
+    }
 
     .o-container--header {
         flex-direction: column;
@@ -1239,9 +1022,9 @@ section {
 
 /* md device */
 @media (max-width: 768px) {
-    /* .c-services-cards-container {
+    .c-services-cards-container {
         grid-template-columns: repeat(2, 1fr);
-    } */
+    }
 
     .c-instructions>div {
         grid-template-columns: 1fr;
@@ -1290,10 +1073,10 @@ section {
         grid-column: span 1;
     }
 
-    /* .c-service-main__icon--size {
+    .c-service-main__icon--size {
         width: var(--icon-font-size);
         height: var(--icon-font-size);
-    } */
+    }
 
     .c-how-box {
         padding: var(--spacing-sm);
@@ -1312,10 +1095,10 @@ section {
         grid-template-columns: 1fr;
     }
 
-    /* .c-services-cards-container {
+    .c-services-cards-container {
         width: 100%;
         grid-template-columns: repeat(1, 1fr) !important;
-    } */
+    }
 }
 
 @media (max-width: 450px) {

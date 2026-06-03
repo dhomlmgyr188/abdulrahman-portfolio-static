@@ -1,0 +1,219 @@
+
+.services-main { 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: var(--spacing-lg);
+}
+
+ .services-main > * {
+    border: 1px solid var(--border-light-color);
+    padding: var(--spacing-md);
+} 
+ .c-service-main__icon--size {
+    width: var(--sizing-lg);
+    height: var(--sizing-lg);
+}
+
+.c-service-main__icon {
+    width: var(--icon-size-md);
+    height: var(--icon-size-md);
+    font: var(--icon-font-size);
+    margin-left: var(--spacing-sm);
+}
+
+.c-how-to-use {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--sizing-sm);
+}
+
+.c-how-box-container {
+    display: grid;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.c-how-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--sizing-md);
+    overflow: hidden;
+    border: 1px solid var(--border-light-color);
+}
+
+.c-instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
+.c-instructions>div {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.c-ins__provide,
+.c-ins__client {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    border: 1px solid var(--border-light-color);
+    padding: var(--spacing-md);
+}
+
+.c-ins__provide span {
+    color: var(--primary-color);
+}
+
+.c-ins__provide h4 {
+    display: flex;
+    align-items: center;
+}
+
+.c-ins__client h4 {
+    display: flex;
+    align-items: center;
+}
+
+.c-services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--sizing-sm);
+}
+
+.c-categories {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: var(--spacing-md);
+}
+
+.c-services-filter {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background-color: var(--bg--section-2-color);
+    border: 1px solid var(--border-light-color);
+}
+
+.c-services-filter__button {
+    color: var(--text-color-white);
+    background-color: var(--primary-color);
+    padding: var(--spacing-sm);
+    text-align: center;
+    cursor: pointer;
+}
+
+.c-services-filter__button.active {
+    background-color: var(--secondary-color);
+}
+
+.c-services-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.c-services-cards-container {
+    display: grid;
+    gap: var(--spacing-md);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.c-service-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    color: var(--text-color-dark);
+    border: 1px solid var(--border-dark-color);
+    background-color: var(--bg--section-2-color);
+    padding: var(--spacing-md);
+    transition: all 200ms linear;
+}
+
+.c-service-card.hide {
+    display: none;
+}
+
+.c-service-card:hover {
+    border: 1px solid var(--primary-color);
+    transform: scale(1.01);
+}
+
+.c-service-card__date {
+    color: var(--highlight-color);
+}
+
+.c-service-card header>*:not(:last-child),
+.c-service-card>*:not(:last-child) {
+    border-bottom: 1px solid var(--border-light-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+.c-service-card header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+
+}
+
+.c-service-card header>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.c-service-card__direct {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--text-color-white);
+    padding: var(--spacing-md);
+    width: 100%;
+    transition: background-color 200ms ease;
+}
+
+.c-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+    justify-content: flex-start;
+    grid-row: 4;
+} 
+.c-services__button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    color: var(--text-color-white);
+}
+
+.c-services-filter__button:hover,
+.c-service-card__direct:hover {
+    background-color: var(--secondary-color);
+}
+
+.c-services__button {
+    background-color: var(--cta-color);
+}
+
+
+.c-services__button:hover {
+    color: var(--text-color-white);
+    background-color: var(--cta-hover-color);
+}
