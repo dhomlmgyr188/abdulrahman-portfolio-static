@@ -33,7 +33,7 @@
 .c-projects__cards {
     display: grid;
     gap: var(--spacing-md);
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr 1fr;
 }
 
 .c-projects__card {
