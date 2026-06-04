@@ -115,3 +115,34 @@ const filterCard = (e) => {
 // console.log(filterButtons, filterContainer);
 
 filterButtons.forEach((button) => button.addEventListener("click", filterCard));
+
+// filterSkills
+const skillButtons = document.querySelectorAll(".bgcolor-guide button");
+const skillItems = document.querySelectorAll(".skills-tech-container .skill");
+
+const highlightSkills = (e) => {
+  const currentActive = document.querySelector(".bgcolor-guide button.active");
+  if (currentActive) {
+    currentActive.classList.remove("active");
+  }
+  
+  e.target.classList.add("active");
+
+  const filterName = e.target.dataset.name;
+
+  skillItems.forEach((skill) => {
+    skill.classList.remove("highlighted", "dimmed");
+
+    if (filterName === "all") {
+      return;
+    }
+
+    if (skill.dataset.name === filterName) {
+      skill.classList.add("highlighted");
+    } else {
+      skill.classList.add("dimmed");
+    }
+  });
+};
+
+skillButtons.forEach((button) => button.addEventListener("click", highlightSkills));
