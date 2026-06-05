@@ -285,7 +285,6 @@ section {
     padding: var(--spacing-sm) var(--spacing-md);
     overflow-wrap: break-word;
     max-width: var(--container-width);
-    transition: 0.6s;
 }
 
 .hidden-header {
@@ -303,7 +302,9 @@ section {
 .c-nav {
     display: flex;
     gap: var(--spacing-md);
+
 }
+
 
 .c-nav__li {
     display: flex;
@@ -420,7 +421,7 @@ section {
     transform: skewX(5deg) translateY(-10px);
 } */
 .c-hero {
-    background: var(--bg--section-1-color);
+    background-color: var(--bg--section-1-color);
 }
 
 
@@ -438,6 +439,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: var(--spacing-md);
+    color: var(--text-color-dark);
 }
 
 .c-hero__content {
@@ -447,7 +449,6 @@ section {
     align-items: center;
     text-align: center;
     max-width: var(--sizing-xxxxxll);
-    color: var(--text-color-dark);
     gap: var(--spacing-lg);
     z-index: 1;
     filter: drop-shadow(0px 0px 1px var(--dark-color));
@@ -659,7 +660,7 @@ section {
     top: -48px;
     background-color: var(--bg--section-1-color);
     border: 1px solid var(--border-light-color);
-    color: var(--black);
+    color: var(--black-color);
     width: var(--sizing-xsl);
     height: var(--sizing-xsl);
     font-size: var(--sizing-lx);
@@ -689,11 +690,8 @@ section {
 }
 
 .project-card {
-    position: relative;
     border: 1px solid var(--border-light-color);
 }
-
-
 
 .project-card main>*:not(:last-child) {
     border-bottom: 1px solid var(--border-light-color);
@@ -768,7 +766,6 @@ section {
 .skills-con-with-nav {
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-md);
     gap: var(--spacing-lg);
 }
 
@@ -776,6 +773,8 @@ section {
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-light-color);
 }
 
 .bgcolor-guide div {
@@ -792,12 +791,12 @@ section {
     color: var(--text-color-white);
     font-size: var(--sizing-ml);
     padding: var(--spacing-md);
-    outline: none;
-    border: none;
-    transition: all 100ms linear;
+    border: 1px solid var(--border-light-color);
 }
 
-
+.bgcolor-guide button:hover {
+    filter: brightness(120%);
+}
 
 .bgcolor-guide button:nth-child(1) {
     background-color: var(--gray-color);
@@ -812,22 +811,6 @@ section {
 }
 
 .bgcolor-guide button:nth-child(4) {
-    background-color: var(--learning-color);
-}
-
-.bgcolor-guide button:hover {
-    filter: brightness(120%);
-}
-
-.skill.expert {
-    background-color: var(--expert-color);
-}
-
-.skill.proficient {
-    background-color: var(--proficient-color);
-}
-
-.skill.learning {
     background-color: var(--learning-color);
 }
 
@@ -858,14 +841,15 @@ section {
     width: 100%;
 }
 
+
 .skills-tech-container .skill.highlighted {
     z-index: 10;
     opacity: 1;
 }
 
 .skills-tech-container .skill.dimmed {
-    transform: scale(0.86);
-    opacity: 0.4;
+    transform: scale(0.80);
+    opacity: 0.2;
     filter: grayscale(100%);
 }
 
@@ -877,8 +861,8 @@ section {
     height: var(--sizing-xl);
     padding: var(--spacing-sm) var(--spacing-md);
     width: 100%;
+    border: 1px solid var(--border-light-color);
     transition: all 200ms linear;
-    overflow: hidden;
     z-index: 1;
 }
 
@@ -887,6 +871,18 @@ section {
     background-color: var(--bg--section-2-color);
     border: 2px solid var(--border-light-color);
     padding: var(--spacing-xs) var(--sizing-sm);
+}
+
+.skill.expert {
+    background-color: var(--expert-color);
+}
+
+.skill.proficient {
+    background-color: var(--proficient-color);
+}
+
+.skill.learning {
+    background-color: var(--learning-color);
 }
 
 .skill h3 {
@@ -925,6 +921,20 @@ section {
     transform: translate(50%, -50%);
 }
 
+.o-container--header:has(.c-nav.active) .c-header__collapse span:nth-child(1) {
+    top: 50%;
+    transform: translate(50%, -50%) rotate(45deg);
+}
+
+.o-container--header:has(.c-nav.active) .c-header__collapse span:nth-child(2) {
+    opacity: 0;
+}
+
+.o-container--header:has(.c-nav.active) .c-header__collapse span:nth-child(3) {
+    top: 50%;
+    transform: translate(50%, -50%) rotate(-45deg);
+}
+
 .c-header__collapse span:nth-child(1) {
     top: 25%;
 }
@@ -933,25 +943,12 @@ section {
     top: 75%;
 }
 
-.c-nav.active .c-header__collapse span:nth-child(1) {
-    top: 50%;
-    transform: translate(-50%, 50%) rotate(45deg);
-}
-
-.c-nav.active .c-header__collapse span:nth-child(2) {
-    opacity: 0;
-}
-
-.c-nav.active .c-header__collapse span:nth-child(3) {
-    top: 50%;
-    transform: translate(-50%, 50%) rotate(-45deg);
-}
-
-
 
 /* xl device */
 @media (max-width: 1200px) {
-
+    .skills-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
 
     .c-projects__cards {
         grid-template-columns: 1fr 1fr;
@@ -1022,6 +1019,8 @@ section {
         gap: var(--spacing-md);
         justify-content: center;
         padding-bottom: var(--spacing-md);
+        transition: all 5s linear;
+
     }
 
     .c-nav__li {
@@ -1072,6 +1071,10 @@ section {
         padding: var(--spacing-smmd) 0;
     }
 
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .c-services-cards-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1083,14 +1086,14 @@ section {
 
 /* sm device */
 @media (max-width: 600px) {
-
-
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
     .projects-container {
         grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: var(--spacing-md);
+    }
+
+    .skills-con-with-nav {
+
+        gap: var(--spacing-sm);
     }
 
     section {
@@ -1105,17 +1108,12 @@ section {
         gap: var(--spacing-md);
     }
 
-    .skills-con-with-nav {
-        gap: var(--spacing-md);
-
-    }
-
     .c-services .o-container {
         gap: var(--spacing-lg);
     }
 
     .services__cards {
-        gap: var(--spacing-lg);
+        gap: var(--spacing-md);
     }
 
     .services__card {
@@ -1141,6 +1139,7 @@ section {
     .c-about__cards {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        gap: var(--spacing-md);
     }
 
     .c-about__card__content--summary {
@@ -1202,15 +1201,10 @@ section {
 
     .skills-grid {
         grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: var(--spacing-sm);
     }
 
     .skill {
         height: var(--sizing-lx);
-    }
-
-    .skills-tech-container {
-        gap: var(--spacing-sm);
     }
 
     .skill img {
@@ -1246,10 +1240,6 @@ section {
 
     .services__card h3 {
         font-size: var(--sizing-md);
-    }
-
-    .c-about__cards {
-        gap: var(--spacing-sm);
     }
 
     .c-about__card__content>*:not(:first-child) {
