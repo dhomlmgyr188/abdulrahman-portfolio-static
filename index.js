@@ -105,10 +105,12 @@ const filterCard = (e) => {
 
   filterContainer.forEach((card) => {
     card.classList.add("hide");
-    
-    if ( card.dataset.name === e.target.dataset.name || e.target.dataset.name === "all") {
+
+    if (
+      card.dataset.name === e.target.dataset.name ||
+      e.target.dataset.name === "all"
+    ) {
       card.classList.remove("hide");
-      
     }
   });
 };
@@ -125,7 +127,7 @@ const highlightSkills = (e) => {
   if (currentActive) {
     currentActive.classList.remove("active");
   }
-  
+
   e.target.classList.add("active");
 
   const filterName = e.target.dataset.name;
@@ -145,4 +147,7 @@ const highlightSkills = (e) => {
   });
 };
 
-skillButtons.forEach((button) => button.addEventListener("click", highlightSkills));
+skillButtons.forEach((button) =>
+  button.addEventListener("click", highlightSkills),
+);
+
