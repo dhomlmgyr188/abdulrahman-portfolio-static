@@ -1156,6 +1156,7 @@ section {
 @media (max-width: 768px) {
     .c-cert {
         position: static;
+        height: var(--sizing-xxl)
     }
 
     .cert-wrapper {
