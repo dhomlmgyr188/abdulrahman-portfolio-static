@@ -920,6 +920,7 @@ section {
     flex: 1;
     position: relative;
     height: var(--sizing-xxxxl);
+    overflow: hidden;   
 }
 
 .c-cert img {
@@ -1156,7 +1157,7 @@ section {
 @media (max-width: 768px) {
     .c-cert {
         position: static;
-        height: var(--sizing-xxl)
+        height: var(--sizing-xxxl)
     }
 
     .cert-wrapper {
