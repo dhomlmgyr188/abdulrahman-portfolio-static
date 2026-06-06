@@ -151,3 +151,4 @@ skillButtons.forEach((button) =>
   button.addEventListener("click", highlightSkills),
 );
 
+const copyRight = document.getElementById("copyRight").innerHTML = "©" + new Date().getFullYear();
