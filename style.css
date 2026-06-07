@@ -27,7 +27,7 @@
     --text-white-color: #fff;
 
     --primary-color: #CC5452;
-    --secondary-color: #d87c7b;
+    --secondary-color: #e49594;
 
     --cta-color: #06662E;
     --cta-hover-color: #349660;
@@ -41,6 +41,7 @@
     --bg-footer-copyright-color: #737373;
 
     --border-light-color: #bbbbbb;
+    --border-light-content-color: #eeeeee;
 
     --gradient--deep-color: #003DB3;
     --gradient-mediator-color: #4D77CA;
@@ -65,6 +66,7 @@
     --sizing-xs: 4px;
     --sizing-sm: 8px;
     --sizing-md: 16px;
+    --sizing-mm: 20px;
     --sizing-ml: 24px;
     --sizing-lg: 32px;
     --sizing-lx: 48px;
@@ -365,7 +367,7 @@ section {
 }
 
 .c-hero__content__title {
-    font-size: var(--sizing-xl);
+    font-size: var(--sizing-lx);
 }
 
 .c-hero__content {
@@ -376,7 +378,7 @@ section {
     text-align: center;
     gap: var(--spacing-lg);
     z-index: 1;
-    font-size: var(--sizing-ml);
+    font-size: var(--sizing-mm);
     filter: drop-shadow(0px 0px 1px var(--dark-color));
 }
 
@@ -386,8 +388,8 @@ section {
 
 .c-hero__content span img {
     display: inline-block;
-    width: var(--sizing-ml);
-    height: var(--sizing-ml);
+    width: var(--sizing-mm);
+    height: var(--sizing-mm);
     animation: wave-animation 2.5s infinite;
 }
 
@@ -517,7 +519,7 @@ section {
     margin: 0 auto;
     background-color: var(--white-color);
     height: var(--sizing-xxxl);
-    border: 1px solid var(--border-light-color);
+    border: 1px solid var(--border-light-content-color);
 }
 
 .c-about__card__content {
@@ -526,7 +528,7 @@ section {
     gap: var(--spacing-md);
     padding: var(--spacing-md);
     background-color: var(--bg--section-1-color);
-    border: 1px solid var(--border-light-color);
+    border: 1px solid var(--border-light-content-color);
 }
 
 .c-about__card__button {
@@ -553,7 +555,11 @@ section {
     flex-direction: column;
     gap: var(--spacing-lg);
 }
-
+.c-services .o-container header h3{
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: var(--sizing-lx);
+}
 .services__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -567,10 +573,10 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: var(--spacing-xl) var(--spacing-md) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
     gap: var(--spacing-md);
     background-color: var(--bg--section-2-color);
-    border: 1px solid var(--border-light-color);
+    border: 1px solid var(--border-light-content-color);
 }
 
 .services__card h2 {
@@ -584,7 +590,7 @@ section {
     position: absolute;
     top: -48px;
     background-color: var(--bg--section-1-color);
-    border: 1px solid var(--border-light-color);
+    border: 1px solid var(--border-light-content-color);
     color: var(--gray-color);
     width: var(--sizing-xl);
     height: var(--sizing-xl);
@@ -633,7 +639,7 @@ section {
 }
 
 .project-card {
-    border: 1px solid var(--border-light-color);
+    border: 1px solid var(--border-light-content-color);
     background-color: var(--bg--section-1-color);
 }
 
@@ -677,7 +683,7 @@ section {
     width: 100%;
     object-fit: cover;
     object-position: top;
-    border-bottom: 1px solid var(--border-light-color);
+    border-bottom: 1px solid var(--border-light-content-color);
 }
 
 .project-card-direct {
@@ -712,7 +718,7 @@ section {
     align-items: center;
     gap: var(--spacing-md);
     padding-bottom: var(--spacing-md);
-    border-bottom: 1px solid var(--border-light-color);
+    border-bottom: 1px solid var(--border-light-content-color);
 }
 
 .bgcolor-guide div {
@@ -729,7 +735,7 @@ section {
     color: var(--text-white-color);
     font-size: var(--sizing-ml);
     padding: var(--spacing-md);
-    border: 1px solid var(--border-light-color);
+    border: 1px solid var(--border-light-content-color);
 }
 
 .bgcolor-guide button:hover {
@@ -799,7 +805,7 @@ section {
     justify-content: center;
     height: var(--sizing-xl);
     width: 100%;
-    border: 1px solid var(--border-light-color);
+    border: 1px solid var(--border-light-content-color);
     transition: all 200ms linear;
     z-index: 1;
 }
@@ -857,7 +863,7 @@ section {
 .c-cert-container::before {
     position: absolute;
     content: "";
-    width: var(--spacing-ss);
+    width: 2px;
     height: 100%;
     right: 50%;
     transform: translateX(50%);
@@ -891,7 +897,7 @@ section {
 .c-cert img {
     height: 100%;
     width: 100%;
-    border: 2px solid var(--gray-color);
+    border: 1px solid var(--border-light-content-color);
 }
 
 .c-cert {
@@ -934,7 +940,7 @@ section {
 
 .c-cert-content>*:not(:last-child) {
     width: 100%;
-    border-bottom: 1px solid var(--border-light-color);
+    border-bottom: 1px solid var(--border-light-content-color);
     padding-bottom: var(--spacing-md);
 }
 
@@ -976,7 +982,7 @@ section {
 /*  call-to-action */
 .call-to-action {
     background-color: var(--bg--section-1-color);
-    border-bottom: 1px solid var(--border-light-color);
+    border-bottom: 1px solid var(--border-light-content-color);
 }
 
 /*  */
@@ -1019,7 +1025,7 @@ section {
 }
 
 .c-footer-group-column-1>*:not(:last-child) {
-    border-bottom: 1px solid var(--border-light-color);
+    border-bottom: 1px solid var(--border-light-content-color);
     padding-bottom: var(--spacing-md);
 }
 
@@ -1307,7 +1313,6 @@ section {
     }
 
     .c-cert-container::before {
-        width: 4px;
         right: 0%;
     }
 
@@ -1338,7 +1343,7 @@ section {
         gap: var(--spacing-md);
         padding: var(--sizing-md);
         background-color: var(--bg--section-1-color);
-        border: 1px solid var(--border-light-color);
+        border: 1px solid var(--border-light-content-color);
     }
 
     .c-cert-content h3 {
@@ -1443,10 +1448,6 @@ section {
         gap: var(--spacing-lg);
     }
 
-    .services__card {
-        padding: var(--sizing-lx) var(--spacing-md) var(--spacing-md);
-    }
-
     .services__card i {
         top: -24px;
         width: var(--sizing-lx);
@@ -1546,7 +1547,7 @@ section {
         width: 100%;
         font-size: var(--sizing-md);
         padding: var(--spacing-sm);
-        border: 1px solid var(--border-light-color);
+        border: 1px solid var(--border-light-content-color);
     }
 
     .skills-grid {
