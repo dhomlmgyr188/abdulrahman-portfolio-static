@@ -20,10 +20,11 @@
 :root {
     /* colors */
     --black-color: #1f1f1f;
-    --gray-color: gray;
+    --gray-color: #808080;
     --white-color: #fff;
 
     --text-dark-color: #1f1f1f;
+    --text-gray-color: #808080;
     --text-white-color: #fff;
 
     --primary-color: #CC5452;
@@ -147,6 +148,14 @@ h1 {
     margin-bottom: 0;
 }
 
+select {
+    border: 1px solid var(--border-light-color);
+    outline: none;
+    padding: var(--sizing-sm);
+    font-size: var(--sizing-md);
+    background-color: var(--white-color);
+    cursor: pointer;
+}
 
 section {
     display: flex;
@@ -167,19 +176,18 @@ section {
 .breadcrumb {
     display: flex;
     gap: var(--spacing-sm);
-    padding: var(--spacing-md);
 }
 
 .breadcrumb-item a {
-    color: var(--cta-color);
+    color: var(--primary-color);
 }
 
 .breadcrumb span {
-    color: var(--gray-color);
+    color: var(--text-gray-color);
 }
 
 .breadcrumb-item.active {
-    color: var(--primary-color);
+    color: var(--text-gray-color);
 }
 
 /* carousel */
@@ -241,6 +249,8 @@ section {
 .js-prev-carousel {
     left: var(--sizing-md);
 }
+
+
 
 /* header */
 
@@ -555,11 +565,13 @@ section {
     flex-direction: column;
     gap: var(--spacing-lg);
 }
-.c-services .o-container header h3{
+
+.c-services .o-container header h3 {
     color: var(--secondary-color);
     text-align: center;
     margin-bottom: var(--sizing-lx);
 }
+
 .services__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

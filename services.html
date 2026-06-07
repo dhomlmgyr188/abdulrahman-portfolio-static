@@ -21,7 +21,7 @@
     <header class="c-header">
         <div class="o-container--header" id="header">
             <div class="c-header__top">
-                <a href="#hero" class="c-header__logo">
+                <a href="./index.html" class="c-logo">
                     <span>ANA</span><span>ALMUGHYIR</span>
                 </a>
                 <div id="collapse" class="c-header__collapse">
@@ -34,321 +34,354 @@
                 <li class="c-nav__li hero"><a href="./index.html" class="js-hero-button">الرئيسية</a></li>
                 <li class="c-nav__li hero"><a href="./index.html#about" class="js-hero-button">نبذة عني</a></li>
                 <li class="c-nav__li services"><a href="./services.html" class="js-hero-button">خدماتي</a></li>
-                <li class="c-nav__li projects"><a href="./projects.html" class="js-hero-button">مشاريعي</a></li>
+                <li class="c-nav__li projects"><a href="./projects.html" class="js-hero-button">أعمالي</a></li>
                 <li class="c-nav__li contact"><a href="./contact.html" class="js-hero-button">تواصل معي</a></li>
             </ul>
-            <a href="./contact.html" class="c-header__button contact">تواصل معي</a>
+            <a href="./contact.html" class="c-header__button contact"><b>تواصل معي</b></a>
         </div>
     </header>
-    <main>
-        <div class="o-container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./index.html">الرئيسية</a></li>
-                <li><span>/</span></li>
-                <li class="breadcrumb-item active">خدماتي</li>
-            </ol>
-        </div>
 
-        <section id="services" class="c-services">
-            <div class="o-container">
-                <h2 class="c-title-no-margin">خدماتي</h2>
-                <main class="services-main">
-                    <section class="c-how-to-use">
-                        <h3 class="c-title-no-margin">الية الطلب</h3>
-                        <ol class="c-how-box-container">
-                            <li class="c-how-box">
-                                دخول الموقع.
-                                <img src="assets/icons/how-use/log-in (1).png" alt="log-in icon"
-                                    class="c-service-main__icon--size">
-                            </li>
-                            <li class="c-how-box">
-                                قسم الخدمات.
-                                <img src="assets/icons/how-use/service.png" alt="service icon"
-                                    class="c-service-main__icon--size">
-                            </li>
-                            <li class="c-how-box">
-                                تقديم طلب.
-                                <img src="assets/icons/how-use/request.png" alt="request icon"
-                                    class="c-service-main__icon--size">
-                            </li>
-                            <li class="c-how-box">
-                                قناة التواصل.
-                                <img src="assets/icons/how-use/communication.png" alt="communication icon"
-                                    class="c-service-main__icon--size">
-                            </li>
-                            <li class="c-how-box">
-                                الإتفاق والتنفيذ.
-                                <img src="assets/icons/how-use/chat.png" alt="chat icon"
-                                    class="c-service-main__icon--size">
-                            </li>
-                            <li class="c-how-box">
-                                الدفع والتقييم.
-                                <img src="assets/icons/how-use/verified.png" alt="verified icon"
-                                    class="c-service-main__icon--size">
-                            </li>
-                        </ol>
-                    </section>
-                    <section class="c-instructions">
-                        <h3 class="c-title-no-margin">التعليمات</h3>
-                        <div>
-                            <div class="c-ins__provide">
-                                <h4 class="c-title-no-margin">
-                                    <img src="assets/icons/guide/guidebook.png" alt="guidebook icon"
-                                        class="c-service-main__icon">
-                                    مقدم الخدمة
-                                </h4>
-                                <ol>
-                                    <li>يمكنك طلب 3 تعديلات وفي حال طلب المزيد تكون هناك <span>رسوم إضافية</span>.</li>
-                                    <li>دفع نصف سعر الخدمة قبل البدء بالتنفيذ والنصف الأخر عند الإنتهاء.</li>
-                                    <li>ملتزم بتقديم الخدمة كاملة وبجودة عالية ومتجاوبة كما هي موضحة.</li>
-                                </ol>
-                            </div>
-                            <div class="c-ins__client">
-                                <h4 class="c-title-no-margin">
-                                    <img src="assets/icons/guide/bill-of-rights.png" alt="bill-of-rights"
-                                        class="c-service-main__icon">
-                                    طالب الخدمة
-                                </h4>
-                                <ol>
-                                    <li>في حال كانت جودة الخدمة رديئة أو ممتازة يمكنك <a href="#">تقييم مقدم الخدمة</a>.
-                                    </li>
-                                    <li>من حقك <a href="#">طلب الدعم والمساعدة</a> لفهم الية الخدمة لمن ليس لديهم خبرة.
-                                    </li>
-                                </ol>
-                            </div>
+
+    <section id="services" class="c-services">
+        <div class="o-container">
+            <header>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">الرئيسية</a></li>
+                    <li><span><i class="fa-solid fa-chevron-left"></i></span></li>
+                    <li class="breadcrumb-item active">خدماتي</li>
+                </ol>
+                <div class="c-services__space-between">
+                    <h1 class="c-services__title c-title-no-margin">جميع الخدمات</h1>
+                    <select name="sorting" id="sorting">
+                        <option selected disabled>اختر الترتيب</option>
+                        <option value="oldest">الأقدم</option> <!-- ترتيب من الأقدم إلى الأحدث حسب تاريخ النشر -->
+                        <option value="newest">الأحدث </option> <!-- ترتيب من الأحدث إلى الأقدم حسب تاريخ النشر -->
+                        <option value="lowest">أقل سعر</option> <!-- ترتيب تصاعدي من السعر الأقل إلى الأعلى -->
+                        <option value="highest">أعلى سعر</option> <!-- ترتيب تنازلي من السعر الأعلى إلى الأقل -->
+                    </select>
+                </div>
+            </header>
+            <main>
+                <aside class="sidebar-services">
+                    <h3>تصفية الخدمات</h3>
+                    <form method="get" class="c-filtering-services-form">
+                        <div class="c-form__group__inline">
+                            <input type="checkbox" name="web-design" id="web-design">
+                            <label for="web-design">تصميم واجهات المستخدم</label>
                         </div>
-                    </section>
-                    <section class="c-reviews">
-                        <h3 class="c-title-no-margin">التقييمات</h3>
-                    </section>
-                    <section class="c-services-container">
-                        <h3 class="c-title-no-margin">التصنيفات</h3>
-                        <div class="c-categories">
-                            <aside class="c-services-filter">
-                                <btutton class="c-services-filter__button active" data-name="all">الكل</btutton>
-                                <btutton class="c-services-filter__button" data-name="frontend">تطوير واجهات المستخدم
-                                </btutton>
-                                <btutton class="c-services-filter__button" data-name="maintenance">إصلاح أخطاء المواقع
-                                </btutton>
-                                <btutton class="c-services-filter__button" data-name="fullstack">تطوير نظام ويب متكامل
-                                </btutton>
-                                <btutton class="c-services-filter__button" data-name="database">تطوير قواعد البيانات
-                                </btutton>
-                            </aside>
-                            <div class="c-services-cards">
-                                <div class="c-services-cards-container">
-                                    <div class="c-service-card" data-name="frontend">
-                                        <header>
-                                            <div>
-                                                <h4 class="c-service-card__title">تطوير ملف الأعمال Portfolio</h4>
-                                                <span class="c-service-card__date">2026/7/21</span>
-                                            </div>
-                                            <p class="c-service-card__desc">انشاء صفحات حديثة ومتجاوبة مع التركيز على
-                                                سرعة
-                                                المتصفح</p>
-                                        </header>
+                        <div class="c-form__group__inline">
+                            <input type="checkbox" name="front-end-dev" id="front-end-dev">
+                            <label for="front-end-dev">تطوير الواجهات الأمامية</label>
+                        </div>
+                        <div class="c-form__group__inline">
+                            <input type="checkbox" name="back-end-dev" id="back-end-dev">
+                            <label for="back-end-dev">تطوير الواجهات الخلفية</label>
+                        </div>
+                        <div class="c-form__group__inline">
+                            <input type="checkbox" name="database-dev" id="database-dev">
+                            <label for="database-dev">تطوير قواعد البيانات</label>
+                        </div>
+                    </form>
+                </aside>
+                <section>
+                    c-service-card
+                </section>
+            </main>
+            <!-- <main class="services-main">
+                <section class="c-how-to-use">
+                    <h3 class="c-title-no-margin">الية الطلب</h3>
+                    <ol class="c-how-box-container">
+                        <li class="c-how-box">
+                            دخول الموقع.
+                            <img src="assets/icons/how-use/log-in (1).png" alt="log-in icon"
+                                class="c-service-main__icon--size">
+                        </li>
+                        <li class="c-how-box">
+                            قسم الخدمات.
+                            <img src="assets/icons/how-use/service.png" alt="service icon"
+                                class="c-service-main__icon--size">
+                        </li>
+                        <li class="c-how-box">
+                            تقديم طلب.
+                            <img src="assets/icons/how-use/request.png" alt="request icon"
+                                class="c-service-main__icon--size">
+                        </li>
+                        <li class="c-how-box">
+                            قناة التواصل.
+                            <img src="assets/icons/how-use/communication.png" alt="communication icon"
+                                class="c-service-main__icon--size">
+                        </li>
+                        <li class="c-how-box">
+                            الإتفاق والتنفيذ.
+                            <img src="assets/icons/how-use/chat.png" alt="chat icon" class="c-service-main__icon--size">
+                        </li>
+                        <li class="c-how-box">
+                            الدفع والتقييم.
+                            <img src="assets/icons/how-use/verified.png" alt="verified icon"
+                                class="c-service-main__icon--size">
+                        </li>
+                    </ol>
+                </section>
+                <section class="c-instructions">
+                    <h3 class="c-title-no-margin">التعليمات</h3>
+                    <div>
+                        <div class="c-ins__provide">
+                            <h4 class="c-title-no-margin">
+                                <img src="assets/icons/guide/guidebook.png" alt="guidebook icon"
+                                    class="c-service-main__icon">
+                                مقدم الخدمة
+                            </h4>
+                            <ol>
+                                <li>يمكنك طلب 3 تعديلات وفي حال طلب المزيد تكون هناك <span>رسوم إضافية</span>.</li>
+                                <li>دفع نصف سعر الخدمة قبل البدء بالتنفيذ والنصف الأخر عند الإنتهاء.</li>
+                                <li>ملتزم بتقديم الخدمة كاملة وبجودة عالية ومتجاوبة كما هي موضحة.</li>
+                            </ol>
+                        </div>
+                        <div class="c-ins__client">
+                            <h4 class="c-title-no-margin">
+                                <img src="assets/icons/guide/bill-of-rights.png" alt="bill-of-rights"
+                                    class="c-service-main__icon">
+                                طالب الخدمة
+                            </h4>
+                            <ol>
+                                <li>في حال كانت جودة الخدمة رديئة أو ممتازة يمكنك <a href="#">تقييم مقدم الخدمة</a>.
+                                </li>
+                                <li>من حقك <a href="#">طلب الدعم والمساعدة</a> لفهم الية الخدمة لمن ليس لديهم خبرة.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+                <section class="c-reviews">
+                    <h3 class="c-title-no-margin">التقييمات</h3>
+                </section>
+                <section class="c-services-container">
+                    <h3 class="c-title-no-margin">التصنيفات</h3>
+                    <div class="c-categories">
+                        <aside class="c-services-filter">
+                            <btutton class="c-services-filter__button active" data-name="all">الكل</btutton>
+                            <btutton class="c-services-filter__button" data-name="frontend">تطوير واجهات المستخدم
+                            </btutton>
+                            <btutton class="c-services-filter__button" data-name="maintenance">إصلاح أخطاء المواقع
+                            </btutton>
+                            <btutton class="c-services-filter__button" data-name="fullstack">تطوير نظام ويب متكامل
+                            </btutton>
+                            <btutton class="c-services-filter__button" data-name="database">تطوير قواعد البيانات
+                            </btutton>
+                        </aside>
+                        <div class="c-services-cards">
+                            <div class="c-services-cards-container">
+                                <div class="c-service-card" data-name="frontend">
+                                    <header>
                                         <div>
-                                            <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
-                                            <ul class="c-service-card__audeince">
-                                                <li>الراغبين إستعراض أعمالهم</li>
-                                                <li>قطاع الأعمال والشركات</li>
-                                            </ul>
+                                            <h4 class="c-service-card__title">تطوير ملف الأعمال Portfolio</h4>
+                                            <span class="c-service-card__date">2026/7/21</span>
                                         </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
-                                            <span class="c-service-card__duration">7 أيام.</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">السعر: </h4>
-                                            <span class="c-service-card__price">يبدء من 200 ريال.</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">المميزات:</h4>
-                                            <ul class="c-service-card__benefits">
-                                                <li>خصم 50% عند طلب خدمة أخرى</li>
-                                                <li>تصميم سيرة ذاتية مجانا</li>
-                                            </ul>
-                                        </div>
-                                        <a href="#" class="c-service-card__direct">طلب الخدمة</a>
+                                        <p class="c-service-card__desc">انشاء صفحات حديثة ومتجاوبة مع التركيز على
+                                            سرعة
+                                            المتصفح</p>
+                                    </header>
+                                    <div>
+                                        <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
+                                        <ul class="c-service-card__audeince">
+                                            <li>الراغبين إستعراض أعمالهم</li>
+                                            <li>قطاع الأعمال والشركات</li>
+                                        </ul>
                                     </div>
-                                    <div class="c-service-card" data-name="database">
-                                        <header>
-                                            <div>
-                                                <h4 class="c-service-card__title">تطوير database</h4>
-                                                <span class="c-service-card__date">2026/7/21</span>
-                                            </div>
-                                            <p class="c-service-card__desc">انشاء صفحات حديثة ومتجاوبة مع التركيز على
-                                                سرعة
-                                                المتصفح</p>
-                                        </header>
-                                        <div>
-                                            <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
-                                            <ul class="c-service-card__audeince">
-                                                <li>الراغبين إستعراض أعمالهم</li>
-                                                <li>قطاع الأعمال والشركات</li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
-                                            <span class="c-service-card__duration">7 أيام.</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">السعر: </h4>
-                                            <span class="c-service-card__price">يبدء من 200 ريال.</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">المميزات:</h4>
-                                            <ul class="c-service-card__benefits">
-                                                <li>خصم 50% عند طلب خدمة أخرى</li>
-                                                <li>تصميم سيرة ذاتية مجانا</li>
-                                            </ul>
-                                        </div>
-                                        <a href="#" class="c-service-card__direct">طلب الخدمة</a>
+                                    <div>
+                                        <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
+                                        <span class="c-service-card__duration">7 أيام.</span>
                                     </div>
-                                    <div class="c-service-card" data-name="fullstack">
-                                        <header>
-                                            <div>
-                                                <h4 class="c-service-card__title">نظام ويب متكامل</h4>
-                                                <span class="c-service-card__date">2026/7/21</span>
-                                            </div>
-                                            <p class="c-service-card__desc">انشاء صفحات حديثة ومتجاوبة مع التركيز على
-                                                سرعة
-                                                المتصفح</p>
-                                        </header>
-                                        <div>
-                                            <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
-                                            <ul class="c-service-card__audeince">
-                                                <li>الراغبين إستعراض أعمالهم</li>
-                                                <li>قطاع الأعمال والشركات</li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
-                                            <span class="c-service-card__duration">7 أيام.</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">السعر: </h4>
-                                            <span class="c-service-card__price">يبدء من 200 ريال.</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">المميزات:</h4>
-                                            <ul class="c-service-card__benefits">
-                                                <li>خصم 50% عند طلب خدمة أخرى</li>
-                                                <li>تصميم سيرة ذاتية مجانا</li>
-                                            </ul>
-                                        </div>
-                                        <a href="#" class="c-service-card__direct">طلب الخدمة</a>
+                                    <div>
+                                        <h4 class="c-title-no-margin">السعر: </h4>
+                                        <span class="c-service-card__price">يبدء من 200 ريال.</span>
                                     </div>
-                                    <div class="c-service-card" data-name="fullstack">
-                                        <header>
-                                            <div>
-                                                <h4 class="c-service-card__title">نظام ويب متكامل</h4>
-                                                <span class="c-service-card__date">2026/7/21</span>
-                                            </div>
-                                            <p class="c-service-card__desc">انشاء صفحات حديثة ومتجاوبة مع التركيز على
-                                                سرعة
-                                                المتصفح</p>
-                                        </header>
-                                        <div>
-                                            <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
-                                            <ul class="c-service-card__audeince">
-                                                <li>الراغبين إستعراض أعمالهم</li>
-                                                <li>قطاع الأعمال والشركات</li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
-                                            <span class="c-service-card__duration">7 أيام.</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">السعر: </h4>
-                                            <span class="c-service-card__price">يبدء من 200 ريال.</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">المميزات:</h4>
-                                            <ul class="c-service-card__benefits">
-                                                <li>خصم 50% عند طلب خدمة أخرى</li>
-                                                <li>تصميم سيرة ذاتية مجانا</li>
-                                            </ul>
-                                        </div>
-                                        <a href="#" class="c-service-card__direct">طلب الخدمة</a>
+                                    <div>
+                                        <h4 class="c-title-no-margin">المميزات:</h4>
+                                        <ul class="c-service-card__benefits">
+                                            <li>خصم 50% عند طلب خدمة أخرى</li>
+                                            <li>تصميم سيرة ذاتية مجانا</li>
+                                        </ul>
                                     </div>
-                                    <div class="c-service-card" data-name="frontend">
-                                        <header>
-                                            <div>
-                                                <h4 class="c-service-card__title">تطوير ملف الأعمال Portfolio</h4>
-                                                <span class="c-service-card__date">2026/7/21</span>
-                                            </div>
-                                            <p class="c-service-card__desc">انشاء صفحات حديثة ومتجاوبة مع التركيز على
-                                                سرعة
-                                                المتصفح</p>
-                                        </header>
+                                    <a href="#" class="c-service-card__direct">طلب الخدمة</a>
+                                </div>
+                                <div class="c-service-card" data-name="database">
+                                    <header>
                                         <div>
-                                            <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
-                                            <ul class="c-service-card__audeince">
-                                                <li>الراغبين إستعراض أعمالهم</li>
-                                                <li>قطاع الأعمال والشركات</li>
-                                            </ul>
+                                            <h4 class="c-service-card__title">تطوير database</h4>
+                                            <span class="c-service-card__date">2026/7/21</span>
                                         </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
-                                            <span class="c-service-card__duration">7 أيام.</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">السعر: </h4>
-                                            <span class="c-service-card__price">يبدء من 200 ريال.</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">المميزات:</h4>
-                                            <ul class="c-service-card__benefits">
-                                                <li>خصم 50% عند طلب خدمة أخرى</li>
-                                                <li>تصميم سيرة ذاتية مجانا</li>
-                                            </ul>
-                                        </div>
-                                        <a href="#" class="c-service-card__direct">طلب الخدمة</a>
+                                        <p class="c-service-card__desc">انشاء صفحات حديثة ومتجاوبة مع التركيز على
+                                            سرعة
+                                            المتصفح</p>
+                                    </header>
+                                    <div>
+                                        <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
+                                        <ul class="c-service-card__audeince">
+                                            <li>الراغبين إستعراض أعمالهم</li>
+                                            <li>قطاع الأعمال والشركات</li>
+                                        </ul>
                                     </div>
-                                    <div class="c-service-card" data-name="maintenance">
-                                        <header>
-                                            <div>
-                                                <h4 class="c-service-card__title">صيانة واصلاح الموقع</h4>
-                                                <span class="c-service-card__date">2026/7/21</span>
-                                            </div>
-                                            <p class="c-service-card__desc">انشاء صفحات حديثة ومتجاوبة مع التركيز على
-                                                سرعة
-                                                المتصفح</p>
-                                        </header>
-                                        <div>
-                                            <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
-                                            <ul class="c-service-card__audeince">
-                                                <li>الراغبين إستعراض أعمالهم</li>
-                                                <li>قطاع الأعمال والشركات</li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
-                                            <span class="c-service-card__duration">7 أيام.</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">السعر: </h4>
-                                            <span class="c-service-card__price">يبدء من 200 ريال.</span>
-                                        </div>
-                                        <div>
-                                            <h4 class="c-title-no-margin">المميزات:</h4>
-                                            <ul class="c-service-card__benefits">
-                                                <li>خصم 50% عند طلب خدمة أخرى</li>
-                                                <li>تصميم سيرة ذاتية مجانا</li>
-                                            </ul>
-                                        </div>
-                                        <a href="#" class="c-service-card__direct">طلب الخدمة</a>
+                                    <div>
+                                        <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
+                                        <span class="c-service-card__duration">7 أيام.</span>
                                     </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">السعر: </h4>
+                                        <span class="c-service-card__price">يبدء من 200 ريال.</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">المميزات:</h4>
+                                        <ul class="c-service-card__benefits">
+                                            <li>خصم 50% عند طلب خدمة أخرى</li>
+                                            <li>تصميم سيرة ذاتية مجانا</li>
+                                        </ul>
+                                    </div>
+                                    <a href="#" class="c-service-card__direct">طلب الخدمة</a>
+                                </div>
+                                <div class="c-service-card" data-name="fullstack">
+                                    <header>
+                                        <div>
+                                            <h4 class="c-service-card__title">نظام ويب متكامل</h4>
+                                            <span class="c-service-card__date">2026/7/21</span>
+                                        </div>
+                                        <p class="c-service-card__desc">انشاء صفحات حديثة ومتجاوبة مع التركيز على
+                                            سرعة
+                                            المتصفح</p>
+                                    </header>
+                                    <div>
+                                        <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
+                                        <ul class="c-service-card__audeince">
+                                            <li>الراغبين إستعراض أعمالهم</li>
+                                            <li>قطاع الأعمال والشركات</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
+                                        <span class="c-service-card__duration">7 أيام.</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">السعر: </h4>
+                                        <span class="c-service-card__price">يبدء من 200 ريال.</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">المميزات:</h4>
+                                        <ul class="c-service-card__benefits">
+                                            <li>خصم 50% عند طلب خدمة أخرى</li>
+                                            <li>تصميم سيرة ذاتية مجانا</li>
+                                        </ul>
+                                    </div>
+                                    <a href="#" class="c-service-card__direct">طلب الخدمة</a>
+                                </div>
+                                <div class="c-service-card" data-name="fullstack">
+                                    <header>
+                                        <div>
+                                            <h4 class="c-service-card__title">نظام ويب متكامل</h4>
+                                            <span class="c-service-card__date">2026/7/21</span>
+                                        </div>
+                                        <p class="c-service-card__desc">انشاء صفحات حديثة ومتجاوبة مع التركيز على
+                                            سرعة
+                                            المتصفح</p>
+                                    </header>
+                                    <div>
+                                        <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
+                                        <ul class="c-service-card__audeince">
+                                            <li>الراغبين إستعراض أعمالهم</li>
+                                            <li>قطاع الأعمال والشركات</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
+                                        <span class="c-service-card__duration">7 أيام.</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">السعر: </h4>
+                                        <span class="c-service-card__price">يبدء من 200 ريال.</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">المميزات:</h4>
+                                        <ul class="c-service-card__benefits">
+                                            <li>خصم 50% عند طلب خدمة أخرى</li>
+                                            <li>تصميم سيرة ذاتية مجانا</li>
+                                        </ul>
+                                    </div>
+                                    <a href="#" class="c-service-card__direct">طلب الخدمة</a>
+                                </div>
+                                <div class="c-service-card" data-name="frontend">
+                                    <header>
+                                        <div>
+                                            <h4 class="c-service-card__title">تطوير ملف الأعمال Portfolio</h4>
+                                            <span class="c-service-card__date">2026/7/21</span>
+                                        </div>
+                                        <p class="c-service-card__desc">انشاء صفحات حديثة ومتجاوبة مع التركيز على
+                                            سرعة
+                                            المتصفح</p>
+                                    </header>
+                                    <div>
+                                        <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
+                                        <ul class="c-service-card__audeince">
+                                            <li>الراغبين إستعراض أعمالهم</li>
+                                            <li>قطاع الأعمال والشركات</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
+                                        <span class="c-service-card__duration">7 أيام.</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">السعر: </h4>
+                                        <span class="c-service-card__price">يبدء من 200 ريال.</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">المميزات:</h4>
+                                        <ul class="c-service-card__benefits">
+                                            <li>خصم 50% عند طلب خدمة أخرى</li>
+                                            <li>تصميم سيرة ذاتية مجانا</li>
+                                        </ul>
+                                    </div>
+                                    <a href="#" class="c-service-card__direct">طلب الخدمة</a>
+                                </div>
+                                <div class="c-service-card" data-name="maintenance">
+                                    <header>
+                                        <div>
+                                            <h4 class="c-service-card__title">صيانة واصلاح الموقع</h4>
+                                            <span class="c-service-card__date">2026/7/21</span>
+                                        </div>
+                                        <p class="c-service-card__desc">انشاء صفحات حديثة ومتجاوبة مع التركيز على
+                                            سرعة
+                                            المتصفح</p>
+                                    </header>
+                                    <div>
+                                        <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
+                                        <ul class="c-service-card__audeince">
+                                            <li>الراغبين إستعراض أعمالهم</li>
+                                            <li>قطاع الأعمال والشركات</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
+                                        <span class="c-service-card__duration">7 أيام.</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">السعر: </h4>
+                                        <span class="c-service-card__price">يبدء من 200 ريال.</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="c-title-no-margin">المميزات:</h4>
+                                        <ul class="c-service-card__benefits">
+                                            <li>خصم 50% عند طلب خدمة أخرى</li>
+                                            <li>تصميم سيرة ذاتية مجانا</li>
+                                        </ul>
+                                    </div>
+                                    <a href="#" class="c-service-card__direct">طلب الخدمة</a>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                </main>
-            </div>
-        </section>
-    </main>
+                    </div>
+                </section>
+            </main> -->
+        </div>
+    </section>
 
     <script type="module" src="./index.js"></script>
 </body>
