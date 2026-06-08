@@ -52,7 +52,7 @@
                 </ol>
                 <div class="c-services__space-between">
                     <h1 class="c-services__title c-title-no-margin">جميع الخدمات</h1>
-                    <select name="sorting" id="sorting">
+                    <select name="sorting" id="sorting" aria-label="sorting">
                         <option selected disabled>اختر الترتيب</option>
                         <option value="oldest">الأقدم</option> <!-- ترتيب من الأقدم إلى الأحدث حسب تاريخ النشر -->
                         <option value="newest">الأحدث </option> <!-- ترتيب من الأحدث إلى الأقدم حسب تاريخ النشر -->
@@ -61,7 +61,7 @@
                     </select>
                 </div>
             </header>
-            <main>
+            <main class="c-services-main">
                 <aside class="sidebar-services">
                     <h3>تصفية الخدمات</h3>
                     <form method="get" class="c-filtering-services-form">
@@ -83,8 +83,112 @@
                         </div>
                     </form>
                 </aside>
-                <section>
-                    c-service-card
+                <section class="c-services_cards">
+                    <div class="c-service-card">
+                        <header>
+                            <div>
+                                <span class="c-service-card__date js-service-date">2026/01/01</span>
+                                <h4 class="c-service-card__title">تصميم الهوية البصرية</h4>
+                            </div>
+                            <p class="c-service-card__desc">
+                                تصميم هوية بصرية جذابة لموقعك الإلكتروني تشمل: (الشعار, الخطوط, الألوان)
+                            </p>
+                        </header>
+                        <div>
+                            <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
+                            <ul class="c-service-card__audeince">
+                                <li>من لا يمتلك هوية بصرية.</li>
+                                <li>الراغبين بتطوير هوية بصرية سابقة.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
+                            <span class="c-service-card__duration">1 يوم</span>
+                        </div>
+                        <div>
+                            <h4 class="c-title-no-margin">السعر: </h4>
+                            <span class="c-service-card__price js-service-price">التسعيرة</span>
+                        </div>
+                        <div>
+                            <h4 class="c-title-no-margin">المميزات:</h4>
+                            <ul class="c-service-card__benefits">
+                                <li>خصم 25% على جميع خدمات تصميم الواجهات (خدمة 1 فقط). </li>
+                                <li>إمكانية طلب التعديل (3 مرات).</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/966541590819?text=طلب تصميم الهوية البصرية" class="c-service-card__direct">طلب الخدمة</a>
+                    </div>
+                    
+                    <div class="c-service-card">
+                        <header>
+                            <div>
+                                <span class="c-service-card__date js-service-date">2026/01/01</span>
+                                <h4 class="c-service-card__title">تصميم صفحات موقعك الإلكتروني </h4>
+                            </div>
+                            <p class="c-service-card__desc">
+                               تصميم صفحات موقعك الإلكتروني كاملة بأحدث برامج التصميم قبل التطوير الفعلي
+                            </p>
+                        </header>
+                        <div>
+                            <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
+                            <ul class="c-service-card__audeince">
+                                <li>من يحتاج الى تطوير موقع الكتروني.</li>
+                                <li>من لا يمتلك خبرة ببرامج التصميم.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
+                            <span class="c-service-card__duration">تختلف حسب عدد الصفحات</span>
+                        </div>
+                        <div>
+                            <h4 class="c-title-no-margin">السعر: </h4>
+                            <span class="c-service-card__price js-service-price">التسعيرة</span>
+                        </div>
+                        <div>
+                            <h4 class="c-title-no-margin">المميزات:</h4>
+                            <ul class="c-service-card__benefits">
+                                <li>رؤية صفحات موقعك الإلكتروني كاملة قبل التطوير.</li>
+                                <li>خصم 25% على جميع خدمات تطوير الواجهة الأمامية (خدمة 1 فقط).</li>
+                                <li>إمكانية طلب التعديل (3 مرات).</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/966541590819?text=طلب تصميم صفحات موقع الكتروني" class="c-service-card__direct">طلب الخدمة</a>
+                    </div>
+                    <div class="c-service-card">
+                        <header>
+                            <div>
+                                <span class="c-service-card__date js-service-date">2026/01/01</span>
+                                <h4 class="c-service-card__title">تصميم صفحة هبوط </h4>
+                            </div>
+                            <p class="c-service-card__desc">
+                               تصميم الصفحة التي يهبط عليها الزائر بهدف التوجيه أو التسويق بأفضل برامج التصميم مع مراعاة أهداف التوجيه
+                            </p>
+                        </header>
+                        <div>
+                            <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
+                            <ul class="c-service-card__audeince">
+                                <li>من يحتاج الى تطوير موقع الكتروني.</li>
+                                <li>من لا يمتلك خبرة ببرامج التصميم.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
+                            <span class="c-service-card__duration">تختلف حسب عدد الصفحات</span>
+                        </div>
+                        <div>
+                            <h4 class="c-title-no-margin">السعر: </h4>
+                            <span class="c-service-card__price js-service-price">التسعيرة</span>
+                        </div>
+                        <div>
+                            <h4 class="c-title-no-margin">المميزات:</h4>
+                            <ul class="c-service-card__benefits">
+                                <li>رؤية صفحات موقعك الإلكتروني كاملة قبل التطوير.</li>
+                                <li>خصم 25% على جميع خدمات تطوير الواجهة الأمامية (خدمة 1 فقط).</li>
+                                <li>إمكانية طلب التعديل (3 مرات).</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/966541590819?text=طلب تصميم صفحات موقع الكتروني" class="c-service-card__direct">طلب الخدمة</a>
+                    </div>
                 </section>
             </main>
             <!-- <main class="services-main">
