@@ -357,7 +357,7 @@ section {
 
 .c-hero {
     background-color: var(--bg--section-1-color);
-    border-bottom: 1px solid var(--border-light-color);
+    
 }
 
 
@@ -510,7 +510,7 @@ section {
 /* about */
 .c-about {
     background: var(--bg--section-2-color);
-    border-bottom: 1px solid var(--border-light-color);
+    
 }
 
 .c-about__title {
@@ -558,7 +558,7 @@ section {
 
 /* services */
 .c-services {
-    border-bottom: 1px solid var(--border-light-color);
+    
     background: var(--bg--section-1-color);
 }
 
@@ -637,7 +637,7 @@ section {
 /* projects */
 .c-projects {
     background-color: var(--bg--section-2-color);
-    border-bottom: 1px solid var(--border-light-color);
+    
 }
 
 .c-projects .o-container {
@@ -712,7 +712,7 @@ section {
 
 .c-skills {
     background-color: var(--bg--section-1-color);
-    border-bottom: 1px solid var(--border-light-color);
+    
 }
 
 .c-skills .o-container {
@@ -735,13 +735,13 @@ section {
     border-bottom: 1px solid var(--border-light-content-color);
 }
 
-.bgcolor-guide div {
+.bgcolor-guide ul {
     display: flex;
     gap: var(--spacing-md);
     flex: 1;
 }
 
-.bgcolor-guide button {
+.bgcolor-guide li button {
     flex: 2;
     display: inline-flex;
     align-items: center;
@@ -752,23 +752,23 @@ section {
     border: 1px solid var(--border-light-content-color);
 }
 
-.bgcolor-guide button:hover {
+.bgcolor-guide li button:hover {
     filter: brightness(120%);
 }
 
-.bgcolor-guide button:nth-child(1) {
+.bgcolor-guide li button:nth-child(1) {
     background-color: var(--gray-color);
 }
 
-.bgcolor-guide button:nth-child(2) {
+.bgcolor-guide li button:nth-child(2) {
     background-color: var(--gradient--deep-color);
 }
 
-.bgcolor-guide button:nth-child(3) {
+.bgcolor-guide li button:nth-child(3) {
     background-color: var(--gradient-mediator-color);
 }
 
-.bgcolor-guide button:nth-child(4) {
+.bgcolor-guide li button:nth-child(4) {
     background-color: var(--gradient-superficial-color);
 }
 
@@ -849,7 +849,7 @@ section {
 /* contact */
 .c-qualifications {
     background-color: var(--bg--section-2-color);
-    border-bottom: 1px solid var(--border-light-color);
+    
 }
 
 .c-qualifications .o-container {
@@ -1157,6 +1157,7 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
     background-color: var(--bg-footer-copyright-color);
 }
 
