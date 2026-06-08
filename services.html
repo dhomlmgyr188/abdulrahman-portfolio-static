@@ -52,81 +52,192 @@
                 </ol>
                 <div class="c-services__space-between">
                     <h1 class="c-services__title c-title-no-margin">جميع الخدمات</h1>
-                    <select name="sorting" id="sorting" aria-label="sorting">
-                        <option selected disabled>اختر الترتيب</option>
-                        <option value="oldest">الأقدم</option> <!-- ترتيب من الأقدم إلى الأحدث حسب تاريخ النشر -->
-                        <option value="newest">الأحدث </option> <!-- ترتيب من الأحدث إلى الأقدم حسب تاريخ النشر -->
-                        <option value="lowest">أقل سعر</option> <!-- ترتيب تصاعدي من السعر الأقل إلى الأعلى -->
-                        <option value="highest">أعلى سعر</option> <!-- ترتيب تنازلي من السعر الأعلى إلى الأقل -->
-                    </select>
+                    <p>قراءة <span><a href="#instructions" class="instructions-btn"><i
+                                    class="fa-solid fa-arrow-pointer"></i> التعليمات</a></span> قبل طلب الخدمة.</p>
                 </div>
             </header>
-            <main class="c-services-main">
-                <aside class="sidebar-services">
-                    <h3>تصفية الخدمات</h3>
-                    <form method="get" class="c-filtering-services-form">
-                        <div class="c-form__group__inline">
-                            <input type="checkbox" name="web-design" id="web-design">
-                            <label for="web-design">تصميم واجهات المستخدم</label>
-                        </div>
-                        <div class="c-form__group__inline">
-                            <input type="checkbox" name="front-end-dev" id="front-end-dev">
-                            <label for="front-end-dev">تطوير الواجهات الأمامية</label>
-                        </div>
-                        <div class="c-form__group__inline">
-                            <input type="checkbox" name="back-end-dev" id="back-end-dev">
-                            <label for="back-end-dev">تطوير الواجهات الخلفية</label>
-                        </div>
-                        <div class="c-form__group__inline">
-                            <input type="checkbox" name="database-dev" id="database-dev">
-                            <label for="database-dev">تطوير قواعد البيانات</label>
-                        </div>
-                    </form>
-                </aside>
-                <section class="c-services_cards">
-                    <div class="c-service-card">
-                        <header>
-                            <div>
-                                <span class="c-service-card__date js-service-date">2026/01/01</span>
-                                <h4 class="c-service-card__title">تصميم الهوية البصرية</h4>
-                            </div>
-                            <p class="c-service-card__desc">
-                                تصميم هوية بصرية جذابة لموقعك الإلكتروني تشمل: (الشعار, الخطوط, الألوان)
-                            </p>
-                        </header>
-                        <div>
-                            <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
-                            <ul class="c-service-card__audeince">
-                                <li>من لا يمتلك هوية بصرية.</li>
-                                <li>الراغبين بتطوير هوية بصرية سابقة.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
-                            <span class="c-service-card__duration">1 يوم</span>
-                        </div>
-                        <div>
-                            <h4 class="c-title-no-margin">السعر: </h4>
-                            <span class="c-service-card__price js-service-price">التسعيرة</span>
-                        </div>
-                        <div>
-                            <h4 class="c-title-no-margin">المميزات:</h4>
-                            <ul class="c-service-card__benefits">
-                                <li>خصم 25% على جميع خدمات تصميم الواجهات (خدمة 1 فقط). </li>
-                                <li>إمكانية طلب التعديل (3 مرات).</li>
-                            </ul>
-                        </div>
-                        <a href="https://wa.me/966541590819?text=طلب تصميم الهوية البصرية" class="c-service-card__direct">طلب الخدمة</a>
+            <section class="c-services_cards">
+                <div class="c-service-card">
+                    <div class="service-wallpaper">
+                        <img src="assets/images/services-img/1.jpeg" class="service-head-img" alt="">
                     </div>
-                    
-                    <div class="c-service-card">
+                    <h4 class="c-service-card__title">تصميم السيرة الذاتية</h4>
+                    <div class="service-between">
+                        <p class="service-price">
+                            <span>39</span>
+                            <img src="assets/icons/Saudi_Riyal_Symbol.svg" alt="Saudi_Riyal" class="service-icon">
+                        </p>
+                        <span class="service-duration">
+                            1 يوم
+                            <i class="fa-solid fa-alarm-clock service-icon"></i>
+                        </span>
+                    </div>
+
+                    <a href="https://wa.me/966541590819?text=طلب تصميم السيرة الذاتية"
+                        class="c-service-card__direct">طلب الخدمة</a>
+                </div>
+                <div class="c-service-card">
+                    <div class="service-wallpaper">
+                        <img src="assets/images/services-img/2.png" class="service-head-img" alt="">
+                    </div>
+                    <h4 class="c-service-card__title">تصميم الهوية البصرية</h4>
+                    <div class="service-between">
+                        <p class="service-price">
+                            <span>79</span>
+                            <img src="assets/icons/Saudi_Riyal_Symbol.svg" alt="Saudi_Riyal" class="service-icon">
+                        </p>
+                        <span class="service-duration">
+                            بين 1 الى 2 أيام
+                            <i class="fa-solid fa-alarm-clock service-icon"></i>
+                        </span>
+                    </div>
+
+                    <a href="https://wa.me/966541590819?text=طلب تصميم الهوية البصرية"
+                        class="c-service-card__direct">طلب الخدمة</a>
+                </div>
+                <div class="c-service-card">
+                    <div class="service-wallpaper">
+                        <img src="assets/images/services-img/3.png" class="service-head-img" alt="">
+                    </div>
+                    <h4 class="c-service-card__title">تصميم وتطوير واجهة موقع إلكتروني</h4>
+                    <div class="service-between">
+                        <p class="service-price">
+                            <span>249</span>
+                            <img src="assets/icons/Saudi_Riyal_Symbol.svg" alt="Saudi_Riyal" class="service-icon">
+                        </p>
+                        <span class="service-duration">
+                            بين 2 الى 6 أيام
+                            <i class="fa-solid fa-alarm-clock service-icon"></i>
+                        </span>
+                    </div>
+
+                    <a href="https://wa.me/966541590819?text=طلب تصميم وتطوير واجهة موقع إلكتروني"
+                        class="c-service-card__direct">طلب الخدمة</a>
+                </div>
+                <div class="c-service-card">
+                    <div class="service-wallpaper">
+                        <img src="assets/images/services-img/4.jpg" class="service-head-img" alt="">
+                    </div>
+                    <h4 class="c-service-card__title"> تصميم وتطوير صفحة هبوط</h4>
+                    <div class="service-between">
+                        <p class="service-price">
+                            <span>149</span>
+                            <img src="assets/icons/Saudi_Riyal_Symbol.svg" alt="Saudi_Riyal" class="service-icon">
+                        </p>
+                        <span class="service-duration">
+                            بين 1 الى 3 أيام
+                            <i class="fa-solid fa-alarm-clock service-icon"></i>
+                        </span>
+                    </div>
+
+                    <a href="https://wa.me/966541590819?text=طلب  تصميم وتطوير صفحة هبوط"
+                        class="c-service-card__direct">طلب
+                        الخدمة</a>
+                </div>
+                <div class="c-service-card">
+                    <div class="service-wallpaper">
+                        <img src="assets/images/services-img/5.png" class="service-head-img" alt="">
+                    </div>
+                    <h4 class="c-service-card__title">تصميم وتطوير واجهة متجر الكتروني</h4>
+                    <div class="service-between">
+                        <p class="service-price">
+                            <span>249</span>
+                            <img src="assets/icons/Saudi_Riyal_Symbol.svg" alt="Saudi_Riyal" class="service-icon">
+                        </p>
+                        <span class="service-duration">
+                            بين 2 الى 6 أيام
+                            <i class="fa-solid fa-alarm-clock service-icon"></i>
+                        </span>
+                    </div>
+
+                    <a href="https://wa.me/966541590819?text=طلب تصميم وتطوير واجهة متجر الكتروني"
+                        class="c-service-card__direct">طلب الخدمة</a>
+                </div>
+                <div class="c-service-card">
+                    <div class="service-wallpaper">
+                        <img src="assets/images/services-img/6.jpg" class="service-head-img" alt="">
+                    </div>
+                    <h4 class="c-service-card__title">تصميم وتطوير واجهة لوحة تحكم</h4>
+                    <div class="service-between">
+                        <p class="service-price">
+                            <span>249</span>
+                            <img src="assets/icons/Saudi_Riyal_Symbol.svg" alt="Saudi_Riyal" class="service-icon">
+                        </p>
+                        <span class="service-duration">
+                            بين 2 الى 6 أيام
+                            <i class="fa-solid fa-alarm-clock service-icon"></i>
+                        </span>
+                    </div>
+
+                    <a href="https://wa.me/966541590819?text=طلب تصميم وتطوير واجهة لوحة تحكم"
+                        class="c-service-card__direct">طلب الخدمة</a>
+                </div>
+                <div class="c-service-card">
+                    <div class="service-wallpaper">
+                        <img src="assets/images/services-img/7.jpg" class="service-head-img" alt="">
+                    </div>
+                    <h4 class="c-service-card__title">تصميم وتطوير واجهة موقع ويب لقائمة مطعم</h4>
+                    <div class="service-between">
+                        <p class="service-price">
+                            <span>99</span>
+                            <img src="assets/icons/Saudi_Riyal_Symbol.svg" alt="Saudi_Riyal" class="service-icon">
+                        </p>
+                        <span class="service-duration">
+                            بين 1 الى 2 أيام
+                            <i class="fa-solid fa-alarm-clock service-icon"></i>
+                        </span>
+                    </div>
+
+                    <a href="https://wa.me/966541590819?text=طلب تصميم وتطوير واجهة موقع ويب لقائمة مطعم"
+                        class="c-service-card__direct">طلب الخدمة</a>
+                </div>
+                <div class="c-service-card">
+                    <div class="service-wallpaper">
+                        <img src="assets/images/services-img/8.png" class="service-head-img" alt="">
+                    </div>
+                    <h4 class="c-service-card__title">إنشاء قاعدة بيانات MySQL وإدراج الجداول</h4>
+                    <div class="service-between">
+                        <p class="service-price">
+                            <span>79</span>
+                            <img src="assets/icons/Saudi_Riyal_Symbol.svg" alt="Saudi_Riyal" class="service-icon">
+                        </p>
+                        <span class="service-duration">
+                            بين 1 الى 2 أيام
+                            <i class="fa-solid fa-alarm-clock service-icon"></i>
+                        </span>
+                    </div>
+
+                    <a href="https://wa.me/966541590819?text=طلب إنشاء قاعدة بيانات MySQL وإدراج الجداول"
+                        class="c-service-card__direct">طلب الخدمة</a>
+                </div>
+                <div class="c-service-card">
+                    <div class="service-wallpaper">
+                        <img src="assets/images/services-img/9.jpg" class="service-head-img" alt="">
+                    </div>
+                    <h4 class="c-service-card__title">ربط بين لغة PHP وقاعدة بيانات MySQL (API)</h4>
+                    <div class="service-between">
+                        <p class="service-price">
+                            <span>غير محدد</span>
+                            <img src="assets/icons/Saudi_Riyal_Symbol.svg" alt="Saudi_Riyal" class="service-icon">
+                        </p>
+                        <span class="service-duration">
+                            بين 1 الى 3 أيام
+                            <i class="fa-solid fa-alarm-clock service-icon"></i>
+                        </span>
+                    </div>
+
+                    <a href="https://wa.me/966541590819?text=طلب ربط بين لغة PHP وقاعدة بيانات MySQL (API)"
+                        class="c-service-card__direct">طلب الخدمة</a>
+                </div>
+
+                <!-- <div class="c-service-card">
                         <header>
                             <div>
                                 <span class="c-service-card__date js-service-date">2026/01/01</span>
                                 <h4 class="c-service-card__title">تصميم صفحات موقعك الإلكتروني </h4>
                             </div>
                             <p class="c-service-card__desc">
-                               تصميم صفحات موقعك الإلكتروني كاملة بأحدث برامج التصميم قبل التطوير الفعلي
+                                تصميم صفحات موقعك الإلكتروني كاملة بأحدث برامج التصميم قبل التطوير الفعلي
                             </p>
                         </header>
                         <div>
@@ -152,114 +263,95 @@
                                 <li>إمكانية طلب التعديل (3 مرات).</li>
                             </ul>
                         </div>
-                        <a href="https://wa.me/966541590819?text=طلب تصميم صفحات موقع الكتروني" class="c-service-card__direct">طلب الخدمة</a>
-                    </div>
-                    <div class="c-service-card">
-                        <header>
-                            <div>
-                                <span class="c-service-card__date js-service-date">2026/01/01</span>
-                                <h4 class="c-service-card__title">تصميم صفحة هبوط </h4>
-                            </div>
-                            <p class="c-service-card__desc">
-                               تصميم الصفحة التي يهبط عليها الزائر بهدف التوجيه أو التسويق بأفضل برامج التصميم مع مراعاة أهداف التوجيه
-                            </p>
-                        </header>
-                        <div>
-                            <h4 class="c-title-no-margin">الجمهور المستهدف: </h4>
-                            <ul class="c-service-card__audeince">
-                                <li>من يحتاج الى تطوير موقع الكتروني.</li>
-                                <li>من لا يمتلك خبرة ببرامج التصميم.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="c-title-no-margin">المدة المتوقعة: </h4>
-                            <span class="c-service-card__duration">تختلف حسب عدد الصفحات</span>
-                        </div>
-                        <div>
-                            <h4 class="c-title-no-margin">السعر: </h4>
-                            <span class="c-service-card__price js-service-price">التسعيرة</span>
-                        </div>
-                        <div>
-                            <h4 class="c-title-no-margin">المميزات:</h4>
-                            <ul class="c-service-card__benefits">
-                                <li>رؤية صفحات موقعك الإلكتروني كاملة قبل التطوير.</li>
-                                <li>خصم 25% على جميع خدمات تطوير الواجهة الأمامية (خدمة 1 فقط).</li>
-                                <li>إمكانية طلب التعديل (3 مرات).</li>
-                            </ul>
-                        </div>
-                        <a href="https://wa.me/966541590819?text=طلب تصميم صفحات موقع الكتروني" class="c-service-card__direct">طلب الخدمة</a>
-                    </div>
-                </section>
-            </main>
-            <!-- <main class="services-main">
-                <section class="c-how-to-use">
-                    <h3 class="c-title-no-margin">الية الطلب</h3>
-                    <ol class="c-how-box-container">
-                        <li class="c-how-box">
-                            دخول الموقع.
-                            <img src="assets/icons/how-use/log-in (1).png" alt="log-in icon"
-                                class="c-service-main__icon--size">
+                        <a href="https://wa.me/966541590819?text=طلب تصميم صفحات موقع الكتروني"
+                            class="c-service-card__direct">طلب الخدمة</a>
+                    </div> -->
+
+
+            </section>
+
+        </div>
+    </section>
+    <section class="c-instructions" id="instructions">
+        <div class="o-container">
+            <h2 class="c-title-no-margin c-instructions-title">التعليمات</h2>
+            <div class="instructions-users">
+                <div class="c-ins__public">
+                    <h3 class="c-title-no-margin">
+                        <img src="assets/icons/guide/guidebook.png" alt="guidebook icon" class="c-service-main__icon">
+                        تعليمات عامة
+                    </h3>
+                    <ol>
+                        <li>يمكنك طلب 3 تعديلات وفي حال طلب المزيد تكون هناك <span>رسوم إضافية</span>.</li>
+                        <li>دفع نصف سعر الخدمة قبل البدء بالتنفيذ والنصف الأخر عند الإنتهاء.</li>
+                        <li>ملتزم بتقديم الخدمة كاملة وبجودة عالية ومتجاوبة كما هي موضحة.</li>
+                    </ol>
+                </div>
+                <div class="c-ins__provide">
+                    <h3 class="c-title-no-margin">
+                        <img src="assets/icons/guide/guidebook.png" alt="guidebook icon" class="c-service-main__icon">
+                        مقدم الخدمة
+                    </h3>
+                    <ol>
+                        <li>يمكنك طلب 3 تعديلات وفي حال طلب المزيد تكون هناك <span>رسوم إضافية</span>.</li>
+                        <li>دفع نصف سعر الخدمة قبل البدء بالتنفيذ والنصف الأخر عند الإنتهاء.</li>
+                        <li>ملتزم بتقديم الخدمة كاملة وبجودة عالية ومتجاوبة كما هي موضحة.</li>
+                    </ol>
+                </div>
+                <div class="c-ins__client">
+                    <h3 class="c-title-no-margin">
+                        <img src="assets/icons/guide/bill-of-rights.png" alt="bill-of-rights"
+                            class="c-service-main__icon">
+                        طالب الخدمة
+                    </h3>
+                    <ol>
+                        <li>في حال كانت جودة الخدمة رديئة أو ممتازة يمكنك <a href="#">تقييم مقدم الخدمة</a>.
                         </li>
-                        <li class="c-how-box">
-                            قسم الخدمات.
-                            <img src="assets/icons/how-use/service.png" alt="service icon"
-                                class="c-service-main__icon--size">
-                        </li>
-                        <li class="c-how-box">
-                            تقديم طلب.
-                            <img src="assets/icons/how-use/request.png" alt="request icon"
-                                class="c-service-main__icon--size">
-                        </li>
-                        <li class="c-how-box">
-                            قناة التواصل.
-                            <img src="assets/icons/how-use/communication.png" alt="communication icon"
-                                class="c-service-main__icon--size">
-                        </li>
-                        <li class="c-how-box">
-                            الإتفاق والتنفيذ.
-                            <img src="assets/icons/how-use/chat.png" alt="chat icon" class="c-service-main__icon--size">
-                        </li>
-                        <li class="c-how-box">
-                            الدفع والتقييم.
-                            <img src="assets/icons/how-use/verified.png" alt="verified icon"
-                                class="c-service-main__icon--size">
+                        <li>من حقك <a href="#">طلب الدعم والمساعدة</a> لفهم الية الخدمة لمن ليس لديهم خبرة.
                         </li>
                     </ol>
-                </section>
-                <section class="c-instructions">
-                    <h3 class="c-title-no-margin">التعليمات</h3>
-                    <div>
-                        <div class="c-ins__provide">
-                            <h4 class="c-title-no-margin">
-                                <img src="assets/icons/guide/guidebook.png" alt="guidebook icon"
-                                    class="c-service-main__icon">
-                                مقدم الخدمة
-                            </h4>
-                            <ol>
-                                <li>يمكنك طلب 3 تعديلات وفي حال طلب المزيد تكون هناك <span>رسوم إضافية</span>.</li>
-                                <li>دفع نصف سعر الخدمة قبل البدء بالتنفيذ والنصف الأخر عند الإنتهاء.</li>
-                                <li>ملتزم بتقديم الخدمة كاملة وبجودة عالية ومتجاوبة كما هي موضحة.</li>
-                            </ol>
-                        </div>
-                        <div class="c-ins__client">
-                            <h4 class="c-title-no-margin">
-                                <img src="assets/icons/guide/bill-of-rights.png" alt="bill-of-rights"
-                                    class="c-service-main__icon">
-                                طالب الخدمة
-                            </h4>
-                            <ol>
-                                <li>في حال كانت جودة الخدمة رديئة أو ممتازة يمكنك <a href="#">تقييم مقدم الخدمة</a>.
-                                </li>
-                                <li>من حقك <a href="#">طلب الدعم والمساعدة</a> لفهم الية الخدمة لمن ليس لديهم خبرة.
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </section>
-                <section class="c-reviews">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="c-how-to-use" id="how-to-use">
+        <div class="o-container">
+            <h3 class="c-title-no-margin">الية الطلب</h3>
+            <ol class="c-how-box-container">
+                <li class="c-how-box">
+                    دخول الموقع.
+                    <img src="assets/icons/how-use/log-in (1).png" alt="log-in icon" class="c-service-main__icon--size">
+                </li>
+                <li class="c-how-box">
+                    قسم الخدمات.
+                    <img src="assets/icons/how-use/service.png" alt="service icon" class="c-service-main__icon--size">
+                </li>
+                <li class="c-how-box">
+                    تقديم طلب.
+                    <img src="assets/icons/how-use/request.png" alt="request icon" class="c-service-main__icon--size">
+                </li>
+                <li class="c-how-box">
+                    قناة التواصل.
+                    <img src="assets/icons/how-use/communication.png" alt="communication icon"
+                        class="c-service-main__icon--size">
+                </li>
+                <li class="c-how-box">
+                    الإتفاق والتنفيذ.
+                    <img src="assets/icons/how-use/chat.png" alt="chat icon" class="c-service-main__icon--size">
+                </li>
+                <li class="c-how-box">
+                    الدفع والتقييم.
+                    <img src="assets/icons/how-use/verified.png" alt="verified icon" class="c-service-main__icon--size">
+                </li>
+            </ol>
+        </div>
+    </section>
+
+
+    <!-- <section class="c-reviews">
                     <h3 class="c-title-no-margin">التقييمات</h3>
-                </section>
-                <section class="c-services-container">
+                </section> -->
+    <!-- <section class="c-services-container">
                     <h3 class="c-title-no-margin">التصنيفات</h3>
                     <div class="c-categories">
                         <aside class="c-services-filter">
@@ -482,10 +574,7 @@
                             </div>
                         </div>
                     </div>
-                </section>
-            </main> -->
-        </div>
-    </section>
+                </section> -->
 
     <script type="module" src="./index.js"></script>
 </body>

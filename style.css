@@ -1241,6 +1241,7 @@ section {
 
 /* lg device */
 @media (max-width: 992px) {
+
     .services__cards {
         gap: var(--spacing-xl);
         grid-template-columns: repeat(2, 1fr);
