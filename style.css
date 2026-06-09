@@ -807,21 +807,19 @@ section {
     position: relative;
 }
 
-.c-cert figure {
-    max-height: var(--sizing-xxxxl);
-}
-
-.c-cert figure>img {
-    height: 100%;
-    width: 100%;
-    border: 1px solid var(--border-light-content-color);
-}
-
 .c-cert {
     flex: 1;
     position: relative;
     height: var(--sizing-xxxxl);
 }
+
+.c-cert >img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid var(--border-light-content-color);
+}
+
 
 .cert-wrapper {
     display: flex;
@@ -1200,14 +1198,16 @@ section {
 
 /* sm device */
 @media (max-width: 600px) {
-    .services__cards{
+    .services__cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--spacing-md);
     }
-    .projects-cards{
+
+    .projects-cards {
         gap: var(--spacing-md);
         grid-template-columns: 1fr;
     }
+
     .copy-right .o-container--footer {
         justify-content: center;
         text-align: center;
@@ -1249,6 +1249,7 @@ section {
         width: 100%;
         gap: var(--spacing-sm);
     }
+
     .bgcolor-guide>div button {
         font-size: var(--sizing-md);
         padding: var(--spacing-sm);
@@ -1267,7 +1268,8 @@ section {
     .c-hero__content {
         gap: var(--spacing-md);
     }
-    .skills-card p{
+
+    .skills-card p {
         display: block;
         font-size: var(--sizing-sm);
         text-align: center;
