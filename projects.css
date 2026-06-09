@@ -1,3 +1,63 @@
+/* carousel */
+
+.c-wrapper-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: var(--sizing-xxxl);
+    position: relative;
+}
+
+.c-wrapper-slider__img-container {
+    height: var(--sizing-xxxl);
+    width: 100%;
+    overflow: hidden;
+}
+
+.c-wrapper-slider__img-container__carousel {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+.c-wrapper-slider__img-container__carousel__img {
+    height: 100%;
+    width: 100%;
+    /* border: 10px solid var(--white-color); */
+    border-bottom: 1px solid var(--black-color);
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    height: var(--sizing-lg) !important;
+    width: var(--sizing-lg) !important;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    text-align: center;
+    line-height: var(--sizing-lg) !important;
+    transition: all 100ms linear;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.carousel-button:active {
+    transform: scale(0.94) translateY(-50%);
+    background-color: var(--secondary-color);
+}
+
+.js-next-carousel {
+    right: var(--sizing-md);
+}
+
+.js-prev-carousel {
+    left: var(--sizing-md);
+}
+
 .c-projects__button {
     background-color: var(--cta-color);
 }
@@ -33,7 +93,7 @@
 .c-projects__cards {
     display: grid;
     gap: var(--spacing-md);
-    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .c-projects__card {

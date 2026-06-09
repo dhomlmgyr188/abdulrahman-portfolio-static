@@ -42,121 +42,168 @@
     <main>
         <section id="hero" class="c-hero">
             <div class="o-container">
-                <section class="c-hero__section">
-                    <div class="c-hero__content">
-                        <span>مرحباً <span><img src="assets/images/waving-hand-medium-light-skin-tone-svgrepo-com.svg"
-                                    alt="light-skin-tone"></span> , أنا عبدالرحمن المغير </span>
-                        <h1 class="c-title-no-margin c-hero__content__title">مطور مواقع ويب ووسائط متعددة</h1>
-                        <p class="c-hero__desc">
-                            أقدم عدة خدمات في تطوير مواقع الويب ذو جودة عالية بإستخدام أحدث الأدوات والتقنيات, كما
-                            أسعى للإنضمام إلى فريق عمل أستطيع من خلاله تطوير نفسي والمساهمة في إبتكار حلول رقمية فعّالة.
-                        </p>
-                        <div class="c-hero__actions">
-                            <a href="./services.html" class="c-hero__button"><b>شاهد خدماتي</b></a>
-                            <a href="./projects.html" class="c-hero__button"><b>شاهد أعمالي</b></a>
-                        </div>
-                        <a href="#about" class="read-more-hero">
-                            إقرأ المزيد
-                            <i class="fa-solid fa-chevron-down"></i>
+                <article class="c-hero__content">
+                    <p>
+                        مرحباً
+                        <span>
+                            <img src="assets/images/waving-hand-medium-light-skin-tone-svgrepo-com.svg"
+                                alt="مرحباً بكم!">
+                        </span>،
+                        أنا عبدالرحمن المغير
+                    </p>
+                    <h1>مطور مواقع ويب ووسائط متعددة</h1>
+                    <p>
+                        أقدم عدة خدمات في تطوير مواقع الويب ذو جودة عالية
+                        بإستخدام أحدث الأدوات والتقنيات، كما أسعى للإنضمام إلى فريق عمل
+                        أستطيع من خلاله تطوير نفسي والمساهمة في إبتكار حلول رقمية فعّالة.
+                    </p>
+                    <div class="c-hero__actions">
+                        <a href="./services.html">
+                            <b>
+                                شاهد خدماتي
+                            </b>
+                        </a>
+                        <a href="./projects.html">
+                            <b>
+                                شاهد أعمالي
+                            </b>
                         </a>
                     </div>
-                </section>
-
+                    <a href="#about" class="read-more-hero">
+                        إقرأ المزيد
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                </article>
             </div>
         </section>
         <section id="about" class="c-about">
             <div class="o-container">
-                <h2>نبذة عني</h2>
+                <header>
+                    <h2>نبذة عني</h2>
+                </header>
                 <div class="c-about__cards">
-                    <img src="assets/images/IMG_7025__1_-removebg-preview (1).png" alt="my photo png"
-                        class="c-about__personal-img">
-                    <div class="c-about__card__content">
-                        <h3 class="c-about__title c-title-no-margin">المعلومات الشخصية</h3>
-                        <ul class="c-about__list">
-                            <li class="c-about__list__child">
-                                <h4>الإسم الكامل: </h4>
-                                <span>عبدالرحمن ناصر المغير.</span>
+                    <figure class="personal-img">
+                        <img src="assets/images/IMG_7025__1_-removebg-preview (1).png"
+                            alt="الصورة الشخصية لعبدالرحمن المغير">
+                    </figure>
+                    <div itemscope itemtype="https://schema.org/Person" class="c-about__card">
+                        <h3 itemprop="name">عبدالرحمن ناصر المغير</h3>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <b>
+                                            مجال الإختصاص:
+                                        </b>
+                                    </dt>
+                                    <dd itemprop="jobTitle">مطور مواقع ويب متكامل.</dd>
+                                </dl>
                             </li>
-                            <li class="c-about__list__child">
-                                <h4>مجال الإختصاص: </h4>
-                                <span>مطور مواقع ويب متكامل.</span>
+                            <li>
+                                <dl itemprop="hasOccupation" itemscope itemtype="https://schema.org/Occupation">
+                                    <dt>
+                                        <b>
+                                            الحالة الوظيفية:
+                                        </b>
+                                    </dt>
+                                    <dd>
+                                        <meta itemprop="name" content="Full-Stack Web Developer">
+                                        <meta itemprop="employmentType" content="Full-time">
+                                        أعمل حالياً في قطاع الضيافة، ومتاح للإنتقال فوراً كمطور ويب.
+                                    </dd>
+                                </dl>
                             </li>
-                            <li class="c-about__list__child">
-                                <h4>الحالة الوظيفية: </h4>
-                                <span>أعمل حالياً, ولكن أبحث عن فرصة أفضل.</span>
-                            </li>
-                            <li class="c-about__list__child">
-                                <h4>العنوان الوطني: </h4>
-                                <span>المملكة العربية السعودية - المدينة المنورة.</span>
+                            <li>
+                                <dl>
+                                    <dt>
+                                        <b>
+                                            العنوان الوطني:
+                                        </b>
+                                    </dt>
+                                    <dd itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                        <address>
+                                            المملكة العربية السعودية - المدينة المنورة.
+                                        </address>
+                                    </dd>
+                                </dl>
                             </li>
                         </ul>
-                        <a href="assets/docs/سيرة ذاتية عبدالرحمن المغير.pdf" class="c-about__card__button">
+                        <a href="assets/docs/سيرة ذاتية عبدالرحمن المغير.pdf">
                             <i class="fa-regular fa-file"></i>
-                            <b>عرض السيرة الذاتية</b>
+                            عرض السيرة الذاتية
                         </a>
                     </div>
-                    <div class="c-about__card__content c-about__card__content--summary">
-                        <h3 class="c-about__title c-title-no-margin">الملخص المهني</h3>
-                        <p class="c-about__description">
-                            أنا عبدالرحمن المغير مطور ويب ووسائط متعددة,
-                            حاصل على دبلوم في تخصص
-                            مطور الويب المتكامل (Full-Stack Web Development)
-                            من جامعة طيبة,
-                            وأتممت دورة
-                            تطوير واجهات المستخدم (Front-End Developer) من
-                            أكاديمية حسوب, موظف من تاريخ بدوام كامل بمسمى موظف إستقبال
-                            فندق في فندق منازل الرحمة بالمدينة المنورة, وأبحث حالياً عن فرصة عمل في
-                            مجال إختصاصي.
+                    <details open class="c-about__card c-about__card--summary">
+                        <summary>
+                            <b>
+                                الملخص المهني:
+                            </b>
+                        </summary>
+                        <p itemprop="description">
+                            مطور ويب متكامل (Full-Stack) شغوف ببناء واجهات مستخدم سلسة وتطبيقات ويب متينة.
+                            تخرجت بدبلوم مطور الويب المتكامل من جامعة طيبة، وعززت مهاراتي عملياً عبر إتمام شهادة تطوير
+                            واجهات المستخدم من أكاديمية حسوب.
+                            أعمل حالياً كمسؤول إستقبال فندقي بالمدينة المنورة، وهي تجربة صقلت لدي مهارات التواصل الفعّال
+                            وحل المشكلات والعمل الجماعي.
+                            أبحث حالياً عن فرصة عمل جديدة للإنطلاق كلياً في مجالي التقني والمساهمة في بناء مشاريع برمجية
+                            مميزة.
                         </p>
-                    </div>
+                    </details>
                 </div>
             </div>
         </section>
         <section id="services" class="c-services">
             <div class="o-container">
                 <header>
-                    <h2 class="c-title-no-margin">ماذا أقدم؟</h2>
+                    <h2>ماذا أقدم؟</h2>
                     <p>العديد من الخدمات التي تلبي رغبات العملاء في تطوير مواقع الويب ومنها:</p>
                 </header>
                 <div class="services__cards">
-                    <div class="services__card">
+                    <div class="service__card">
                         <i class="fa-solid fa-code"></i>
-                        <h3 class="c-title-no-margin">تطوير واجهات المستخدم</h3>
+                        <h3>تطوير واجهات المستخدم</h3>
                     </div>
-                    <div class="services__card">
+                    <div class="service__card">
                         <i class="fa-solid fa-gears"></i>
-                        <h3 class="c-title-no-margin">صيانة أخطاء المواقع</h3>
+                        <h3>صيانة أخطاء المواقع</h3>
                     </div>
-                    <div class="services__card">
+                    <div class="service__card">
                         <i class="fa-solid fa-code-branch"></i>
-                        <h3 class="c-title-no-margin">تطوير نظام ويب متكامل</h3>
+                        <h3>تطوير نظام ويب متكامل</h3>
                     </div>
-                    <div class="services__card">
+                    <div class="service__card">
                         <i class="fa-solid fa-database"></i>
-                        <h3 class="c-title-no-margin">تطوير قواعد البيانات</h3>
+                        <h3>تطوير قواعد البيانات</h3>
                     </div>
                 </div>
-                <div class="cta-services">
-                    <a href="services.html" class="cta-services-direct"><b>شاهد جميع خدماتي ..</b></a>
-                </div>
+                <a href="services.html" class="services-direct">
+                    <b>
+                        شاهد جميع خدماتي
+                    </b>
+                </a>
             </div>
         </section>
         <section id="projects" class="c-projects">
             <div class="o-container">
-                <h2 class="c-title-no-margin">آخر الأعمال</h2>
-                <div class="projects-container">
+                <header>
+                    <h2>آخر الأعمال</h2>
+                </header>
+                <div class="projects-cards">
                     <div class="project-card">
-                        <header>
-                            <img src="assets/images/c-panel/1.png" alt="c-panel" class="project-card-img">
-                        </header>
+                        <figure>
+                            <img src="assets/images/c-panel/1.png" alt="تطوير لوحة تحكم لمتجر الكتروني">
+                        </figure>
                         <main>
-                            <div>
-                                <h3 class="project-card-title c-title-no-margin">تطوير لوحة تحكم</h3>
-                                <time datetime="2026-01" class="projcet-date">2026/01</time>
-                            </div>
-                            <p class="project-card-desc">لوحة للتحكم بعمليات المتجر مثل إضافة منتج جديد أو الإطلاع على
-                                إحصائيات المتجر, إلخ..,</p>
-                            <ul class="project-technique">
+                            <header>
+                                <h3>تطوير لوحة تحكم</h3>
+                                <time datetime="2026-01">2026/01</time>
+                            </header>
+                            <p>
+                                تطوير واجهة لوحة تحكم متجاوبة مع مختلف الشاشات مع مدرب أكاديمية حسوب بإستخدام المكونات
+                                حيث تم تجميع كل مكون داخل الصفحة ليصبحوا مستقلين قابلين لإعادة الإستخدام وسهلة في
+                                الصيانة.
+                            </p>
+                            <ul>
                                 <li>html</li>
                                 <li>sass / scss</li>
                                 <li>JavaScript</li>
@@ -166,17 +213,19 @@
                         </main>
                     </div>
                     <div class="project-card">
-                        <header>
-                            <img src="assets/images/e-commerce/1.png" alt="e-commerce" class="project-card-img">
-                        </header>
+                        <figure>
+                            <img src="assets/images/e-commerce/1.png" alt="تطوير واجهة متجر الكتروني">
+                        </figure>
                         <main>
-                            <div>
-                                <h3 class="project-card-title c-title-no-margin">تطوير متجر إلكتروني</h3>
-                                <time datetime="2026-01" class="projcet-date">2026/01</time>
-                            </div>
-                            <p class="project-card-desc">منصة لبيع المنتجات مقابل الأموال إلكترونياً, وتهدف إلى تسهيل
-                                عمليات الشراء والبيع , إلخ..,</p>
-                            <ul class="project-technique">
+                            <header>
+                                <h3>تطوير متجر الكتروني</h3>
+                                <time datetime="2026-01">2026/01</time>
+                            </header>
+                            <p>
+                                تطوير واجهة متجر الكتروني متجاوبة بإستخدام اطار العمل Bootstrap وانشاء عدة صفحات ومنها
+                                عربة الشراء والدفع الخ.. وكانت الصفحات مرنة وديناميكية.
+                            </p>
+                            <ul>
                                 <li>html</li>
                                 <li>sass / scss</li>
                                 <li>JavaScript</li>
@@ -186,113 +235,124 @@
                         </main>
                     </div>
                 </div>
-                <div class="cta-projects">
-                    <a href="projects.html" class="cta-projects-direct"><b>شاهد جميع أعمالي ..</b></a>
-                </div>
+                <a href="projects.html" class="projects-direct">
+                    <b>
+                        شاهد جميع أعمالي
+                    </b>
+                </a>
             </div>
         </section>
         <section id="skills" class="c-skills">
             <div class="o-container">
-                <h2 class="c-title-no-margin">مهاراتي في تطوير مواقع الويب</h2>
+                <header>
+                    <h2>مهاراتي</h2>
+                </header>
                 <div class="skills-con-with-nav">
                     <div class="bgcolor-guide">
-                        <span class="c-title-no-margin">دلالة ألوان الخلفية</span>
-                        <ul>
-                            <li><button type="button" data-name="all" class="active">الكل</button></li>
-                            <li><button type="button" data-name="expert">متقدم</button></li>
-                            <li><button type="button" data-name="proficient">متوسط</button></li>
-                            <li><button type="button" data-name="learning">قيد التعلم</button></li>
-                        </ul>
+                        <p>دلالة ألوان الخلفية</p>
+                        <div>
+                            <button type="button" data-name="all" class="active">
+                                الكل
+                            </button>
+                            <button type="button" data-name="expert">
+                                متقدم
+                            </button>
+                            <button type="button" data-name="proficient">
+                                متوسط
+                            </button>
+                            <button type="button" data-name="learning">
+                                قيد التعلم
+                            </button>
+                        </div>
                     </div>
+                    <hr>
                     <div class="skills-grid">
                         <div class="skills-techinique">
                             <div class="skills-card">
-                                <h3 class="c-title-no-margin">تصميم واجهة المستخدم</h3>
+                                <p>تصميم واجهة المستخدم</p>
                                 <div class="skills-tech-container">
-                                    <div class="skill expert" data-name="expert">
+                                    <figure class="skill expert" data-name="expert">
                                         <img src="assets/icons/photoshop-svgrepo-com.svg" alt="photoshop">
-                                    </div>
-                                    <div class="skill proficient" data-name="proficient">
+                                    </figure>
+                                    <figure class="skill proficient" data-name="proficient">
                                         <img src="assets/icons/figma-svgrepo-com.svg" alt="figma">
-                                    </div>
-                                    <div class="skill expert" data-name="expert">
+                                    </figure>
+                                    <figure class="skill expert" data-name="expert">
                                         <img src="assets/icons/canva-icon.svg" alt="canva">
-                                    </div>
+                                    </figure>
                                 </div>
                             </div>
                         </div>
                         <div class="skills-techinique">
                             <div class="skills-card">
-                                <h3 class="c-title-no-margin">تطوير الواجهة الأمامية</h3>
+                                <p>تطوير الواجهة الأمامية</p>
                                 <div class="skills-tech-container">
-                                    <div class="skill expert" data-name="expert">
+                                    <figure class="skill expert" data-name="expert">
                                         <img src="assets/icons/html5-svgrepo-com.svg" alt="html5">
-                                    </div>
-                                    <div class="skill expert" data-name="expert">
+                                    </figure>
+                                    <figure class="skill expert" data-name="expert">
                                         <img src="assets/icons/css-3-svgrepo-com.svg" alt="css3">
-                                    </div>
-                                    <div class="skill proficient" data-name="proficient">
+                                    </figure>
+                                    <figure class="skill proficient" data-name="proficient">
                                         <img src="assets/icons/js-svgrepo-com.svg" alt="javascript">
-                                    </div>
-
+                                    </figure>
                                 </div>
                             </div>
                         </div>
                         <div class="skills-techinique">
                             <div class="skills-card">
-                                <h3 class="c-title-no-margin">أدوات التطوير المتقدمة</h3>
+                                <p>أدوات التطوير المتقدمة</p>
                                 <div class="skills-tech-container">
-                                    <div class="skill expert" data-name="expert">
+                                    <figure class="skill expert" data-name="expert">
                                         <img src="assets/icons/sass-svgrepo-com.svg" alt="sass">
-                                    </div>
-                                    <div class="skill learning" data-name="learning">
+                                    </figure>
+                                    <figure class="skill learning" data-name="learning">
                                         <img src="assets/icons/react-svgrepo-com.svg" alt="react">
-                                    </div>
-                                    <div class="skill expert" data-name="expert">
+                                    </figure>
+                                    <figure class="skill expert" data-name="expert">
                                         <img src="assets/icons/bootstrap-svgrepo-com.svg" alt="bootstrap">
-                                    </div>
-                                    <div class="skill proficient" data-name="proficient">
+                                    </figure>
+                                    <figure class="skill proficient" data-name="proficient">
                                         <img src="assets/icons/tailwind-svgrepo-com.svg" alt="tailwind">
-                                    </div>
-                                    <div class="skill proficient" data-name="proficient">
+                                    </figure>
+                                    <figure class="skill proficient" data-name="proficient">
                                         <img src="assets/icons/handlebars-svgrepo-com.svg" alt="handlebars">
-                                    </div>
+                                    </figure>
                                 </div>
                             </div>
                         </div>
                         <div class="skills-techinique">
                             <div class="skills-card">
-                                <h3 class="c-title-no-margin">تطوير الواجهة الخلفية</h3>
+                                <p>تطوير الواجهة الخلفية</p>
                                 <div class="skills-tech-container">
-                                    <div class="skill proficient" data-name="proficient">
+                                    <figure class="skill proficient" data-name="proficient">
                                         <img src="assets/icons/php-svgrepo-com.svg" alt="php">
-                                    </div>
-                                    <div class="skill learning" data-name="learning">
+                                    </figure>
+                                    <figure class="skill learning" data-name="learning">
                                         <img src="assets/icons/node-js-svgrepo-com.svg" alt="node-js">
-                                    </div>
-                                    <div class="skill learning" data-name="learning">
+                                    </figure>
+                                    <figure class="skill learning" data-name="learning">
                                         <img src="assets/icons/expressjs.PNG" alt="expressjs">
-                                    </div>
-                                    <div class="skill expert" data-name="expert">
+                                    </figure>
+                                    <figure class="skill expert" data-name="expert">
                                         <img src="assets/icons/mysql-icon.svg" alt="mysql">
-                                    </div>
-                                    <div class="skill learning" data-name="learning">
+                                    </figure>
+                                    <figure class="skill learning" data-name="learning">
                                         <img src="assets/icons/mongodb-svgrepo-com.svg" alt="mongodb">
-                                    </div>
+                                    </figure>
                                 </div>
                             </div>
                         </div>
-
                         <div class="skills-techinique">
                             <div class="skills-card">
-                                <h3 class="c-title-no-margin">إدارة الشيفرات والتعاون</h3>
+                                <p>إدارة الشيفرات والتعاون</p>
                                 <div class="skills-tech-container">
-                                    <div class="skill expert" data-name="expert">
+                                    <figure class="skill expert" data-name="expert">
                                         <img src="assets/icons/git-svgrepo-com.svg" alt="git">
-                                    </div>
-                                    <div class="skill expert" data-name="expert">
+                                    </figure>
+                                    <figure class="skill expert" data-name="expert">
                                         <img src="assets/icons/github-142-svgrepo-com.svg" alt="github">
-                                    </div>
+                                    </figure>
                                 </div>
                             </div>
                         </div>
@@ -303,17 +363,18 @@
         <section id="qualifications" class="c-qualifications">
             <div class="o-container">
                 <header>
-                    <h2 class="c-title-no-margin">مؤهلاتي</h2>
+                    <h2>مؤهلاتي</h2>
                     <p>شهادات من جهات معتمدة تثبت حرصي في التطور بمجال تطوير الويب, حيث أن التعلم لدي لا يتوقف عند
                         جهة معينة.</p>
                 </header>
-
                 <div class="c-cert-container">
                     <div class="c-cert c-cert-move-top">
-                        <img src="assets/images/hsoub-cert.PNG" alt="hsoub-cert" class="c-cert-img">
+                        <figure>
+                            <img src="assets/images/hsoub-cert.PNG" alt="شهادة دورة اكاديمية حسوب مطور واجهات المستخدم">
+                        </figure>
                         <div class="cert-wrapper">
                             <div class="c-cert-content">
-                                <h3 class="c-title-no-margin">تطوير واجهات المستخدم</h3>
+                                <h3>تطوير واجهات المستخدم</h3>
                                 <div class="c-cert-content-head">
                                     <b class="c-cert-type">دورة تدريبية</b>
                                     <time datetime="2026-03-27">27 مارس 2026</time>
@@ -334,7 +395,9 @@
                         </div>
                     </div>
                     <div class="c-cert c-cert-move-bottom">
-                        <img src="assets/images/taibah-cert.jpeg" alt="taibah-cert">
+                        <figure>
+                            <img src="assets/images/taibah-cert.jpeg" alt="وثيقة تخرج دبلوم متوسط كمطور ويب متكامل من جامعة طيبة">
+                        </figure>
                         <div class="cert-wrapper">
                             <div class="c-cert-content">
                                 <h3 class="c-title-no-margin">دبلوم مطور الويب المتكامل</h3>
