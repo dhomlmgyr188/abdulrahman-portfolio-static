@@ -820,7 +820,6 @@ section {
 .c-cert {
     flex: 1;
     position: relative;
-    height: var(--sizing-xxxxl);
 }
 
 .cert-wrapper {
