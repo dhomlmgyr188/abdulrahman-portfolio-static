@@ -807,6 +807,9 @@ section {
     position: relative;
 }
 
+.c-cert figure {
+    max-height: var(--sizing-xxxxl);
+}
 
 .c-cert figure>img {
     height: 100%;
@@ -817,7 +820,7 @@ section {
 .c-cert {
     flex: 1;
     position: relative;
-    max-height: var(--sizing-xxxxl);
+    height: var(--sizing-xxxxl);
 }
 
 .cert-wrapper {
