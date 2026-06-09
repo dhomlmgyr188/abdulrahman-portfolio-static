@@ -816,7 +816,6 @@ section {
 .c-cert img {
     height: 100%;
     width: 100%;
-    aspect-ratio: 16 / 9;
     border: 1px solid var(--border-light-content-color);
 }
 
@@ -1089,6 +1088,9 @@ section {
 
 /* lg device */
 @media (max-width: 992px) {
+    .c-cert img {
+        height: auto;
+    }
 
     .c-about__cards {
         grid-template-columns: repeat(3, 1fr);
