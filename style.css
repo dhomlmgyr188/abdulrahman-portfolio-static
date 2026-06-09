@@ -19,37 +19,27 @@
 /* variables */
 :root {
     /* colors */
-    --black-color: #1f1f1f;
-    --gray-color: #808080;
-    --white-color: #fff;
 
-    --text-dark-color: #1f1f1f;
-    --text-gray-color: #808080;
-    --text-white-color: #fff;
+    --dark-color: #152331;
+    --white-color: #f7f7f7;
+    --text-dark-color: #152331;
+    --text-white-color: #f7f7f7;
+    --bg--section-1-color: #ffffff;
+    --bg--section-2-color: #f0f0f0;
+    --border-color: #d3d3d3;
 
+    --static-white-color: white;
+    --bg-navbar-color: gray;
+    --bg-footer-copyright-color: gray;
+    --gray-color: gray;
+    --text-gray-color: gray;
     --primary-color: #CC5452;
     --secondary-color: #e49594;
-
     --cta-color: #06662E;
     --cta-hover-color: #349660;
-
-    --bg--section-1-color: #fff;
-    --bg--section-2-color: #fafafa;
-    --bg-color: #fffafa;
-
-    --bg-navbar-color: #1f1f1f;
-    --bg-footer-color: #dddddd;
-    --bg-footer-copyright-color: #737373;
-
-    --border-light-color: #bbbbbb;
-    --border-light-content-color: #eeeeee;
-
     --gradient--deep-color: #003DB3;
     --gradient-mediator-color: #4D77CA;
     --gradient-superficial-color: #99B1E1;
-
-    --badge-color: #ad9030;
-
     --instagram-color: #833AB4;
     --tiktok-color: #FE2C55;
     --linkedin-color: #0077B5;
@@ -57,7 +47,6 @@
     --whatsapp-color: #25D366;
     --envelope-color: #0489c9;
 
-    --card-service-color: #ffffff;
 
     /* size and space */
     --spacing-ss: 6px;
@@ -80,6 +69,43 @@
     --navbar-height: 64px;
 
     --container-width: 1400px;
+}
+
+.darkmode {
+    --dark-color: #ffffff;
+    --white-color: #000000;
+    --text-dark-color: #ffffff;
+    --text-white-color: #000000;
+    --bg--section-1-color: #0e0e0e;
+    --bg--section-2-color: #1a1a1a;
+    --border-color: #000000;
+}
+
+.theme-switch {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    color: var(--static-white-color);
+    background-color: var(--cta-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-switch i:last-child {
+    display: none;
+}
+
+.darkmode .theme-switch i:first-child {
+    display: none;
+}
+
+.darkmode .theme-switch i:last-child {
+    display: block;
+}
+
+.theme-switch--mobile {
+    display: none;
 }
 
 /* reset */
@@ -106,7 +132,6 @@ html {
 body {
     font-family: "Zain", sans-serif;
     font-size: var(--sizing-md);
-    background-color: var(--bg-color);
     color: var(--text-dark-color);
     line-height: 1.5;
     padding-top: var(--navbar-height);
@@ -123,7 +148,6 @@ button {
     border: none;
     outline: none;
     background: none;
-    color: var(--cta-color);
 }
 
 h1 {
@@ -138,15 +162,6 @@ h2 {
 
 h3 {
     font-size: var(--sizing-mm);
-}
-
-select {
-    border: 1px solid var(--border-light-color);
-    outline: none;
-    padding: var(--sizing-sm);
-    font-size: var(--sizing-md);
-    background-color: var(--white-color);
-    cursor: pointer;
 }
 
 section {
@@ -180,7 +195,6 @@ section {
     top: 0;
     z-index: 999;
     background: var(--bg-navbar-color);
-    filter: drop-shadow(0px 0px 1px var(--white-color));
 }
 
 .c-header__top {
@@ -189,10 +203,17 @@ section {
     justify-content: space-between;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
 .c-logo {
     font-family: Brickshapers;
     font-size: var(--sizing-lg);
-    color: var(--text-white-color);
+    color: var(--static-white-color);
 }
 
 .c-logo span:first-child {
@@ -206,7 +227,6 @@ section {
     justify-content: space-between;
     width: 100%;
     min-height: var(--navbar-height);
-    gap: var(--spacing-md);
     padding: var(--spacing-sm) var(--spacing-md);
     overflow-wrap: break-word;
     max-width: var(--container-width);
@@ -248,13 +268,13 @@ section {
 
 .c-nav__li a {
     padding: var(--spacing-sm) var(--spacing-md);
-    color: var(--text-white-color);
+    color: var(--static-white-color);
 }
 
 
 .c-header__button {
     padding: var(--spacing-sm) var(--spacing-md);
-    color: var(--text-white-color) !important;
+    color: var(--static-white-color) !important;
     background-color: var(--cta-color);
     transition: background-color 100ms linear;
 }
@@ -270,19 +290,18 @@ section {
 .c-header__collapse {
     display: none;
     flex-shrink: 0;
-    color: var(--white-color);
-    transition: background-color 200ms linear;
     width: var(--sizing-lg);
     height: var(--sizing-lg);
     position: relative;
     margin-right: auto;
     cursor: pointer;
+    transition: background-color 200ms linear;
 }
 
 .c-header__collapse span {
     height: var(--sizing-xs);
     width: 100%;
-    background-color: var(--white-color);
+    background-color: var(--static-white-color);
     position: absolute;
     top: 50%;
     right: 50%;
@@ -326,7 +345,6 @@ section {
     gap: var(--spacing-lg);
     z-index: 1;
     font-size: var(--sizing-mm);
-    filter: drop-shadow(0px 0px 1px var(--dark-color));
 }
 
 
@@ -413,7 +431,7 @@ section {
     width: 100%;
     padding: var(--spacing-md);
     background-color: var(--primary-color);
-    color: var(--text-white-color);
+    color: var(--static-white-color);
     text-align: center;
     transition: background-color 100ms linear;
 }
@@ -451,7 +469,6 @@ section {
     margin: 0 auto;
     background-color: var(--white-color);
     height: var(--sizing-xxxl);
-    border: 1px solid var(--border-light-content-color);
 }
 
 .c-about__cards {
@@ -467,13 +484,12 @@ section {
     gap: var(--spacing-sm);
     padding: var(--spacing-md);
     background-color: var(--white-color);
-    border: 1px solid var(--border-light-content-color);
 }
 
 .c-about__card>a {
     width: fit-content;
     padding: var(--spacing-sm) var(--spacing-md);
-    color: var(--text-white-color);
+    color: var(--static-white-color);
     background-color: var(--primary-color);
     transition: background-color 100ms linear;
 }
@@ -516,16 +532,15 @@ section {
     text-align: center;
     gap: var(--spacing-md);
     padding: var(--spacing-md);
-    color: var(--text-white-color);
-    background-color: var(--gray-color);
-    border: 1px solid var(--border-light-content-color);
+    color: var(--dark-color);
+    background-color: var(--white-color);
 }
 
 .service__card>i {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white-color);
+    color: var(--primary-color);
     font-size: var(--sizing-lg);
 }
 
@@ -533,7 +548,7 @@ section {
     width: fit-content;
     margin: auto;
     text-align: center;
-    color: var(--white-color);
+    color: var(--static-white-color);
     background-color: var(--cta-color);
     padding: var(--spacing-md);
     transition: all 100ms linear;
@@ -572,7 +587,6 @@ section {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
-    border: 1px solid var(--border-light-content-color);
     background-color: var(--white-color);
 }
 
@@ -581,11 +595,10 @@ section {
 }
 
 .project-card main>*:not(:last-child) {
-    border-bottom: 1px solid var(--border-light-content-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .project-card figure {
-    border-bottom: 1px solid var(--border-light-content-color);
     overflow: hidden;
 }
 
@@ -613,7 +626,7 @@ section {
 }
 
 .project-card main>header>time {
-    color: var(--gray-color);
+    color: var(--text-gray-color);
 }
 
 .project-card main>ul {
@@ -625,15 +638,15 @@ section {
 
 .project-card main>ul>li {
     padding: var(--spacing-sm);
-    color: var(--white-color);
-    background-color: var(--badge-color);
+    color: var(--static-white-color);
+    background-color: var(--gray-color);
 }
 
 .projects-direct {
     width: fit-content;
     margin: auto;
     text-align: center;
-    color: var(--white-color);
+    color: var(--static-white-color);
     background-color: var(--cta-color);
     padding: var(--spacing-md);
     transition: all 100ms linear;
@@ -641,11 +654,6 @@ section {
 
 .projects-direct:hover {
     background-color: var(--cta-hover-color);
-}
-
-
-.projcet-date {
-    color: var(--gray-color);
 }
 
 /* Skills Section */
@@ -688,10 +696,9 @@ section {
 .bgcolor-guide>div button {
     width: 100%;
     display: flex;
-    border: 1px solid var(--border-light-content-color);
     align-items: center;
     justify-content: center;
-    color: var(--text-white-color);
+    color: var(--static-white-color);
     font-size: var(--sizing-ml);
     padding: var(--spacing-sm) var(--spacing-md);
     transition: all 100ms linear;
@@ -702,7 +709,8 @@ section {
 }
 
 .bgcolor-guide>div button:nth-child(1) {
-    background-color: var(--gray-color);
+    color: var(--white-color);
+    background-color: var(--dark-color);
 }
 
 .bgcolor-guide>div button:nth-child(2) {
@@ -766,7 +774,7 @@ section {
 
 .skill img {
     height: 100%;
-    filter: brightness(120%) drop-shadow(0px 0px 1px var(--black-color));
+    filter: brightness(120%);
 }
 
 .skill.expert {
@@ -816,7 +824,6 @@ section {
 .c-cert img {
     height: 100%;
     width: 100%;
-    border: 1px solid var(--border-light-content-color);
 }
 
 
@@ -834,11 +841,10 @@ section {
 
 .cert-wrapper:hover {
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--white-color);
 }
 
 .c-cert-content {
-    color: var(--text-white-color);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -850,7 +856,7 @@ section {
 
 .c-cert-content>*:not(:last-child) {
     width: 100%;
-    border-bottom: 1px solid var(--border-light-content-color);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: var(--spacing-md);
 }
 
@@ -870,12 +876,13 @@ section {
 }
 
 .c-cert-type {
-    background-color: var(--badge-color);
+    color: var(--white-color);
+    background-color: var(--dark-color);
     padding: var(--spacing-ss);
 }
 
 .c-cert-verify {
-    color: var(--text-white-color);
+    color: var(--static-white-color);
     background-color: var(--primary-color);
     padding: var(--spacing-sm);
     transition: all 100ms linear;
@@ -895,7 +902,7 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--bg-footer-color);
+    background-color: var(--bg--section-1-color);
 }
 
 .o-container--footer {
@@ -929,7 +936,7 @@ section {
 }
 
 .c-footer-group-column-1>*:not(:last-child) {
-    border-bottom: 1px solid var(--border-light-content-color);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: var(--spacing-md);
 }
 
@@ -975,7 +982,7 @@ section {
     text-align: center;
     padding: var(--spacing-md);
     font-size: var(--sizing-mmd);
-    color: var(--text-white-color);
+    color: var(--static-white-color);
     background-color: var(--cta-color);
     transition: all 100ms linear;
 }
@@ -998,7 +1005,7 @@ section {
     font-size: var(--sizing-ml);
     width: var(--sizing-lx);
     height: var(--sizing-lx);
-    color: var(--white-color);
+    color: var(--static-white-color);
 }
 
 .c-social-nav__link i {
@@ -1057,12 +1064,12 @@ section {
     align-items: center;
     flex-wrap: wrap;
     gap: var(--spacing-md);
-    color: var(--text-white-color);
+    color: var(--static-white-color);
     padding: var(--spacing-md) var(--spacing-md);
 }
 
 .click-to-up {
-    color: var(--text-white-color);
+    color: var(--static-white-color);
 }
 
 /*  */
@@ -1088,6 +1095,13 @@ section {
 
 /* lg device */
 @media (max-width: 992px) {
+    .theme-switch--mobile {
+        display: flex;
+    }
+    .theme-switch--desktop {
+        display: none;
+    }
+
     .c-cert img {
         height: auto;
     }
@@ -1129,12 +1143,13 @@ section {
         flex-wrap: wrap;
         width: 100%;
         gap: var(--spacing-md);
-        justify-content: center;
+        justify-content: flex-start;
         padding-bottom: var(--spacing-md);
         transition: all 5s linear;
-
     }
-
+    .c-nav.active:last-child{
+        margin-bottom: 0;
+    }
     .c-nav__li {
         width: 100%;
     }
@@ -1156,20 +1171,15 @@ section {
 
     .c-cert-content {
         font-size: var(--sizing-md);
-        color: var(--text-dark-color);
         gap: var(--spacing-md);
         padding: var(--sizing-md);
-        background-color: var(--bg--section-1-color);
-        border: 1px solid var(--border-light-content-color);
+        background-color: var(--white-color);
     }
 
     .c-cert-content h3 {
         color: var(--primary-color);
     }
 
-    .c-cert-type {
-        color: var(--text-white-color);
-    }
 }
 
 /* md device */

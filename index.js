@@ -151,4 +151,27 @@ skillButtons.forEach((button) =>
   button.addEventListener("click", highlightSkills),
 );
 
-const copyRight = document.getElementById("copyRight").innerHTML = "©" + new Date().getFullYear();
+const copyRight = (document.getElementById("copyRight").innerHTML =
+  "©" + new Date().getFullYear());
+
+// theme-switch
+let darkmode = localStorage.getItem("darkmode");
+const themeSwitch = document.querySelectorAll(".theme-switch");
+
+const enableDarkMode = () => {
+  document.body.classList.add("darkmode");
+  localStorage.setItem("darkmode", "active");
+};
+const disableDarkMode = () => {
+  document.body.classList.remove("darkmode");
+  localStorage.setItem("darkmode", null);
+};
+
+if (darkmode === "active") enableDarkMode();
+
+themeSwitch.forEach((button) => {
+  button.addEventListener("click", () => {
+    darkmode = localStorage.getItem("darkmode");
+    darkmode !== "active" ? enableDarkMode() : disableDarkMode();
+  });
+});
