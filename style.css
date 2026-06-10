@@ -21,13 +21,13 @@
     /* colors */
 
     --black-color: #111111;
-    --white-color: #eeeeee;
+    --white-color: #fafafa;
     --text-black-color: #111111;
-    --text-white-color: #eeeeee;
+    --text-white-color: #fafafa;
     --bg--section-1-color: #ffffff;
     --bg--section-2-color: #f8f8f8;
     --border-color: #cccccc;
-    --static-white-color: #eeeeee;
+    --static-white-color: #fafafa;
     --bg-navbar-color: #111111;
     --bg-footer-copyright-color: #111111;
     --gray-color: gray;
@@ -72,23 +72,23 @@
 }
 
 .darkmode {
-    --black-color: #eeeeee;
+    --black-color: #fafafa;
     --white-color: #111111;
-    --text-black-color: #eeeeee;
+    --text-black-color: #fafafa;
     --text-white-color: #111111;
     --bg--section-1-color: #000000;
     --bg--section-2-color: #1b1b1b;
     --border-color: #4d4d4d;
-    --static-white-color: #eeeeee;
-    --bg-navbar-color: #eeeeee;
-    --bg-footer-copyright-color: #eeeeee;
+    --bg-navbar-color: #fafafa;
+    --bg-footer-copyright-color: #fafafa;
     --gray-color: gray;
     --text-gray-color: gray;
 }
 
 .theme-switch {
-    width: 50px;
-    height: 50px;
+    width: var(--sizing-lx);
+    height: var(--sizing-lx);
+    font-size: var(--sizing-lg);
     padding: 0;
     color: var(--static-white-color);
     background-color: var(--cta-color);
@@ -279,7 +279,8 @@ section {
 .c-nav__li a:hover {
     color: var(--black-color);
 }
-.contact a{
+
+.contact a {
     color: var(--static-white-color);
 }
 
@@ -300,9 +301,9 @@ section {
 
 .c-header__collapse {
     display: none;
-    flex-shrink: 0;
-    width: var(--sizing-lg);
-    height: var(--sizing-lg);
+    background-color: var(--cta-color);
+    width: var(--sizing-lx);
+    height: var(--sizing-lx);
     position: relative;
     margin-right: auto;
     cursor: pointer;
@@ -311,8 +312,8 @@ section {
 
 .c-header__collapse span {
     height: var(--sizing-xs);
-    width: 100%;
-    background-color: var(--white-color);
+    width: 70%;
+    background-color: var(--static-white-color);
     position: absolute;
     top: 50%;
     right: 50%;
@@ -833,13 +834,14 @@ section {
     flex: 1;
     position: relative;
     height: var(--sizing-xxxxl);
-    border: 1px solid var(--border-color);
 
 }
 
 .c-cert img {
     height: 100%;
     width: 100%;
+    border: 1px solid var(--border-color);
+
 }
 
 
@@ -861,6 +863,7 @@ section {
 }
 
 .c-cert-content {
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1111,6 +1114,10 @@ section {
 
 /* lg device */
 @media (max-width: 992px) {
+    .c-cert-content {
+        border: 1px solid var(--border-color);
+    }
+
     .theme-switch--mobile {
         display: flex;
     }
