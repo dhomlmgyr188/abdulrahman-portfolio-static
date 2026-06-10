@@ -20,19 +20,19 @@
 :root {
     /* colors */
 
-    --dark-color: #152331;
-    --white-color: #f7f7f7;
-    --text-dark-color: #152331;
-    --text-white-color: #f7f7f7;
+    --black-color: #111111;
+    --white-color: #eeeeee;
+    --text-black-color: #111111;
+    --text-white-color: #eeeeee;
     --bg--section-1-color: #ffffff;
-    --bg--section-2-color: #f0f0f0;
-    --border-color: #d3d3d3;
-
-    --static-white-color: white;
-    --bg-navbar-color: gray;
-    --bg-footer-copyright-color: gray;
+    --bg--section-2-color: #f8f8f8;
+    --border-color: #cccccc;
+    --static-white-color: #eeeeee;
+    --bg-navbar-color: #111111;
+    --bg-footer-copyright-color: #111111;
     --gray-color: gray;
     --text-gray-color: gray;
+
     --primary-color: #CC5452;
     --secondary-color: #e49594;
     --cta-color: #06662E;
@@ -72,13 +72,18 @@
 }
 
 .darkmode {
-    --dark-color: #ffffff;
-    --white-color: #000000;
-    --text-dark-color: #ffffff;
-    --text-white-color: #000000;
-    --bg--section-1-color: #0e0e0e;
-    --bg--section-2-color: #1a1a1a;
-    --border-color: #000000;
+    --black-color: #eeeeee;
+    --white-color: #111111;
+    --text-black-color: #eeeeee;
+    --text-white-color: #111111;
+    --bg--section-1-color: #000000;
+    --bg--section-2-color: #1b1b1b;
+    --border-color: #4d4d4d;
+    --static-white-color: #eeeeee;
+    --bg-navbar-color: #eeeeee;
+    --bg-footer-copyright-color: #eeeeee;
+    --gray-color: gray;
+    --text-gray-color: gray;
 }
 
 .theme-switch {
@@ -132,7 +137,7 @@ html {
 body {
     font-family: "Zain", sans-serif;
     font-size: var(--sizing-md);
-    color: var(--text-dark-color);
+    color: var(--text-black-color);
     line-height: 1.5;
     padding-top: var(--navbar-height);
 }
@@ -213,7 +218,7 @@ section {
 .c-logo {
     font-family: Brickshapers;
     font-size: var(--sizing-lg);
-    color: var(--static-white-color);
+    color: var(--white-color);
 }
 
 .c-logo span:first-child {
@@ -268,9 +273,15 @@ section {
 
 .c-nav__li a {
     padding: var(--spacing-sm) var(--spacing-md);
-    color: var(--static-white-color);
+    color: var(--white-color);
 }
 
+.c-nav__li a:hover {
+    color: var(--black-color);
+}
+.contact a{
+    color: var(--static-white-color);
+}
 
 .c-header__button {
     padding: var(--spacing-sm) var(--spacing-md);
@@ -301,7 +312,7 @@ section {
 .c-header__collapse span {
     height: var(--sizing-xs);
     width: 100%;
-    background-color: var(--static-white-color);
+    background-color: var(--white-color);
     position: absolute;
     top: 50%;
     right: 50%;
@@ -393,7 +404,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--text-dark-color);
+    color: var(--text-black-color);
 }
 
 .read-more-hero>i {
@@ -467,7 +478,8 @@ section {
 .personal-img>img {
     display: block;
     margin: 0 auto;
-    background-color: var(--white-color);
+    background-color: var(--bg--section-1-color);
+    border: 1px solid var(--border-color);
     height: var(--sizing-xxxl);
 }
 
@@ -483,7 +495,8 @@ section {
     flex-direction: column;
     gap: var(--spacing-sm);
     padding: var(--spacing-md);
-    background-color: var(--white-color);
+    background-color: var(--bg--section-1-color);
+    border: 1px solid var(--border-color);
 }
 
 .c-about__card>a {
@@ -532,8 +545,8 @@ section {
     text-align: center;
     gap: var(--spacing-md);
     padding: var(--spacing-md);
-    color: var(--dark-color);
-    background-color: var(--white-color);
+    color: var(--black-color);
+    background-color: var(--bg--section-2-color);
 }
 
 .service__card>i {
@@ -587,7 +600,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
-    background-color: var(--white-color);
+    background-color: var(--bg--section-1-color);
+    border: 1px solid var(--border-color);
 }
 
 .project-card main>* {
@@ -710,7 +724,7 @@ section {
 
 .bgcolor-guide>div button:nth-child(1) {
     color: var(--white-color);
-    background-color: var(--dark-color);
+    background-color: var(--black-color);
 }
 
 .bgcolor-guide>div button:nth-child(2) {
@@ -819,6 +833,8 @@ section {
     flex: 1;
     position: relative;
     height: var(--sizing-xxxxl);
+    border: 1px solid var(--border-color);
+
 }
 
 .c-cert img {
@@ -876,8 +892,8 @@ section {
 }
 
 .c-cert-type {
-    color: var(--white-color);
-    background-color: var(--dark-color);
+    color: var(--static-white-color);
+    background-color: var(--gray-color);
     padding: var(--spacing-ss);
 }
 
@@ -941,7 +957,7 @@ section {
 }
 
 .c-footer-group-column-1 .c-logo {
-    color: var(--dark-color);
+    color: var(--black-color);
     font-size: var(--sizing-lx);
 }
 
@@ -965,7 +981,7 @@ section {
 }
 
 .list-footer li a {
-    color: var(--text-dark-color);
+    color: var(--text-black-color);
 }
 
 .c-footer-group-column-3 {
@@ -1064,12 +1080,12 @@ section {
     align-items: center;
     flex-wrap: wrap;
     gap: var(--spacing-md);
-    color: var(--static-white-color);
+    color: var(--white-color);
     padding: var(--spacing-md) var(--spacing-md);
 }
 
 .click-to-up {
-    color: var(--static-white-color);
+    color: var(--white-color);
 }
 
 /*  */
@@ -1098,6 +1114,7 @@ section {
     .theme-switch--mobile {
         display: flex;
     }
+
     .theme-switch--desktop {
         display: none;
     }
@@ -1140,17 +1157,19 @@ section {
 
     .c-nav.active {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         width: 100%;
         gap: var(--spacing-md);
         justify-content: flex-start;
         padding-bottom: var(--spacing-md);
         transition: all 5s linear;
     }
-    .c-nav.active:last-child{
+
+    .c-nav.active:last-child {
         margin-bottom: 0;
     }
-    .c-nav__li {
+
+    .c-nav__li a {
         width: 100%;
     }
 

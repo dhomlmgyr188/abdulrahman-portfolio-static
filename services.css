@@ -42,13 +42,13 @@
     flex-direction: column;
     gap: var(--spacing-md);
     padding: var(--spacing-md);
-    color: var(--text-white-color);
+    color: var(--static-white-color);
     background-color: var(--gray-color);
 }
 
 .instructions-btn {
-    color: var(--text-white-color);
-    background-color: var(--badge-color);
+    color: var(--static-white-color);
+    background-color: var(--gray-color);
     padding: 2px var(--spacing-sm);
 }
 
@@ -101,9 +101,8 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
-    color: var(--text-dark-color);
-    background-color: var(--card-service-color);
-    border: 1px solid var(--border-light-color);
+    background-color: var(--bg--section-2-color);
+    border: 1px solid var(--border-color);
     padding: var(--spacing-md);
     transition: all 200ms linear;
     max-height: var(--sizing-xxxxl);
@@ -125,7 +124,7 @@
     position: absolute;
     content: "خصم 25%";
     padding: var(--sizing-xs);
-    color: var(--text-white-color);
+    color: var(--static-white-color);
     background-color: var(--gradient--deep-color);
 }
 
@@ -133,7 +132,7 @@
     position: absolute;
     content: "خصم 30%";
     padding: var(--sizing-xs);
-    color: var(--text-white-color);
+    color: var(--static-white-color);
     background-color: var(--gradient--deep-color);
 }
 
@@ -168,10 +167,13 @@
     color: var(--gray-color);
 }
 
-.c-service-card header>*:not(:last-child),
 .c-service-card>*:not(:last-child) {
-    border-bottom: 1px solid var(--border-light-content-color);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: var(--spacing-sm);
+}
+
+.c-service-card>*:nth-child(1) {
+    border-bottom: none;
 }
 
 .c-service-card header {
@@ -192,7 +194,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--primary-color);
-    color: var(--text-white-color);
+    color: var(--static-white-color);
     padding: var(--spacing-sm) var(--spacing-md);
     width: 100%;
     transition: background-color 100ms linear;
