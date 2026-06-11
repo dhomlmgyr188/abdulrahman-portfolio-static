@@ -12,15 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
-    <script defer>
-        function googleTranslateElementInit() { 
-            new google.translate.TranslateElement(
-                { pageLanguage: "ar" },
-                "google_translate_element"
-            )
-        }
-    </script>
+    <script>window.gtranslateSettings = { "default_language": "ar", "native_language_names": true, "wrapper_selector": ".gtranslate_wrapper", "flag_size": 24, "flag_style": "3d" }</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/ps.js" defer></script>
     <title>حافظة أعمال وخدمات | عبدالرحمن المغير</title>
     <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
 
@@ -35,10 +28,13 @@
                     <span>ANA</span><span>ALMUGHYIR</span>
                 </a>
                 <div class="header-left">
-                    <button type="button" class="theme-switch theme-switch--mobile" aria-label="switch">
-                        <i class="fa-solid fa-moon"></i>
-                        <i class="fa-solid fa-sun"></i>
-                    </button>
+                    <div class="settings">
+                        <div class="gtranslate_wrapper gtranslate_wrapper--mobile"></div>
+                        <button type="button" class="theme-switch theme-switch--mobile" aria-label="switch">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </button>
+                    </div>
                     <div id="collapse" class="c-header__collapse">
                         <span></span>
                         <span></span>
@@ -54,11 +50,14 @@
                 <li class="c-nav__li contact"><a href="./contact.html" class="js-hero-button">تواصل معي</a></li>
             </ul>
             <div class="header-left">
+                <div class="settings">
+                    <div class="gtranslate_wrapper gtranslate_wrapper--desktop"></div>
+                    <button type="button" class="theme-switch theme-switch--desktop" aria-label="switch">
+                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-solid fa-sun"></i>
+                    </button>
+                </div>
                 <a href="./contact.html" class="c-header__button contact"><b>تواصل معي</b></a>
-                <button type="button" class="theme-switch theme-switch--desktop" aria-label="switch">
-                    <i class="fa-solid fa-moon"></i>
-                    <i class="fa-solid fa-sun"></i>
-                </button>
             </div>
         </div>
     </header>
@@ -151,7 +150,7 @@
                                 </dl>
                             </li>
                         </ul>
-                        <a href="assets/docs/سيرة ذاتية عبدالرحمن المغير.pdf">
+                        <a href="assets/docs/سيرتي الذاتية عبدالرحمن المغير.pdf">
                             <i class="fa-regular fa-file"></i>
                             عرض السيرة الذاتية
                         </a>
