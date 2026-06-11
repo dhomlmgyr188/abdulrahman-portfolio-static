@@ -1,19 +1,4 @@
-.breadcrumb {
-    display: flex;
-    gap: var(--spacing-sm);
-}
 
-.breadcrumb-item a {
-    color: var(--primary-color);
-}
-
-.breadcrumb span {
-    color: var(--text-gray-color);
-}
-
-.breadcrumb-item.active {
-    color: var(--text-gray-color);
-}
 
 .c-services__title {
     font-size: var(--sizing-lx);
@@ -24,14 +9,11 @@
     color: var(--primary-color);
 }
 
-.c-services .o-container header {
-    display: flex;
-    flex-direction: column;
-}
 
 .c-services__space-between {
     display: flex;
     align-items: center;
+    text-align: right !important;
     justify-content: space-between;
 }
 

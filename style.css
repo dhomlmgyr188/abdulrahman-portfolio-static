@@ -24,12 +24,12 @@
     --white-color: #fafafa;
     --text-black-color: #111111;
     --text-white-color: #fafafa;
-    --bg--section-1-color: #ffffff;
-    --bg--section-2-color: #f8f8f8;
+    --bg-1-color: #ffffff;
+    --bg-2-color: #f8f8f8;
     --border-color: #cccccc;
     --static-white-color: #fafafa;
-    --bg-navbar-color: #111111;
-    --bg-footer-copyright-color: #111111;
+    --bg-navbar-color: #444;
+    --bg-footer-copyright-color: #444;
     --gray-color: gray;
     --text-gray-color: gray;
 
@@ -76,8 +76,8 @@
     --white-color: #111111;
     --text-black-color: #fafafa;
     --text-white-color: #111111;
-    --bg--section-1-color: #000000;
-    --bg--section-2-color: #1b1b1b;
+    --bg-1-color: #000000;
+    --bg-2-color: #1b1b1b;
     --border-color: #4d4d4d;
     --bg-navbar-color: #fafafa;
     --bg-footer-copyright-color: #fafafa;
@@ -190,21 +190,32 @@ select {
     padding: 0 var(--spacing-md);
 }
 
-
-/* header */
-.gt_container-unisv1 {
-    background-color: transparent !important;
-    padding: 0 var(--sizing-xs);
+.breadcrumb-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg)  0  0;
 }
 
-.gt_container-unisv1 a.glink span {
-    color: var(--text-gray-color) !important;
+.breadcrumb {
+    display: flex;
+    gap: var(--spacing-sm);
 }
 
-.gtranslate_wrapper--mobile {
-    display: none;
+.breadcrumb-item a {
+    color: var(--text-gray-color);
 }
 
+.breadcrumb span {
+    color: var(--text-gray-color);
+}
+
+.breadcrumb-item.active {
+    color: var(--text-gray-color);
+}
+
+/* Header */
 .c-header {
     display: flex;
     align-items: center;
@@ -362,7 +373,7 @@ select {
 
 /* Hero Section */
 .c-hero {
-    background-color: var(--bg--section-1-color);
+    background-color: var(--bg-1-color);
 
 }
 
@@ -472,7 +483,7 @@ select {
 
 /* About Section */
 .c-about {
-    background: var(--bg--section-2-color);
+    background: var(--bg-2-color);
 
 }
 
@@ -497,7 +508,7 @@ select {
 .personal-img>img {
     display: block;
     margin: 0 auto;
-    background-color: var(--bg--section-1-color);
+    background-color: var(--bg-1-color);
     border: 1px solid var(--border-color);
     height: var(--sizing-xxxl);
 }
@@ -514,7 +525,7 @@ select {
     flex-direction: column;
     gap: var(--spacing-sm);
     padding: var(--spacing-md);
-    background-color: var(--bg--section-1-color);
+    background-color: var(--bg-1-color);
     border: 1px solid var(--border-color);
 }
 
@@ -533,7 +544,7 @@ select {
 
 /* Services Section */
 .c-services {
-    background: var(--bg--section-1-color);
+    background: var(--bg-1-color);
 }
 
 .c-services>div {
@@ -565,7 +576,7 @@ select {
     gap: var(--spacing-md);
     padding: var(--spacing-md);
     color: var(--black-color);
-    background-color: var(--bg--section-2-color);
+    background-color: var(--bg-2-color);
 }
 
 .service__card>i {
@@ -592,7 +603,7 @@ select {
 
 /* projects Section */
 .c-projects {
-    background-color: var(--bg--section-2-color);
+    background-color: var(--bg-2-color);
 }
 
 .c-projects>div {
@@ -619,7 +630,7 @@ select {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
-    background-color: var(--bg--section-1-color);
+    background-color: var(--bg-1-color);
     border: 1px solid var(--border-color);
 }
 
@@ -691,7 +702,7 @@ select {
 
 /* Skills Section */
 .c-skills {
-    background-color: var(--bg--section-1-color);
+    background-color: var(--bg-1-color);
 }
 
 .c-skills>div {
@@ -824,7 +835,7 @@ select {
 
 /* Qualifications Section */
 .c-qualifications {
-    background-color: var(--bg--section-2-color);
+    background-color: var(--bg-2-color);
 
 }
 
@@ -939,7 +950,7 @@ select {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--bg--section-1-color);
+    background-color: var(--bg-1-color);
 }
 
 .o-container--footer {
@@ -1300,22 +1311,6 @@ select {
 
 /* xs device */
 @media (max-width: 500px) {
-    body {
-        padding-top: 96px;
-    }
-
-    html {
-        scroll-padding-top: 96px;
-    }
-
-    .c-header__top {
-        flex-direction: column;
-    }
-
-    .header-left {
-        justify-content: space-between;
-        width: 100%;
-    }
 
     .c-social-nav__link {
         width: var(--sizing-lg);
