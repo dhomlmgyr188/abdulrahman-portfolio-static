@@ -1,3 +1,8 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+// تفعيل المكتبة مع الإعدادات الخاصة بك
+AOS.init();
+
 // collapse header
 const navbar = document.getElementById("navbar"),
   collapse = document.getElementById("collapse"),
