@@ -35,7 +35,6 @@
 
 .card--details summary {
     cursor: pointer;
-    font-size: var(--sizing-ml);
 }
 
 @media (max-width: 992px) {

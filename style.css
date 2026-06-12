@@ -59,7 +59,7 @@
     --sizing-sm: 8px;
     --sizing-md: 16px;
     --sizing-mm: 20px;
-    --sizing-ml: 24px;
+    --sizing-ml: 26px;
     --sizing-lg: 32px;
     --sizing-lx: 48px;
     --sizing-xl: 64px;
@@ -76,7 +76,7 @@
     --white-color: #111111;
     --text-black-color: #fafafa;
     --text-white-color: #111111;
-    --bg-1-color: #000000;
+    --bg-1-color: #111111;
     --bg-2-color: #1b1b1b;
     --border-color: #4d4d4d;
     --bg-navbar-color: #fafafa;
@@ -156,12 +156,12 @@ button {
 
 h1 {
     color: var(--primary-color);
-    font-size: var(--sizing-lx);
+    font-size: var(--sizing-lg);
 }
 
 h2 {
     color: var(--primary-color);
-    font-size: var(--sizing-lg);
+    font-size: var(--sizing-ml);
 }
 
 h3 {
@@ -467,7 +467,6 @@ select {
 }
 
 .c-hero__actions>a {
-    font-size: var(--sizing-md);
     font-weight: 700;
     width: 100%;
     padding: var(--spacing-md);
@@ -990,7 +989,6 @@ select {
 
 .c-footer-group-column-1 .c-logo {
     color: var(--black-color);
-    font-size: var(--sizing-lx);
 }
 
 .c-footer-group-column-2 {
@@ -1020,7 +1018,7 @@ select {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
 }
 
 .cta-footer {
@@ -1029,7 +1027,6 @@ select {
     justify-content: center;
     text-align: center;
     padding: var(--spacing-md);
-    font-size: var(--sizing-mmd);
     color: var(--static-white-color);
     background-color: var(--cta-color);
     transition: all 100ms linear;
@@ -1238,7 +1235,6 @@ select {
     }
 
     .c-cert-content {
-        font-size: var(--sizing-md);
         gap: var(--spacing-md);
         padding: var(--sizing-md);
         background-color: var(--white-color);
@@ -1315,7 +1311,6 @@ select {
     .c-social-nav__link {
         width: var(--sizing-lg);
         height: var(--sizing-lg);
-        font-size: var(--sizing-ml);
     }
 
     .c-hero__content {
