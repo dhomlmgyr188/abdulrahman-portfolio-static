@@ -32,15 +32,15 @@ window.addEventListener("scroll", () => {
   });
 
   // عند النزول السفلي في الصفحة يضيف الصنف hidder-header اذا شيء اخر يزيل العنصر hidden-header
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollTop > lastScrollTop) {
-    header.classList.add("hidden-header");
-  } else {
-    header.classList.remove("hidden-header");
-  }
-  lastScrollTop = scrollTop;
+  // let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  // if (scrollTop > lastScrollTop) {
+  //   header.classList.add("hidden-header");
+  // } else {
+  //   header.classList.remove("hidden-header");
+  // }
+  // lastScrollTop = scrollTop;
 
-  headerContainer.classList.toggle("slidedown", window.scrollY > 0);
+  // headerContainer.classList.toggle("slidedown", window.scrollY > 0);
 });
 
 const allSliders = document.querySelectorAll(".c-wrapper-slider");

@@ -130,6 +130,7 @@ html {
     box-sizing: inherit;
     scroll-behavior: smooth;
     height: -webkit-fill-available;
+    scroll-padding-top: var(--navbar-height);
 }
 
 body {
@@ -138,7 +139,6 @@ body {
     color: var(--text-black-color);
     line-height: 1.5;
     padding-top: var(--navbar-height);
-    scroll-padding-top: var(--navbar-height);
 }
 
 p {
@@ -195,7 +195,7 @@ select {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-lg)  0  0;
+    padding: var(--spacing-lg) 0 0;
 }
 
 .breadcrumb {
@@ -293,6 +293,22 @@ select {
 
 .c-nav__li {
     display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+}
+
+.c-nav__li::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0%;
+    bottom: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s;
+}
+
+.c-nav__li:hover::after {
+    width: 100%;
 }
 
 .c-nav__li:last-child {
@@ -300,16 +316,12 @@ select {
     background-color: var(--cta-color);
 }
 
-
 .c-nav__li a {
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--white-color);
-    transition: background-color 100ms linear;
+    transition: all 100ms linear;
 }
 
-.c-nav__li a:hover {
-    background-color: var(--primary-color);
-}
 
 .contact a {
     color: var(--static-white-color);
@@ -374,7 +386,7 @@ select {
 /* Hero Section */
 .c-hero {
     background-color: var(--bg-1-color);
-    
+
 }
 
 .c-hero__content {
@@ -1118,8 +1130,25 @@ select {
 }
 
 /*  */
+
 .button-active {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+}
+
+.button-active a {
     background-color: var(--primary-color);
+}
+
+.button-active::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    background-color: var(--secondary-color);
+    transition: width 100ms linear;
 }
 
 /* xl device */
