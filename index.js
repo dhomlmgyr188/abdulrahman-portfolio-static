@@ -1,27 +1,27 @@
-
-// collapse header
+// تعريف المتغيرات
 const navbar = document.getElementById("navbar"),
   collapse = document.getElementById("collapse"),
   headerButton = document.querySelectorAll(".c-nav__li"),
   sections = document.querySelectorAll("section");
-
-var lastScrollTop = 0,
+let lastScrollTop = 0,
   header = document.getElementById("header"),
   headerContainer = document.querySelector(".c-header");
 
+// عند الضغط على زر collapse يعطى الصنف active وعند الضغط مرة اخرى باستخدام خاصية toggle يزال الصنف active
 collapse.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });
 
+// عند التمرير لكل قسم يعطى لون لزر القائمة يثبت ان المستخدم يقف على هذا القسم
 window.addEventListener("scroll", () => {
   let current = "";
-  // sections.forEach((section) => {
-  //   const sectionTop = section.offsetTop;
-  //   const sectionHeight = section.clientHeight;
-  //   if (pageYOffset >= sectionTop) {
-  //     current = section.getAttribute("id");
-  //   }
-  // });
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= sectionTop - 64) {
+      current = section.getAttribute("id");
+    }
+  });
 
   headerButton.forEach((li) => {
     navbar.classList.remove("active");
@@ -30,7 +30,9 @@ window.addEventListener("scroll", () => {
       li.classList.add("button-active");
     }
   });
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // عند النزول السفلي في الصفحة يضيف الصنف hidder-header اذا شيء اخر يزيل العنصر hidden-header
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   if (scrollTop > lastScrollTop) {
     header.classList.add("hidden-header");
   } else {
@@ -38,7 +40,7 @@ window.addEventListener("scroll", () => {
   }
   lastScrollTop = scrollTop;
 
-  headerContainer.classList.toggle("slidedown", window.scrollY > 0)
+  headerContainer.classList.toggle("slidedown", window.scrollY > 0);
 });
 
 const allSliders = document.querySelectorAll(".c-wrapper-slider");
@@ -93,33 +95,7 @@ allSliders.forEach((wrapperSlider) => {
   wrapperSlider.addEventListener("mouseleave", autoSlide);
 });
 
-// filterServices
-const filterButtons = document.querySelectorAll(".c-services-filter btutton");
-const filterContainer = document.querySelectorAll(
-  ".c-services-cards-container .c-service-card ",
-);
-
-//
-const filterCard = (e) => {
-  document.querySelector(".active").classList.remove("active");
-  e.target.classList.add("active");
-
-  filterContainer.forEach((card) => {
-    card.classList.add("hide");
-
-    if (
-      card.dataset.name === e.target.dataset.name ||
-      e.target.dataset.name === "all"
-    ) {
-      card.classList.remove("hide");
-    }
-  });
-};
-// console.log(filterButtons, filterContainer);
-
-filterButtons.forEach((button) => button.addEventListener("click", filterCard));
-
-// filterSkills
+// يضيف الصنف active على ال الزر المفعل ويزيله من باقي الاصناف التي لها اسماء مختلفة
 const skillButtons = document.querySelectorAll(".bgcolor-guide button");
 const skillItems = document.querySelectorAll(".skills-tech-container .skill");
 
@@ -152,10 +128,14 @@ skillButtons.forEach((button) =>
   button.addEventListener("click", highlightSkills),
 );
 
+// يضيف السنة الحالية في عنصر داخل مستند html ويحدثها مع مرور كل سنة دون العودة لكتابتها يدوياً
 const copyRight = (document.getElementById("copyRight").innerHTML =
   "©" + new Date().getFullYear());
 
-// theme-switch
+/*
+ يغير ثيم الصفحة من خلال اضافة الصنف active على الbody
+ ويخزن قيمته في الذاكرة بحيث حتى لو المستخدم حدث الصفحة يضل الصنف مفعل
+ */
 let darkmode = localStorage.getItem("darkmode");
 const themeSwitch = document.querySelectorAll(".theme-switch");
 

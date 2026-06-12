@@ -130,7 +130,6 @@ html {
     box-sizing: inherit;
     scroll-behavior: smooth;
     height: -webkit-fill-available;
-    scroll-padding-top: var(--navbar-height);
 }
 
 body {
@@ -139,6 +138,7 @@ body {
     color: var(--text-black-color);
     line-height: 1.5;
     padding-top: var(--navbar-height);
+    scroll-padding-top: var(--navbar-height);
 }
 
 p {
@@ -349,16 +349,16 @@ select {
     transform: translate(50%, -50%);
 }
 
-.o-container--header:has(.c-nav.active) .c-header__collapse span:nth-child(1) {
+.o-container--header:has(#navbar.active) .c-header__collapse span:nth-child(1) {
     top: 50%;
     transform: translate(50%, -50%) rotate(45deg);
 }
 
-.o-container--header:has(.c-nav.active) .c-header__collapse span:nth-child(2) {
+.o-container--header:has(#navbar.active) .c-header__collapse span:nth-child(2) {
     opacity: 0;
 }
 
-.o-container--header:has(.c-nav.active) .c-header__collapse span:nth-child(3) {
+.o-container--header:has(#navbar.active) .c-header__collapse span:nth-child(3) {
     top: 50%;
     transform: translate(50%, -50%) rotate(-45deg);
 }
@@ -1197,11 +1197,11 @@ select {
         display: flex;
     }
 
-    .c-nav {
+    #navbar {
         display: none;
     }
 
-    .c-nav.active {
+    #navbar.active {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -1211,7 +1211,7 @@ select {
         transition: all 5s linear;
     }
 
-    .c-nav.active:last-child {
+    #navbar.active:last-child {
         margin-bottom: 0;
     }
 
