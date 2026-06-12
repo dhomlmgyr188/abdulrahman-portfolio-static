@@ -1,7 +1,3 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css'
-// تفعيل المكتبة مع الإعدادات الخاصة بك
-AOS.init();
 
 // collapse header
 const navbar = document.getElementById("navbar"),
@@ -18,7 +14,7 @@ collapse.addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", () => {
-  // let current = "";
+  let current = "";
   // sections.forEach((section) => {
   //   const sectionTop = section.offsetTop;
   //   const sectionHeight = section.clientHeight;
@@ -34,15 +30,15 @@ window.addEventListener("scroll", () => {
       li.classList.add("button-active");
     }
   });
-  // var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  // if (scrollTop > lastScrollTop) {
-  //   header.classList.add("hidden-header");
-  // } else {
-  //   header.classList.remove("hidden-header");
-  // }
-  // lastScrollTop = scrollTop;
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    header.classList.add("hidden-header");
+  } else {
+    header.classList.remove("hidden-header");
+  }
+  lastScrollTop = scrollTop;
 
-  // headerContainer.classList.toggle("slidedown", window.scrollY > 0)
+  headerContainer.classList.toggle("slidedown", window.scrollY > 0)
 });
 
 const allSliders = document.querySelectorAll(".c-wrapper-slider");

@@ -374,7 +374,7 @@ select {
 /* Hero Section */
 .c-hero {
     background-color: var(--bg-1-color);
-    min-height: calc(100vh - 64px);
+    
 }
 
 .c-hero__content {
