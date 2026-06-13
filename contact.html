@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
     <title>تواصل معي | عبدالرحمن المغير</title>
     <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
 </head>
@@ -20,26 +17,72 @@
     <header class="c-header">
         <div class="o-container--header" id="header">
             <div class="c-header__top">
-                <a href="#hero" class="c-header__logo">
+                <a href="./index.html" class="c-logo">
                     <span>ANA</span><span>ALMUGHYIR</span>
                 </a>
-                <div id="collapse" class="c-header__collapse">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="header-left">
+                    <div class="settings">
+                        <button type="button" class="theme-switch theme-switch--mobile" aria-label="switch">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </button>
+                    </div>
+                    <div id="collapse" class="c-header__collapse">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
             <ul class="c-nav" id="navbar">
-                <li class="c-nav__li hero"><a href="./index.html" class="js-hero-button">الرئيسية</a></li>
-                <li class="c-nav__li hero"><a href="./index.html#about" class="js-hero-button">نبذة عني</a></li>
-                <li class="c-nav__li services"><a href="./services.html" class="js-hero-button">خدماتي</a></li>
-                <li class="c-nav__li projects"><a href="./projects.html" class="js-hero-button">مشاريعي</a></li>
-                <li class="c-nav__li contact"><a href="./contact.html" class="js-hero-button">تواصل معي</a></li>
+                <li class="c-nav__li hero button-active"><a href="./index.html">الرئيسية</a></li>
+                <li class="c-nav__li about"><a href="./index.html#about">نبذة عني</a></li>
+                <li class="c-nav__li services">
+                    <a href="./index.html#services">
+                        <i class="fa-solid fa-sort-down"></i>
+                        ماذا أقدم؟
+                    </a>
+                    <div class="ser-btn-cont-details">
+                        <a href="./services.html">خدماتي</a>
+                    </div>
+                </li>
+                <li class="c-nav__li projects">
+                    <a href="./index.html#projects">
+                        <i class="fa-solid fa-sort-down"></i>
+                        آخر الأعمال
+                    </a>
+                    <div class="prj-btn-cont-details">
+                        <a href="./projects.html">أعمالي</a>
+                    </div>
+                </li>
+                <li class="c-nav__li skills"><a href="./index.html#skills">مهاراتي</a></li>
+                <li class="c-nav__li qualifications"><a href="./index.html#qualifications">مؤهلاتي</a></li>
+                <li class="c-nav__li contact"><a href="./contact.html">تواصل معي</a></li>
             </ul>
-            <a href="./contact.html" class="c-header__button contact">تواصل معي</a>
+            <div class="header-left">
+                <div class="settings">
+                    <button type="button" class="theme-switch theme-switch--desktop" aria-label="switch">
+                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-solid fa-sun"></i>
+                    </button>
+                </div>
+                <a href="./contact.html" class="c-header__button contact"><b>تواصل معي</b></a>
+            </div>
         </div>
     </header>
-    
+
+    <main>
+        <header class="breadcrumb-container breadcrumb-container--contact">
+            <div class="o-container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">الرئيسية</a></li>
+                    <li><span><i class="fa-solid fa-chevron-left"></i></span></li>
+                    <li class="breadcrumb-item active">تواصل معي</li>
+                </ol>
+            </div>
+        </header>
+    </main>
+
     <script type="module" src="./index.js"></script>
 </body>
 

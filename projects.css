@@ -205,3 +205,8 @@
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--dark-color-white);
 }
+@media (max-width: 992px) {
+    .c-projects__cards{
+        grid-template-columns: 1fr;
+    }
+}
