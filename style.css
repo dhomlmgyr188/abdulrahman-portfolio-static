@@ -189,6 +189,31 @@ select {
     color: var(--text-gray-color);
 }
 
+/* spilt btn */
+
+
+.dropdown button {
+    height: 100%;
+    color: var(--static-white-color);
+    border-left: 1px solid var(--gray-color);
+    font-size: var(--sizing-md);
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: var(--gray-color);
+    width: 100%;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
 /* Header */
 .c-header {
     display: flex;
@@ -305,43 +330,6 @@ select {
     background-color: var(--secondary-color);
     transition: width 0.3s;
 }
-
-.c-nav__li {
-    position: relative;
-}
-
-.ser-btn-cont-details,
-.prj-btn-cont-details {
-    display: none;
-    position: absolute;
-    width: 100%;
-    bottom: -48px;
-}
-
-.ser-btn-cont-details a,
-.prj-btn-cont-details a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 16px !important;
-    color: var(--cta-color);
-    background-color: #cc54528a;
-    transition: all 100ms linear;
-    width: 100%;
-}
-
-.c-nav__li.projects:hover .prj-btn-cont-details,
-.c-nav__li.services:hover .ser-btn-cont-details {
-    display: flex;
-}
-
-.c-nav:has(.c-nav__li.projects.button-active) .prj-btn-cont-details,
-.c-nav:has(.c-nav__li.services.button-active) .ser-btn-cont-details {
-    display: none;
-}
-
-
-
 
 .c-nav__li:hover::after {
     width: 100%;
@@ -677,6 +665,8 @@ select {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
+    background-color: var(--gray-bg-color);
+    border: 1px solid var(--border-color);
 }
 
 .project-card main>* {
@@ -689,6 +679,7 @@ select {
 
 .project-card figure {
     overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .project-card figure:hover>img {
@@ -759,9 +750,11 @@ select {
 .c-skills header {
     text-align: center;
 }
-hr{
+
+hr {
     color: var(--border-color) !important;
 }
+
 .c-skills header>h2 {
     color: var(--primary-color);
 }
@@ -1185,12 +1178,13 @@ hr{
 }
 
 /* top button */
-.top-btn{
+.top-btn {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.top-btn button{
+
+.top-btn button {
     display: none;
     align-items: center;
     justify-content: center;
@@ -1206,9 +1200,10 @@ hr{
     z-index: 1;
 }
 
-.js-top-btn.active{
+.js-top-btn.active {
     display: flex;
 }
+
 /* xl device */
 @media (max-width: 1200px) {
     .skills-grid {
