@@ -156,3 +156,20 @@ themeSwitch.forEach((button) => {
     darkmode !== "active" ? enableDarkMode() : disableDarkMode();
   });
 });
+
+const topBtn = document.querySelector(".js-top-btn");
+
+topBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  })
+})
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    topBtn.classList.add("active");
+  } else {
+    topBtn.classList.remove("active");
+  }
+});

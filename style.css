@@ -432,7 +432,6 @@ select {
     align-items: center;
     text-align: center;
     gap: var(--spacing-lg);
-    z-index: 1;
     font-size: var(--sizing-mm);
 }
 
@@ -843,7 +842,6 @@ hr{
 
 
 .skills-tech-container .skill.highlighted {
-    z-index: 10;
     opacity: 1;
 }
 
@@ -860,7 +858,6 @@ hr{
     height: var(--sizing-xl);
     width: 100%;
     transition: all 200ms linear;
-    z-index: 1;
     padding: var(--spacing-sm);
 }
 
@@ -930,7 +927,6 @@ hr{
     inset: 0;
     transform: translateY(50%, -50%);
     opacity: 0;
-    z-index: 4;
     transition: all 0.2s linear;
 }
 
@@ -1162,11 +1158,11 @@ hr{
     padding: var(--spacing-md) var(--spacing-md);
 }
 
-.click-to-up {
+.copy-right a {
     color: var(--static-white-color);
 }
 
-/*  */
+/* active header button */
 
 .button-active {
     display: flex;
@@ -1188,6 +1184,34 @@ hr{
     transition: width 100ms linear;
 }
 
+/* top button */
+.top-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-btn button{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    height: var(--sizing-lx);
+    width: var(--sizing-lx);
+    font-size: var(--sizing-mm);
+    color: var(--static-white-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 100ms linear;
+}
+.top-btn button:hover{
+    background-color: var(--secondary-color);
+}
+.js-top-btn.active{
+    display: flex;
+}
 /* xl device */
 @media (max-width: 1200px) {
     .skills-grid {
