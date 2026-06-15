@@ -1204,11 +1204,8 @@ hr{
     background-color: var(--primary-color);
     border-radius: 50%;
     z-index: 1;
-    transition: background-color 100ms linear;
 }
-.top-btn button:hover{
-    background-color: var(--secondary-color);
-}
+
 .js-top-btn.active{
     display: flex;
 }
