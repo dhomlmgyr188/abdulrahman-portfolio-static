@@ -97,7 +97,6 @@
     align-items: center;
     justify-content: flex-start;
     margin-top: var(--spacing-sm);
-    color: var(--gray-color);
 }
 
 .c-service .c-service__features ul>* {
@@ -117,7 +116,6 @@
     color: var(--static-white-color);
     background-color: var(--cta-color);
     font-size: var(--sizing-ml);
-    font-weight: bold;
     padding: var(--spacing-md);
     transition: all 100ms linear;
     animation: moving 3s ease-in-out infinite forwards;
