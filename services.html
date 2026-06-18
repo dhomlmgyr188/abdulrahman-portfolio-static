@@ -119,26 +119,36 @@
                                 </ul>
                             </article>
                             <div>
-                                <select aria-label="select pages" id="selectDesignPages" required>
-                                    <option value="" disabled selected>اختر عدد الصفحات المطلوبة</option>
-                                    <option value="one page">صفحة واحدة طويلة (صفحة هبوط)</option>
-                                    <option value="two between five pages">بين 2 إلى 5 صفحات</option>
-                                    <option value="six between ten pages">بين 6 إلى 10 صفحات</option>
-                                    <option value="ten pages and over">10 صفحات فأعلى</option>
+                                <select id="selectDesignPages" class="js-select-design-pages" required>
+                                    <option value="" disabled selected>يرجى اختيار عدد الصفحات لتظهر التكلفة</option>
+                                    <option value="one-page">صفحة واحدة طويلة (صفحة هبوط)</option>
+                                    <option value="two-between-five-pages">بين 2 إلى 5 صفحات</option>
+                                    <option value="six-between-ten-pages">بين 6 إلى 10 صفحات</option>
+                                    <option value="ten-pages-and-over">10 صفحات فأعلى</option>
                                 </select>
                             </div>
                             <article>
                                 <h3 class="c-service__sub-title">التكلفة المتوقعة: </h3>
-                                <p>
+                                <p class="c-service__cost-value">
                                     بين
-                                    <span class="firstCost medium-text">30</span>
-                                    ريال
+                                    <span class="c-service__price medium-text">
+                                        (
+                                        <span class="js-first-cost">0</span>
+                                        ريال
+                                        )
+                                    </span>
                                     الى
-                                    <span class="secondCost medium-text">100</span>
-                                    ريال.
+                                    <span class="c-service__price medium-text">
+                                        (
+                                        <span class="js-second-cost">0</span>
+                                        ريال
+                                        )
+                                    </span>
+                                    .
                                 </p>
                             </article>
-                            <a href="#" class="c-service__direct">
+                            <a href="https://wa.me/966541590819?text=طلب خدمة تصميم واجهات المستخدم"
+                                class="c-service__direct js-ui-whatsapp-direct">
                                 تواصل معي واتساب
                             </a>
                         </main>

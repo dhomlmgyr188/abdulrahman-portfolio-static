@@ -41,9 +41,11 @@
     overflow: hidden;
     transition: box-shadow 200ms linear;
 }
-.c-service:hover{
+
+.c-service:hover {
     box-shadow: 0px 0px 4px 0px var(--gray-color);
 }
+
 .c-service__img {
     height: 100%;
     width: 100%;
@@ -108,7 +110,8 @@
 .c-service main>div select {
     width: 100%;
 }
-.c-service .c-service__direct{
+
+.c-service .c-service__direct {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,29 +123,43 @@
     transition: all 100ms linear;
     animation: moving 3s ease-in-out infinite forwards;
 }
-@keyframes moving{
+
+@keyframes moving {
     0% {
         transform: rotate(0deg);
     }
+
     25% {
         transform: rotate(0.5deg);
     }
+
     50% {
         transform: rotate(-0.5deg);
     }
+
     75% {
         transform: rotate(0.5deg);
     }
+
     100% {
         transform: rotate(0deg);
     }
 }
-.c-service .c-service__direct:hover{
+
+.c-service .c-service__direct:hover {
     background-color: var(--cta-hover-color);
 }
 
+.c-service__cost-value {
+    padding-bottom: var(--spacing-sm);
+}
+
+.c-service__price {
+    color: var(--cta-color);
+}
+
 @media (max-width: 350px) {
-    .c-service .c-service__direct{
+    .c-service .c-service__direct {
         font-size: var(--sizing-md);
     }
 }

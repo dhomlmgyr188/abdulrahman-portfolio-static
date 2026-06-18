@@ -173,3 +173,60 @@ window.addEventListener("scroll", () => {
     topBtn.classList.remove("active");
   }
 });
+
+// تغيير تلقائي للأسعار مع تغير خيار المستخدم وتغيير الرسالة التي تنقل المستخدم الى التواصل
+const firstCost = document.querySelector(".js-first-cost"),
+  secondCost = document.querySelector(".js-second-cost"),
+  whatsappUiButton = document.querySelector(".js-ui-whatsapp-direct"),
+  selectPagesDesign = document.querySelector(".js-select-design-pages");
+
+// بيانات افتراضية للحد الادنى والاعلى للتكلفة والرسالة عند الضغط على زر التواصل
+const optionsData = {
+  "one-page": {
+    minPrice: 149,
+    maxPrice: 178,
+    message: "مرحباً، أود طلب خدمة تصميم واجهات الموقع الإلكتروني UI/UX، (صفحة واحدة طويلة (صفحة هبوط))."
+  },
+  "two-between-five-pages": {
+    minPrice: 178,
+    maxPrice: 445,
+    message: "مرحباً، أود طلب خدمة تصميم واجهات الموقع الإلكتروني UI/UX، (بين 2 إلى 5 صفحات)."
+  },
+  "six-between-ten-pages": {
+    minPrice: 534,
+    maxPrice: 890,
+    message: "مرحباً، أود طلب خدمة تصميم واجهات الموقع الإلكتروني UI/UX، (بين 6 إلى 10 صفحات)."
+  },
+  "ten-pages-and-over": {
+    minPrice: 890,
+    maxPrice: 1798,
+    message: "مرحباً، أود طلب خدمة تصميم واجهات الموقع الإلكتروني UI/UX، (10 صفحات فأعلى)."
+  }
+};
+
+function updateServiceDetails() {
+  const selectedValue = selectPagesDesign.value;
+
+  if (optionsData[selectedValue]) {
+    const currentData = optionsData[selectedValue];
+    firstCost.textContent = currentData.minPrice;
+    secondCost.textContent = currentData.maxPrice;
+    const encodedMessage = encodeURIComponent(currentData.message);
+    const baseWhatsappUrl = "https://wa.me/966541590819";
+    whatsappUiButton.href = `${baseWhatsappUrl}?text=${encodedMessage}`;
+  }
+
+  else {
+    firstCost.textContent = "0";
+    secondCost.textContent = "0";
+    whatsappUiButton.href = "https://wa.me/966541590819?text=طلب خدمة تصميم واجهات المستخدم";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (selectPagesDesign) {
+    selectPagesDesign.addEventListener("change", updateServiceDetails);
+  } else {
+    console.error("خطأ: لم يتم العثور على عنصر الـ select، تأكد من كلاس .js-select-design-pages");
+  }
+});
