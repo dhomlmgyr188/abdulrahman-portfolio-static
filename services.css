@@ -15,6 +15,7 @@
 .c-services__space-between {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     text-align: right !important;
     justify-content: space-between;
     gap: var(--spacing-lg);
@@ -26,102 +27,124 @@
     padding: 2px var(--spacing-sm);
 }
 
-.c-services_cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.c-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: var(--spacing-md);
+    background-color: var(--gray-bg-color);
+    box-shadow: 0px 0px 2px 0px var(--gray-color);
+    padding: var(--spacing-md);
+    height: 100%;
+    max-width: var(--sizing-xxxxl);
+    width: 100%;
+    overflow: hidden;
+    transition: box-shadow 200ms linear;
+}
+.c-service:hover{
+    box-shadow: 0px 0px 4px 0px var(--gray-color);
+}
+.c-service__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
 }
 
-.c-service-card__title {
+.c-service .c-service__title {
     color: var(--primary-color);
 }
 
-.c-service-card {
-    display: flex;
-    flex-direction: column;
-    transition: all 200ms linear;
-    border: 1px solid var(--border-color);
-    max-height: var(--sizing-xxxxl);
-    position: relative;
+.c-service .c-service__sub-title {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-sm);
 }
 
-.service-content {
+.c-service main {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
-    padding: var(--spacing-md);
-    background-color: var(--gray-bg-color);
+    justify-content: center;
 }
 
-.c-service-card:nth-child(3)::after {
-    position: absolute;
-    content: "خصم 25%";
-    padding: var(--sizing-xs);
-    color: var(--static-white-color);
-    background-color: var(--gradient--deep-color);
+.c-service main>*:not(:nth-child(5)):not(:nth-child(6)) {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
 }
 
-.c-service-card:nth-child(4)::after {
-    position: absolute;
-    content: "خصم 30%";
-    padding: var(--sizing-xs);
-    color: var(--static-white-color);
-    background-color: var(--gradient--deep-color);
-}
-
-.service-wallpaper {
-    height: var(--sizing-xxxl);
-    border-bottom: 1px solid var(--border-color);
-    overflow: hidden;
-}
-
-.service-wallpaper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all .2s linear;
-}
-
-.service-wallpaper:hover img {
-    transform: scale(1.1);
-}
-
-.service-between {
+.c-service .c-service__technicals ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
 }
 
-.c-service-card__direct {
-    display: inline-flex;
+.c-service .c-service__technicals ul>li {
+    flex: 1;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary-color);
     color: var(--static-white-color);
-    padding: var(--spacing-sm) var(--spacing-md);
-    transition: background-color 100ms linear;
+    background-color: var(--gray-color);
+    padding: var(--spacing-sm);
 }
 
-.c-service-card__direct:hover {
-    background-color: var(--secondary-color);
+.c-service .c-service__technicals ul>li img {
+    margin-right: var(--spacing-sm);
 }
 
-@media (max-width: 992px) {
-    .c-services_cards {
-        grid-template-columns: repeat(2, 1fr);
+.c-service .c-service__technicals small {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: var(--spacing-sm);
+    color: var(--gray-color);
+}
+
+.c-service .c-service__features ul>* {
+    display: list-item;
+    list-style: disc;
+    margin-right: var(--spacing-ml);
+}
+
+.c-service main>div select {
+    width: 100%;
+}
+.c-service .c-service__direct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--static-white-color);
+    background-color: var(--cta-color);
+    font-size: var(--sizing-ml);
+    font-weight: bold;
+    padding: var(--spacing-md);
+    transition: all 100ms linear;
+    animation: moving 3s ease-in-out infinite forwards;
+}
+@keyframes moving{
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(0.5deg);
+    }
+    50% {
+        transform: rotate(-0.5deg);
+    }
+    75% {
+        transform: rotate(0.5deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
-
-@media (max-width: 768px) {
-    .c-services__space-between {
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-    }
+.c-service .c-service__direct:hover{
+    background-color: var(--cta-hover-color);
 }
 
-@media (max-width: 600px) {
-    .c-services_cards {
-        grid-template-columns: 1fr;
+@media (max-width: 350px) {
+    .c-service .c-service__direct{
+        font-size: var(--sizing-md);
     }
 }

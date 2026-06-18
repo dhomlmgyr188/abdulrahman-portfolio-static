@@ -54,6 +54,7 @@
     --spacing-ss: 6px;
     --spacing-sm: 8px;
     --spacing-md: 16px;
+    --spacing-ml: 26px;
     --spacing-lg: 32px;
     --spacing-xl: 64px;
 
@@ -151,7 +152,7 @@ section {
 }
 
 select {
-    border: 0;
+    font-size: var(--sizing-md);
     outline: none;
     cursor: pointer;
     padding: var(--spacing-sm);
