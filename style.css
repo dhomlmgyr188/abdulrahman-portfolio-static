@@ -63,7 +63,6 @@
 /* variables */
 :root {
     /* colors */
-
     --black-color: #111111;
     --white-color: #fafafa;
     --text-black-color: #111111;
@@ -72,20 +71,20 @@
     --bg-2-color: #f5f5f5;
     --border-color: #cccccc;
     --static-white-color: #fafafa;
-    --bg-navbar-color: #444;
+    --bg-navbar-color: #003457;
     --bg-footer-copyright-color: #444;
     --gray-color: gray;
     --gray-bg-color: rgba(128, 128, 128, 0.05);
     --text-gray-color: gray;
 
-    --primary-color: #CC5452;
-    --secondary-color: #e49594;
+    --primary-color: #007BCB;
+    --secondary-color: #0065A8;
     --theme-color: #95b0fa;
-    --cta-color: #06662E;
-    --cta-hover-color: #349660;
-    --gradient--deep-color: #003DB3;
-    --gradient-mediator-color: #4D77CA;
-    --gradient-superficial-color: #99B1E1;
+    --cta-color: #0096FA;
+    --cta-hover-color: #007BCB;
+    --gradient--deep-color: #003457;
+    --gradient-mediator-color: #007BCB;
+    --gradient-superficial-color: #0065A8;
     --instagram-color: #833AB4;
     --tiktok-color: #FE2C55;
     --linkedin-color: #0077B5;
@@ -116,6 +115,8 @@
     --navbar-height: 64px;
 
     --container-width: 1400px;
+
+    --sectio-mw: 992px;
 }
 
 .darkmode {
@@ -149,6 +150,7 @@ html {
     box-sizing: inherit;
     scroll-behavior: smooth;
     height: -webkit-fill-available;
+    scroll-padding-top: var(--navbar-height);
 }
 
 body {
@@ -157,6 +159,7 @@ body {
     line-height: 1.6;
     font-size: var(--sizing-md);
     color: var(--text-black-color);
+    padding-top: var(--navbar-height);
 }
 
 p {
@@ -246,6 +249,7 @@ select {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: fixed;
     width: 100%;
     left: 0;
     right: 0;
@@ -437,6 +441,13 @@ select {
 
 }
 
+.c-hero .o-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .c-hero__content {
     display: flex;
     flex-direction: column;
@@ -445,6 +456,7 @@ select {
     text-align: center;
     gap: var(--spacing-lg);
     font-size: var(--sizing-mm);
+    max-width: var(--sectio-mw);
 }
 
 
@@ -747,7 +759,7 @@ select {
 .project-card main>ul>li {
     padding: var(--spacing-sm);
     color: var(--static-white-color);
-    background-color: var(--gray-color);
+    background-color: var(--secondary-color);
 }
 
 .projects-direct {
