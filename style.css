@@ -357,7 +357,7 @@ select {
     width: 0%;
     bottom: 0;
     background-color: var(--secondary-color);
-    transition: width 0.3s;
+    transition: width 0.3s linear;
 }
 
 .c-nav__li:hover::after {
@@ -372,19 +372,13 @@ select {
 .c-nav__li a {
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--static-white-color);
-    transition: all 100ms linear;
-}
-
-
-.contact a {
-    color: var(--static-white-color);
 }
 
 .c-header__button {
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--static-white-color) !important;
     background-color: var(--cta-color);
-    transition: background-color 100ms linear;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .c-header__button:hover {
@@ -455,7 +449,7 @@ select {
     /* Dynamic viewport (automatically adjusts as bars slide in/out) */
     width: 100%;
     background-color: var(--bg-navbar-color);
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
 }
 
 .loading-container.loader-hidden {
@@ -496,7 +490,7 @@ select {
             var(--gradient-superficial-color));
     background-size: 400% 100%;
     height: 100%;
-    animation: loader-bar 3s linear alternate;
+    animation: loader-bar 2s linear alternate;
 }
 
 @keyframes loader-bar {
@@ -630,7 +624,7 @@ select {
     background-color: var(--primary-color);
     color: var(--static-white-color);
     text-align: center;
-    transition: background-color 100ms linear;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .c-hero__actions>a:hover {
@@ -670,7 +664,74 @@ select {
 }
 
 .c-about__card>h3 {
+    position: relative;
     color: var(--secondary-color);
+}
+
+.c-about__card>h3 .status {
+    position: absolute;
+    transform: translate(-75%, -25%);
+    top: 50%;
+    background-color: #25D366;
+    width: var(--sizing-md);
+    height: var(--sizing-md);
+    border-radius: 50%;
+    animation: eye-water 1s linear infinite alternate;
+    cursor: pointer;
+}
+
+@keyframes eye-water {
+    0% {
+        box-shadow: 0px 0px 4px 1px #25D366;
+    }
+
+    50% {
+        box-shadow: 0px 0px 2px 0px #25D366;
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 0px #25D366;
+    }
+}
+
+.c-about__card>h3 .status::after {
+    content: "متاح للعمل";
+    position: absolute;
+    bottom: calc(100% + var(--spacing-sm) + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 400;
+    color: var(--static-white-color);
+    background-color: var(--secondary-color);
+    padding: var(--spacing-sm);
+    width: max-content;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
+    z-index: 10;
+}
+
+.c-about__card>h3 .status:hover::before,
+.c-about__card>h3 .status:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.c-about__card>h3 .status::before {
+    content: "";
+    position: absolute;
+    bottom: calc(100% + var(--spacing-sm));
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px 6px 0px 6px;
+    border-style: solid;
+    border-color: var(--secondary-color) transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
+    z-index: 9;
 }
 
 .personal-img>img {
@@ -702,7 +763,7 @@ select {
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--static-white-color);
     background-color: var(--primary-color);
-    transition: background-color 100ms linear;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .c-about__card>a:hover {
@@ -764,7 +825,7 @@ select {
     color: var(--static-white-color);
     background-color: var(--cta-color);
     padding: var(--spacing-md);
-    transition: all 100ms linear;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .services-direct:hover {
@@ -826,7 +887,7 @@ select {
     width: 100%;
     object-fit: cover;
     object-position: top;
-    transition: all 200ms linear;
+    transition: transform 0.3s linear;
 }
 
 .project-card main>header {
@@ -860,7 +921,7 @@ select {
     color: var(--static-white-color);
     background-color: var(--cta-color);
     padding: var(--spacing-md);
-    transition: all 100ms linear;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .projects-direct:hover {
@@ -976,7 +1037,7 @@ hr {
     justify-content: center;
     height: var(--sizing-xl);
     width: 100%;
-    transition: all 200ms linear;
+    transition: all 0.3s ease-in-out;
     padding: var(--spacing-sm);
 }
 
@@ -1037,7 +1098,6 @@ hr {
 
 }
 
-
 .cert-wrapper {
     display: flex;
     justify-content: center;
@@ -1046,12 +1106,12 @@ hr {
     inset: 0;
     transform: translateY(50%, -50%);
     opacity: 0;
-    transition: all 0.2s linear;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .cert-wrapper:hover {
     opacity: 1;
-    background-color: var(--white-color);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .c-cert-content {
@@ -1096,15 +1156,10 @@ hr {
     color: var(--static-white-color);
     background-color: var(--primary-color);
     padding: var(--spacing-sm);
-    transition: all 100ms linear;
 }
 
 .c-cert-verify.whatsapp {
     background-color: var(--whatsapp-color);
-}
-
-.c-cert-verify:hover {
-    filter: brightness(120%);
 }
 
 /* Footer Section */
@@ -1193,7 +1248,7 @@ hr {
     padding: var(--spacing-md);
     color: var(--static-white-color);
     background-color: var(--cta-color);
-    transition: all 100ms linear;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .cta-footer:hover {
@@ -1214,18 +1269,22 @@ hr {
     font-size: var(--sizing-ml);
     width: var(--sizing-lx);
     height: var(--sizing-lx);
+    border-radius: 50%;
+
     color: var(--static-white-color);
 }
 
 .c-social-nav__link i {
-    transition: all 0.1s linear;
-    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s linear;
 }
 
 .c-social-nav__link i:hover {
-    opacity: 1;
     transform: scale(1.2);
-
 }
 
 .c-social-nav__link--instagram {
@@ -1294,13 +1353,8 @@ hr {
 }
 
 .button-active::after {
-    position: absolute;
-    content: "";
     height: 3px;
     width: 100%;
-    bottom: 0;
-    background-color: var(--secondary-color);
-    transition: width 100ms linear;
 }
 
 /* fixed btn */
@@ -1428,7 +1482,7 @@ hr {
         opacity: 0;
         overflow: hidden;
         padding-bottom: 0;
-        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        transition: max-height 0.3s linear, opacity 0.3s linear, padding 0.3s linear;
     }
 
     #navbar.active {
@@ -1546,6 +1600,7 @@ hr {
     .c-social-nav__link {
         width: var(--sizing-lg);
         height: var(--sizing-lg);
+        font-size: var(--sizing-md);
     }
 
     .c-hero__content {

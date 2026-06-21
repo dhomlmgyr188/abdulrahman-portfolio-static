@@ -239,4 +239,4 @@ setTimeout(() => {
   if (pageLoader) {
     pageLoader.classList.add("loader-hidden")
   }
-}, 3000);
+}, 2000);
