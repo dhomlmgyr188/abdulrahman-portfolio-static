@@ -158,6 +158,7 @@ themeSwitch.forEach((button) => {
 });
 
 const topBtn = document.querySelector(".js-top-btn");
+const whatsappFixedBtn = document.querySelector(".js-whatsapp-btn")
 
 topBtn.addEventListener("click", () => {
   window.scrollTo({
@@ -169,8 +170,10 @@ topBtn.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     topBtn.classList.add("active");
+    whatsappFixedBtn.classList.add("active");
   } else {
     topBtn.classList.remove("active");
+    whatsappFixedBtn.classList.remove("active");
   }
 });
 

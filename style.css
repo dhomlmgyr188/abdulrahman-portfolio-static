@@ -255,7 +255,7 @@ select {
     left: 0;
     right: 0;
     top: 0;
-    z-index: 99;
+    z-index: 999;
     background: var(--bg-navbar-color);
 }
 
@@ -442,7 +442,7 @@ select {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 9999;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1303,31 +1303,46 @@ hr {
     transition: width 100ms linear;
 }
 
-/* top button */
-.top-btn {
+/* fixed btn */
+.fixed-btns {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.top-btn button {
-    display: none;
+.fiexd-icon-btn {
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
-    bottom: var(--spacing-md);
-    right: var(--spacing-md);
     height: var(--sizing-lx);
     width: var(--sizing-lx);
     font-size: var(--sizing-mm);
     color: var(--static-white-color);
-    background-color: var(--primary-color);
+    z-index: 100;
     border-radius: 50%;
-    z-index: 1;
+    right: var(--spacing-md);
+    transform: scale(0.8);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+.whatsapp-fixed.active,
 .js-top-btn.active {
-    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.js-top-btn {
+    background-color: var(--primary-color);
+    bottom: calc(16px + 64px);
+}
+
+.whatsapp-fixed {
+    background-color: var(--whatsapp-color);
+    bottom: var(--spacing-md);
 }
 
 /* xl device */
