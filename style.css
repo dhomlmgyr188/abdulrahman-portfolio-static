@@ -454,6 +454,12 @@ select {
     /* Dynamic viewport (automatically adjusts as bars slide in/out) */
     width: 100%;
     background-color: var(--bg-navbar-color);
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-container.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .loading-width {
@@ -461,7 +467,7 @@ select {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
     text-align: center;
     font-size: var(--sizing-lg);
     color: var(--static-white-color);
@@ -489,7 +495,7 @@ select {
             var(--gradient-superficial-color));
     background-size: 400% 100%;
     height: 100%;
-    animation: loader-bar 4s linear infinite;
+    animation: loader-bar 3s linear alternate;
 }
 
 @keyframes loader-bar {

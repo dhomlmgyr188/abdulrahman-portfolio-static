@@ -230,3 +230,10 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("خطأ: لم يتم العثور على عنصر الـ select، تأكد من كلاس .js-select-design-pages");
   }
 });
+
+setTimeout(() => {
+  const pageLoader = document.querySelector(".loading-container");
+  if (pageLoader) {
+    pageLoader.classList.add("loader-hidden")
+  }
+}, 3000);
