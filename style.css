@@ -401,7 +401,6 @@ select {
     height: var(--sizing-lg);
     position: relative;
     cursor: pointer;
-    transition: background-color 200ms linear;
 }
 
 .c-header__collapse span {
@@ -412,11 +411,13 @@ select {
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
+    transition: all 0.3s linear;
 }
 
 .o-container--header:has(#navbar.active) .c-header__collapse span:nth-child(1) {
     top: 50%;
     transform: translate(50%, -50%) rotate(45deg);
+
 }
 
 .o-container--header:has(#navbar.active) .c-header__collapse span:nth-child(2) {
@@ -1405,17 +1406,20 @@ hr {
     }
 
     #navbar {
-        display: none;
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-start;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding-bottom: 0;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
     }
 
     #navbar.active {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: var(--spacing-md);
-        justify-content: flex-start;
+        max-height: var(--sizing-xxxxl);
+        opacity: 1;
         padding-bottom: var(--spacing-md);
-        transition: all 5s linear;
     }
 
     #navbar.active:last-child {
