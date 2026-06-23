@@ -650,21 +650,7 @@ select {
 }
 
 .c-about {
-    position: relative;
     background-color: var(--bg-2-color);
-    z-index: 1;
-}
-
-.c-about::before {
-    background-image: url("assets/images/magicpattern-saRKnTHBEhU-unsplash.jpg");
-    background-position: center;
-    background-size: contain;
-    background-attachment: fixed;
-    position: absolute;
-    content: "";
-    inset: 0;
-    filter:grayscale(100%) opacity(8%);
-    z-index: -1;
 }
 
 .c-about>div {
