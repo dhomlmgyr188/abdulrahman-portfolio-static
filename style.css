@@ -72,7 +72,7 @@
     --border-color: #cccccc;
     --static-white-color: #fafafa;
     --bg-navbar-color: #003457;
-    --bg-footer-copyright-color: #444;
+    --bg-footer-copyright-color: #003457;
     --gray-color: gray;
     --gray-bg-color: rgba(128, 128, 128, 0.2);
     --text-gray-color: gray;
@@ -622,16 +622,19 @@ select {
     width: 100%;
 }
 
-.c-hero__actions>a {
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 100%;
     padding: var(--spacing-md);
     background-color: var(--primary-color);
     color: var(--static-white-color);
-    text-align: center;
     transition: background-color 0.2s ease-in-out;
 }
 
-.c-hero__actions>a:hover {
+.cta-button:hover {
     background-color: var(--secondary-color);
 }
 
@@ -765,56 +768,48 @@ select {
 .c-about__card>a {
     width: fit-content;
     padding: var(--spacing-sm) var(--spacing-md);
-    color: var(--static-white-color);
-    background-color: var(--primary-color);
-    transition: background-color 0.2s ease-in-out;
 }
 
-.c-about__card>a:hover {
-    background-color: var(--secondary-color);
-}
-
-
-/* Services Section */
-.c-services {
+/* my-offers Section */
+.c-my-offers {
     background: var(--bg-1-color);
 }
 
-.c-services>div {
+.c-my-offers>div {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
 }
 
-.c-services>div>header {
+.c-my-offers>div>header {
     text-align: center;
 
 }
 
-.c-services>div>header>h2 {
+.c-my-offers>div>header>h2 {
     color: var(--primary-color);
 }
 
-.services__cards {
+.my-offers__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-lg);
 }
 
-.service__card {
+.my-offer__card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
     padding: var(--spacing-md);
     color: var(--black-color);
     background-color: var(--gray-bg-color);
     border: 1px solid var(--border-color);
 }
 
-.service__card>i {
+.my-offer__card>i {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -822,18 +817,13 @@ select {
     font-size: var(--sizing-lg);
 }
 
-.services-direct {
+.c-my-offers a {
     width: fit-content;
     margin: auto;
-    text-align: center;
-    color: var(--static-white-color);
-    background-color: var(--cta-color);
-    padding: var(--spacing-md);
-    transition: background-color 0.2s ease-in-out;
 }
 
-.services-direct:hover {
-    background-color: var(--cta-hover-color);
+.my-offers-icon {
+    filter: invert(31%) sepia(93%) saturate(3015%) hue-rotate(202deg) brightness(101%) contrast(104%);
 }
 
 /* projects Section */
@@ -918,18 +908,10 @@ select {
     background-color: var(--secondary-color);
 }
 
-.projects-direct {
+.c-projects .o-container a {
     width: fit-content;
     margin: auto;
     text-align: center;
-    color: var(--static-white-color);
-    background-color: var(--cta-color);
-    padding: var(--spacing-md);
-    transition: background-color 0.2s ease-in-out;
-}
-
-.projects-direct:hover {
-    background-color: var(--cta-hover-color);
 }
 
 /* Skills Section */
@@ -1560,7 +1542,7 @@ hr {
 
 /* sm device */
 @media (max-width: 600px) {
-    .services__cards {
+    .my-offers__cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--spacing-md);
     }

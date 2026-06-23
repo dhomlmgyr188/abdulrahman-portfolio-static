@@ -2,11 +2,11 @@
     background-color: var(--bg-2-color);
 }
 
-.terms-of-service {
+.terms-of-my-offer {
     background-color: var(--bg-2-color);
 }
 
-.terms-of-service .o-container {
+.terms-of-my-offer .o-container {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
