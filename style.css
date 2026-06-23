@@ -74,7 +74,7 @@
     --bg-navbar-color: #003457;
     --bg-footer-copyright-color: #444;
     --gray-color: gray;
-    --gray-bg-color: rgba(128, 128, 128, 0.05);
+    --gray-bg-color: rgba(128, 128, 128, 0.2);
     --text-gray-color: gray;
 
     --primary-color: #007BCB;
@@ -650,7 +650,21 @@ select {
 }
 
 .c-about {
-    background: var(--bg-2-color);
+    position: relative;
+    background-color: var(--bg-2-color);
+    z-index: 1;
+}
+
+.c-about::before {
+    background-image: url("assets/images/magicpattern-saRKnTHBEhU-unsplash.jpg");
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    position: absolute;
+    content: "";
+    inset: 0;
+    filter:grayscale(100%) opacity(8%);
+    z-index: -1;
 }
 
 .c-about>div {
