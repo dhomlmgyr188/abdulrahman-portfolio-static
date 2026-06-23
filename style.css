@@ -152,6 +152,8 @@ html {
     scroll-behavior: smooth;
     height: -webkit-fill-available;
     scroll-padding-top: var(--navbar-height);
+    overflow-x: hidden;
+    /* اضفناها من اجل aos عدم خروج خارج الشاشة افقيا*/
 }
 
 body {
@@ -161,6 +163,8 @@ body {
     font-size: var(--sizing-md);
     color: var(--text-black-color);
     padding-top: var(--navbar-height);
+    overflow-x: hidden;
+    /* اضفناها من اجل aos عدم خروج خارج الشاشة افقيا*/
 }
 
 p {
