@@ -30,6 +30,7 @@
     "vite": "^8.0.14"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "mongodb": "^7.3.0"
   }
 }

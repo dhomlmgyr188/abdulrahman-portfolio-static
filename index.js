@@ -1,3 +1,11 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init({
+  disable: false,
+  duration: 800,
+  offset: 100
+});
+
 // تعريف المتغيرات
 const navbar = document.getElementById("navbar"),
   collapse = document.getElementById("collapse"),
