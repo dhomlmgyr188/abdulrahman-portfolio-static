@@ -1,5 +1,3 @@
-import AOS from "aos/dist/aos.esm";
-import "aos/dist/aos.css";
 AOS.init({
   disable: false,
   duration: 800,
