@@ -87,6 +87,7 @@
     --gradient-superficial-color: #0065A8;
     --instagram-color: #833AB4;
     --tiktok-color: #FE2C55;
+    --hot-color: #fe912c;
     --linkedin-color: #0077B5;
     --github-color: #24292e;
     --whatsapp-color: #25D366;
@@ -771,7 +772,7 @@ select {
 }
 
 /* my-offers Section */
-.c-my-offers {
+ .c-my-offers {
     background: var(--bg-1-color);
 }
 

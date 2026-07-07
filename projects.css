@@ -26,7 +26,7 @@
     height: 100%;
     width: 100%;
     /* border: 10px solid var(--white-color); */
-    border-bottom: 1px solid var(--black-color);
+    border-bottom: 1px solid var(--border-color);
     object-fit: cover;
 }
 
@@ -36,7 +36,7 @@
     width: var(--sizing-lg) !important;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--white-color);
+    color: var(--static-white-color);
     background-color: var(--primary-color);
     text-align: center;
     line-height: var(--sizing-lg) !important;
@@ -58,18 +58,13 @@
     left: var(--sizing-md);
 }
 
-.c-projects__button {
-    background-color: var(--cta-color);
-}
-
-.c-projects__button:hover {
-    color: var(--text-color-white);
-    background-color: var(--cta-hover-color);
-}
-
 /* projects */
 .c-projects {
-    background-color: var(--bg--section-2-color);
+    background-color: var(--bg-2-color);
+}
+
+.breadcrumb-container--my-projects {
+    background-color: var(--bg-2-color);
 }
 
 .c-projects__gallery {
@@ -79,29 +74,20 @@
     gap: var(--spacing-md);
 }
 
-.c-projects__button--ghost {
-    background-color: transparent;
-    border: 1px solid var(--cta-color);
-    color: var(--cta-color);
-}
 
-.c-projects__button--ghost:hover {
-    color: var(--cta-color);
-    background-color: #026cc90c;
-}
 
 .c-projects__cards {
     display: grid;
     gap: var(--spacing-md);
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .c-projects__card {
     display: flex;
     flex-direction: column;
     max-height: var(--sizing-xxxxxll);
-    background-color: var(--bg--section-1-color);
-    border: 1px solid var(--gray-color);
+    background-color: var(--bg-1-color);
+    border: 1px solid var(--border-color);
     overflow: hidden;
 }
 
@@ -113,7 +99,7 @@
 }
 
 .c-projects__content>*:not(:last-child) {
-    border-bottom: 1px solid var(--border-light-color);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: var(--sizing-md);
 }
 
@@ -145,47 +131,36 @@
     gap: var(--spacing-sm);
 }
 
+.c-projects__contributors ul {
+    display: list-item;
+    margin-right: var(--sizing-mm);
+}
+
+.c-projects__contributors ul li {
+    list-style: disc;
+}
+
 .c-projects__badge {
-    color: var(--white-color);
-    background-color: var(--highlight-color);
-    padding: 0 var(--spacing-sm);
+    color: var(--static-white-color);
+    background-color: var(--secondary-color);
+    padding: var(--sizing-xs) var(--spacing-sm);
     width: fit-content;
-    text-align: center;
 }
 
 .c-projects__badge--type {
-    color: var(--white-color);
-    background-color: var(--highlight-color);
-    padding: 0 var(--spacing-sm);
+    color: var(--black-color);
 }
 
 .c-projects__badge--contributor {
-    background-color: var(--highlight-4-color);
-}
-
-.c-projects__badge--frontend {
-    background-color: var(--highlight-frontend-color);
-}
-
-.c-projects__badge--backend {
-    background-color: var(--highlight-5-color);
-}
-
-.c-projects__badge--fullstack {
-    background-color: var(--highlight-6-color);
-}
-
-.c-projects__contributors {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    border-bottom: none !important;
-    padding-bottom: 0px !important;
+    color: var(--black-color);
+    background-color: transparent;
 }
 
 .c-projects__actions {
     display: flex;
     gap: var(--spacing-md);
+    margin-top: auto;
+    padding: var(--spacing-md);
 }
 
 .c-projects__button {
@@ -195,6 +170,14 @@
     justify-content: center;
     text-align: center;
     gap: var(--spacing-sm);
+    color: var(--static-white-color) !important;
+    background-color: var(--primary-color);
+}
+
+.c-projects__button--ghost {
+    background-color: transparent !important;
+    border: 1px solid var(--cta-color);
+    color: var(--cta-color) !important;
 }
 
 .c-projects__icon {
@@ -205,8 +188,15 @@
     padding: var(--spacing-sm) var(--spacing-md);
     color: var(--dark-color-white);
 }
-@media (max-width: 992px) {
-    .c-projects__cards{
+
+@media (max-width: 776px) {
+    .c-projects__cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .c-projects__cards {
         grid-template-columns: 1fr;
     }
 }
