@@ -86,7 +86,7 @@
     display: flex;
     flex-direction: column;
     max-height: var(--sizing-xxxxxll);
-    background-color: var(--bg-1-color);
+    background-color: var(--gray-bg-color);
     border: 1px solid var(--border-color);
     overflow: hidden;
 }
@@ -101,6 +101,10 @@
 .c-projects__content>*:not(:last-child) {
     border-bottom: 1px solid var(--border-color);
     padding-bottom: var(--sizing-md);
+}
+
+.c-projects__content__title {
+    color: var(--primary-color);
 }
 
 .c-projects__content__date {

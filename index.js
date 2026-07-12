@@ -1,7 +1,8 @@
 AOS.init({
   disable: false,
   duration: 800,
-  offset: 100
+  offset: 100,
+  once: true,
 });
 
 // تعريف المتغيرات

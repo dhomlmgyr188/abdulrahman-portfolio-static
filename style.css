@@ -68,13 +68,13 @@
     --text-black-color: #111111;
     --text-white-color: #fafafa;
     --bg-1-color: #ffffff;
-    --bg-2-color: #f5f5f5;
+    --bg-2-color: #f5f5f550;
     --border-color: #cccccc;
     --static-white-color: #fafafa;
     --bg-navbar-color: #003457;
     --bg-footer-copyright-color: #003457;
     --gray-color: gray;
-    --gray-bg-color: rgba(128, 128, 128, 0.2);
+    --gray-bg-color: #88888815;
     --text-gray-color: gray;
 
     --primary-color: #007BCB;
@@ -82,9 +82,9 @@
     --theme-color: #95b0fa;
     --cta-color: #0096FA;
     --cta-hover-color: #007BCB;
-    --gradient-deep-color: #003457;
-    --gradient-mediator-color: #007BCB;
-    --gradient-superficial-color: #0065A8;
+    --gradient-deep-color: #2d2d2d75;
+    --gradient-mediator-color: #4d4d4d60;
+    --gradient-superficial-color: #6d6d6d45;
     --instagram-color: #833AB4;
     --tiktok-color: #FE2C55;
     --hot-color: #fe912c;
@@ -126,8 +126,8 @@
     --white-color: #111111;
     --text-black-color: #fafafa;
     --text-white-color: #111111;
-    --bg-1-color: #202020;
-    --bg-2-color: #2e2e2e;
+    --bg-1-color: #252525;
+    --bg-2-color: #202020;
     --border-color: #838383;
     --theme-color: #faf095;
     --gray-color: gray;
@@ -752,7 +752,7 @@ select {
 
 .c-about__cards {
     display: grid;
-    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-columns: 3fr 3fr;
     width: 100%;
     gap: var(--spacing-lg);
 }
@@ -772,7 +772,7 @@ select {
 }
 
 /* my-offers Section */
- .c-my-offers {
+.c-my-offers {
     background: var(--bg-1-color);
 }
 
@@ -906,7 +906,7 @@ select {
 .project-card main>ul>li {
     padding: var(--spacing-sm);
     color: var(--static-white-color);
-    background-color: var(--secondary-color);
+    background-color: var(--gray-color);
 }
 
 .c-projects .o-container a {
@@ -964,6 +964,7 @@ hr {
     color: var(--static-white-color);
     font-size: var(--sizing-ml);
     padding: var(--spacing-sm) var(--spacing-md);
+    outline: 1px solid #00000060;
 }
 
 .bgcolor-guide>div button:nth-child(1) {
@@ -1026,6 +1027,7 @@ hr {
     width: 100%;
     transition: all 0.3s ease-in-out;
     padding: var(--spacing-sm);
+    outline: 1px solid #00000040;
 }
 
 .skill img {
