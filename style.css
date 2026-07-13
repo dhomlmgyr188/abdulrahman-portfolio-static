@@ -524,7 +524,7 @@ select {
 /* Hero Section */
 .c-hero {
     background-color: var(--bg-1-color);
-
+    height: calc(100svh - var(--navbar-height));
 }
 
 .c-hero .o-container {
