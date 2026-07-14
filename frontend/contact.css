@@ -1,0 +1,114 @@
+.c-contact .o-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.breadcrumb-container--contact {
+    background-color: var(--bg-2-color);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray-bg-color);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-md);
+    margin-left: auto;
+}
+
+.contact-form h2 {
+    text-align: center;
+}
+
+.c-contact {
+    background-color: var(--bg-2-color);
+}
+
+.form-2-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.form-row {
+    display: grid;
+    gap: var(--spacing-sm);
+}
+
+.c-textarea {
+    min-height: var(--sizing-xxl);
+    max-height: var(--sizing-xxxl);
+    resize: vertical;
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-label {
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.c-label .required {
+    color: var(--tiktok-color);
+    font-weight: 300;
+}
+
+.c-label .optional {
+    font-weight: 400;
+}
+
+.errorHint {
+    display: none;
+    color: var(--tiktok-color);
+    font-weight: 300;
+}
+
+.c-input {
+    width: 100%;
+    outline: 1px solid transparent;
+    padding: var(--spacing-sm);
+    font-size: var(--sizing-md);
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.c-input:hover,
+.c-input:focus {
+    border: 1px solid var(--gray-color);
+}
+
+.c-input:focus {
+    outline: 1px solid var(--secondary-color);
+    box-shadow: 0px 0px 4px #0099ff50;
+}
+
+.c-form-btn {
+    padding: var(--spacing-sm);
+    font-size: var(--sizing-mm);
+    font-weight: 600;
+    color: var(--static-white-color);
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.c-form-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .form-2-col {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+}

@@ -235,7 +235,7 @@ function updateServiceDetails() {
 
 document.addEventListener("DOMContentLoaded", function () {
   if (selectPagesDesign) {
-    selectPagesDesign.addEventListener("change", updatemy-offerDetails);
+    selectPagesDesign.addEventListener("change", updatemy - offerDetails);
   } else {
     console.error("خطأ: لم يتم العثور على عنصر الـ select، تأكد من كلاس .js-select-design-pages");
   }
@@ -247,3 +247,4 @@ setTimeout(() => {
     pageLoader.classList.add("loader-hidden")
   }
 }, 2000);
+

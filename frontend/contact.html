@@ -67,6 +67,59 @@
                 </ol>
             </div>
         </header>
+        <section id="contact" class="c-contact">
+            <div class="o-container">
+                <h1>تواصل معنا</h1>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="c-label">الإسم<span class="required">*</span>:</label>
+                            <input class="c-input" type="text" id="name" name="name" placeholder="ضع اسمك هنا .."
+                                required>
+                            <span class="errorHint">يرجى تعبئة حقل الإسم</span>
+                        </div>
+                        <div class="form-2-col">
+                            <div class="form-group">
+                                <label for="phone" class="c-label">رقم الجوال<span class="required">*</span>:</label>
+                                <input class="c-input" type="text" id="phone" name="phone"
+                                    placeholder="ضع رقم جوالك هنا .." required>
+                                <span class="errorHint">يرجى تعبئة حقل رقم الجوال</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="c-label">البريد الإلكتروني <span
+                                        class="optional">(إختياري)</span>:</label>
+                                <input class="c-input" type="email" id="email" name="email"
+                                    placeholder="ضع بريد الإلكتروني هنا ..">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="c-label">عنوان الطلب<span class="required">*</span>:</label>
+                            <input class="c-input" type="text" id="subject" name="subject"
+                                placeholder="ضع عنوان الطلب هنا .." required>
+                            <span class="errorHint">يرجى تعبئة حقل عنوان الطلب</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="client_type" class="c-label">اختر نوع العميل <span
+                                    class="required">*</span>:</label>
+                            <select name="client_type" id="client_type" required>
+                                <option value="" disabled selected>- نوع العميل -</option>
+                                <option value="individual">فرد</option>
+                                <option value="company">شركة / مؤسسة</option>
+                            </select>
+                            <span class="errorHint">يرجى اختيار نوع العميل</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="c-label">الرسالة<span class="required">*</span>:</label>
+                            <textarea name="message" id="message" minlength="20" class="c-input c-textarea"
+                                placeholder="ضع محتوى نص رسالتك هنا .." required></textarea>
+                            <span class="errorHint">يرجى كتابة رسالة لا تقل كلماتها عن 20 كلمة</span>
+                        </div>
+                        <button type="submit" class="c-form-btn">إرسال النموذج</button>
+                        <div id="formResponse" style="margin-top: 15px; font-weight: bold; text-align: center;"></div>
+                    </div>
+                </form>
+            </div>
+        </section>
 
     </main>
 
@@ -141,6 +194,64 @@
     </footer>
 
     <script type="module" src="./index.js"></script>
+    <script>
+
+        const contactForm = document.getElementById("contactForm");
+        const formResponse = document.getElementById("formResponse");
+
+        // شرط الأمان لمنع توقف الكود في الصفحات الأخرى
+        if (contactForm) {
+            contactForm.addEventListener("submit", async (e) => {
+                e.preventDefault(); // إيقاف تحديث الصفحة بنجاح
+
+                if (formResponse) {
+                    formResponse.style.color = "#333";
+                    formResponse.textContent = "جاري إرسال طلبك...";
+                }
+
+                const formData = {
+                    name: document.getElementById("name").value,
+                    phone: document.getElementById("phone").value,
+                    email: document.getElementById("email").value,
+                    subject: document.getElementById("subject").value,
+                    client_type: document.getElementById("client_type").value,
+                    message: document.getElementById("message").value
+                };
+
+                try {
+                    const response = await fetch("https://abdulrahman-portfolio-p034.onrender.com/api/contact", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    const result = await response.json();
+
+                    if (formResponse) {
+                        if (response.ok && result.success) {
+                            formResponse.style.color = "green";
+                            formResponse.textContent = result.message;
+                            contactForm.reset(); // تفريغ الحقول بعد النجاح
+                        } else {
+                            formResponse.style.color = 'red';
+                            formResponse.textContent = result.error || 'حدث خطأ أثناء الإرسال.';
+                        }
+                    }
+                }
+                catch (error) {
+                    console.error("Fetch Error:", error);
+                    if (formResponse) {
+                        formResponse.style.color = "red";
+                        formResponse.textContent = "تعذر الاتصال بالخادم، يرجى المحاولة مرة أخرى.";
+                    }
+                }
+            });
+        }
+
+
+    </script>
 </body>
 
 </html>
