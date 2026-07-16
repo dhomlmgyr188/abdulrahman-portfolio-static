@@ -40,7 +40,6 @@
     min-height: var(--sizing-xxl);
     max-height: var(--sizing-xxxl);
     resize: vertical;
-
 }
 
 .form-group {
