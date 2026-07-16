@@ -14,10 +14,12 @@
     background-color: var(--gray-bg-color);
     border: 1px solid var(--border-color);
     padding: var(--spacing-md);
-    margin-left: auto;
+    width: 100%;
+    max-width: 600px;
 }
 
-.contact-form h2 {
+.contact-form header {
+    margin-bottom: var(--spacing-md);
     text-align: center;
 }
 
@@ -64,7 +66,7 @@
 .errorHint {
     display: none;
     color: var(--tiktok-color);
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .c-input {

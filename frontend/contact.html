@@ -71,6 +71,11 @@
             <div class="o-container">
                 <h1>تواصل معنا</h1>
                 <form id="contactForm" class="contact-form">
+                    <header>
+                        <h2 class="cotact-sub-title">نموذج التواصل</h2>
+                        <p>إذا كان لديك أي استفسار، أو ترغب في طلب استشارة، أو تود التواصل معي، فما عليك سوى تعبئة
+                            الحقول في نموذج التواصل وإرسال رسالتك. سأحرص على الرد عليك في أقرب وقت ممكن.</p>
+                    </header>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name" class="c-label">الإسم<span class="required">*</span>:</label>
@@ -109,9 +114,10 @@
                             <span class="errorHint">يرجى اختيار نوع العميل</span>
                         </div>
                         <div class="form-group">
-                            <label for="subject" class="c-label">الرسالة<span class="required">*</span>:</label>
+                            <label for="message" class="c-label">الرسالة<span class="required">*</span>:</label>
                             <textarea name="message" id="message" minlength="20" class="c-input c-textarea"
                                 placeholder="ضع محتوى نص رسالتك هنا .." required></textarea>
+                            <span class="maxlength-contact"></span>
                             <span class="errorHint">يرجى كتابة رسالة لا تقل كلماتها عن 20 كلمة</span>
                         </div>
                         <button type="submit" class="c-form-btn">إرسال النموذج</button>
@@ -244,7 +250,7 @@
                     console.error("Fetch Error:", error);
                     if (formResponse) {
                         formResponse.style.color = "red";
-                        formResponse.textContent = "تعذر الاتصال بالخادم، يرجى المحاولة مرة أخرى.";
+                        formResponse.textContent = "تعذر الاتصال بالخادم، يرجى المحأولة مرة أخرى.";
                     }
                 }
             });
