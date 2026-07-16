@@ -109,6 +109,7 @@
     --sizing-mm: 20px;
     --sizing-ml: 26px;
     --sizing-lg: 32px;
+    --sizing-gg: 40px;
     --sizing-lx: 48px;
     --sizing-xl: 64px;
     --sizing-xxl: 128px;
@@ -286,11 +287,12 @@ select {
 }
 
 .theme-switch {
-    width: var(--sizing-lg);
-    height: var(--sizing-lg);
+    width: var(--sizing-gg);
+    height: var(--sizing-gg);
     font-size: var(--sizing-md);
     padding: 0;
     color: var(--theme-color);
+    background-color: var(--cta-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -397,8 +399,9 @@ select {
 
 .c-header__collapse {
     display: none;
-    width: var(--sizing-lg);
-    height: var(--sizing-lg);
+    width: var(--sizing-gg);
+    height: var(--sizing-gg);
+    background-color: var(--primary-color);
     position: relative;
     cursor: pointer;
 }
